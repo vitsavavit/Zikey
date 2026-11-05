@@ -1,0 +1,15 @@
+{
+  "checks": [
+    "Keyboard D3 selection updates linked details, score context and coverage context",
+    "Local LLM explanation shown in the real browser",
+    "Mark/unmark updates vocabulary coverage and recommendation exclusion",
+    "Goal preset updates ranking and coverage without losing selected character",
+    "Simulated heat is visibly labelled",
+    "No document overflow or app exception at 320px",
+    "No document overflow or app exception at 768px",
+    "No document overflow or app exception at 1024px",
+    "No document overflow or app exception at 1440px"
+  ],
+  "page_errors": [],
+  "failed_requests": []
+}

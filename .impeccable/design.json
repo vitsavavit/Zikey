@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T02:26:24.073628+00:00",
+  "title": "Design System: ZIKEY 字鑰",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(from #f7f5ee 15% c h)",
+          "oklch(from #f7f5ee 26% c h)",
+          "oklch(from #f7f5ee 37% c h)",
+          "oklch(from #f7f5ee 49% c h)",
+          "oklch(from #f7f5ee 60% c h)",
+          "oklch(from #f7f5ee 72% c h)",
+          "oklch(from #f7f5ee 84% c h)",
+          "oklch(from #f7f5ee 95% c h)"
+        ]
+      },
+      "inspector": {
+        "role": "neutral",
+        "displayName": "Inspector",
+        "tonalRamp": [
+          "oklch(from #f0f0e8 15% c h)",
+          "oklch(from #f0f0e8 26% c h)",
+          "oklch(from #f0f0e8 37% c h)",
+          "oklch(from #f0f0e8 49% c h)",
+          "oklch(from #f0f0e8 60% c h)",
+          "oklch(from #f0f0e8 72% c h)",
+          "oklch(from #f0f0e8 84% c h)",
+          "oklch(from #f0f0e8 95% c h)"
+        ]
+      },
+      "control": {
+        "role": "neutral",
+        "displayName": "Control",
+        "tonalRamp": [
+          "oklch(from #fcfbf7 15% c h)",
+          "oklch(from #fcfbf7 26% c h)",
+          "oklch(from #fcfbf7 37% c h)",
+          "oklch(from #fcfbf7 49% c h)",
+          "oklch(from #fcfbf7 60% c h)",
+          "oklch(from #fcfbf7 72% c h)",
+          "oklch(from #fcfbf7 84% c h)",
+          "oklch(from #fcfbf7 95% c h)"
+        ]
+      },
+      "binding": {
+        "role": "primary",
+        "displayName": "Binding",
+        "tonalRamp": [
+          "oklch(from #203c50 15% c h)",
+          "oklch(from #203c50 26% c h)",
+          "oklch(from #203c50 37% c h)",
+          "oklch(from #203c50 49% c h)",
+          "oklch(from #203c50 60% c h)",
+          "oklch(from #203c50 72% c h)",
+          "oklch(from #203c50 84% c h)",
+          "oklch(from #203c50 95% c h)"
+        ]
+      },
+      "binding-hover": {
+        "role": "primary",
+        "displayName": "Binding Hover",
+        "tonalRamp": [
+          "oklch(from #35576d 15% c h)",
+          "oklch(from #35576d 26% c h)",
+          "oklch(from #35576d 37% c h)",
+          "oklch(from #35576d 49% c h)",
+          "oklch(from #35576d 60% c h)",
+          "oklch(from #35576d 72% c h)",
+          "oklch(from #35576d 84% c h)",
+          "oklch(from #35576d 95% c h)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(from #25303b 15% c h)",
+          "oklch(from #25303b 26% c h)",
+          "oklch(from #25303b 37% c h)",
+          "oklch(from #25303b 49% c h)",
+          "oklch(from #25303b 60% c h)",
+          "oklch(from #25303b 72% c h)",
+          "oklch(from #25303b 84% c h)",
+          "oklch(from #25303b 95% c h)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(from #5d666a 15% c h)",
+          "oklch(from #5d666a 26% c h)",
+          "oklch(from #5d666a 37% c h)",
+          "oklch(from #5d666a 49% c h)",
+          "oklch(from #5d666a 60% c h)",
+          "oklch(from #5d666a 72% c h)",
+          "oklch(from #5d666a 84% c h)",
+          "oklch(from #5d666a 95% c h)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "tonalRamp": [
+          "oklch(from #d3d6cf 15% c h)",
+          "oklch(from #d3d6cf 26% c h)",
+          "oklch(from #d3d6cf 37% c h)",
+          "oklch(from #d3d6cf 49% c h)",
+          "oklch(from #d3d6cf 60% c h)",
+          "oklch(from #d3d6cf 72% c h)",
+          "oklch(from #d3d6cf 84% c h)",
+          "oklch(from #d3d6cf 95% c h)"
+        ]
+      },
+      "ochre": {
+        "role": "primary",
+        "displayName": "Ochre",
+        "tonalRamp": [
+          "oklch(from #94651e 15% c h)",
+          "oklch(from #94651e 26% c h)",
+          "oklch(from #94651e 37% c h)",
+          "oklch(from #94651e 49% c h)",
+          "oklch(from #94651e 60% c h)",
+          "oklch(from #94651e 72% c h)",
+          "oklch(from #94651e 84% c h)",
+          "oklch(from #94651e 95% c h)"
+        ]
+      },
+      "green": {
+        "role": "secondary",
+        "displayName": "Green",
+        "tonalRamp": [
+          "oklch(from #43776c 15% c h)",
+          "oklch(from #43776c 26% c h)",
+          "oklch(from #43776c 37% c h)",
+          "oklch(from #43776c 49% c h)",
+          "oklch(from #43776c 60% c h)",
+          "oklch(from #43776c 72% c h)",
+          "oklch(from #43776c 84% c h)",
+          "oklch(from #43776c 95% c h)"
+        ]
+      },
+      "blue": {
+        "role": "secondary",
+        "displayName": "Blue",
+        "tonalRamp": [
+          "oklch(from #526f91 15% c h)",
+          "oklch(from #526f91 26% c h)",
+          "oklch(from #526f91 37% c h)",
+          "oklch(from #526f91 49% c h)",
+          "oklch(from #526f91 60% c h)",
+          "oklch(from #526f91 72% c h)",
+          "oklch(from #526f91 84% c h)",
+          "oklch(from #526f91 95% c h)"
+        ]
+      },
+      "violet": {
+        "role": "secondary",
+        "displayName": "Violet",
+        "tonalRamp": [
+          "oklch(from #81708f 15% c h)",
+          "oklch(from #81708f 26% c h)",
+          "oklch(from #81708f 37% c h)",
+          "oklch(from #81708f 49% c h)",
+          "oklch(from #81708f 60% c h)",
+          "oklch(from #81708f 72% c h)",
+          "oklch(from #81708f 84% c h)",
+          "oklch(from #81708f 95% c h)"
+        ]
+      },
+      "novice": {
+        "role": "neutral",
+        "displayName": "Novice",
+        "tonalRamp": [
+          "oklch(from #a5c8b8 15% c h)",
+          "oklch(from #a5c8b8 26% c h)",
+          "oklch(from #a5c8b8 37% c h)",
+          "oklch(from #a5c8b8 49% c h)",
+          "oklch(from #a5c8b8 60% c h)",
+          "oklch(from #a5c8b8 72% c h)",
+          "oklch(from #a5c8b8 84% c h)",
+          "oklch(from #a5c8b8 95% c h)"
+        ]
+      },
+      "band-a": {
+        "role": "neutral",
+        "displayName": "Band A",
+        "tonalRamp": [
+          "oklch(from #aac6da 15% c h)",
+          "oklch(from #aac6da 26% c h)",
+          "oklch(from #aac6da 37% c h)",
+          "oklch(from #aac6da 49% c h)",
+          "oklch(from #aac6da 60% c h)",
+          "oklch(from #aac6da 72% c h)",
+          "oklch(from #aac6da 84% c h)",
+          "oklch(from #aac6da 95% c h)"
+        ]
+      },
+      "band-b": {
+        "role": "neutral",
+        "displayName": "Band B",
+        "tonalRamp": [
+          "oklch(from #dfc080 15% c h)",
+          "oklch(from #dfc080 26% c h)",
+          "oklch(from #dfc080 37% c h)",
+          "oklch(from #dfc080 49% c h)",
+          "oklch(from #dfc080 60% c h)",
+          "oklch(from #dfc080 72% c h)",
+          "oklch(from #dfc080 84% c h)",
+          "oklch(from #dfc080 95% c h)"
+        ]
+      },
+      "band-c": {
+        "role": "neutral",
+        "displayName": "Band C",
+        "tonalRamp": [
+          "oklch(from #c7b9dc 15% c h)",
+          "oklch(from #c7b9dc 26% c h)",
+          "oklch(from #c7b9dc 37% c h)",
+          "oklch(from #c7b9dc 49% c h)",
+          "oklch(from #c7b9dc 60% c h)",
+          "oklch(from #c7b9dc 72% c h)",
+          "oklch(from #c7b9dc 84% c h)",
+          "oklch(from #c7b9dc 95% c h)"
+        ]
+      },
+      "unknown": {
+        "role": "neutral",
+        "displayName": "Unknown",
+        "tonalRamp": [
+          "oklch(from #c7ccc5 15% c h)",
+          "oklch(from #c7ccc5 26% c h)",
+          "oklch(from #c7ccc5 37% c h)",
+          "oklch(from #c7ccc5 49% c h)",
+          "oklch(from #c7ccc5 60% c h)",
+          "oklch(from #c7ccc5 72% c h)",
+          "oklch(from #c7ccc5 84% c h)",
+          "oklch(from #c7ccc5 95% c h)"
+        ]
+      },
+      "active-row": {
+        "role": "neutral",
+        "displayName": "Active Row",
+        "tonalRamp": [
+          "oklch(from #e3e9e5 15% c h)",
+          "oklch(from #e3e9e5 26% c h)",
+          "oklch(from #e3e9e5 37% c h)",
+          "oklch(from #e3e9e5 49% c h)",
+          "oklch(from #e3e9e5 60% c h)",
+          "oklch(from #e3e9e5 72% c h)",
+          "oklch(from #e3e9e5 84% c h)",
+          "oklch(from #e3e9e5 95% c h)"
+        ]
+      },
+      "control-border": {
+        "role": "neutral",
+        "displayName": "Control Border",
+        "tonalRamp": [
+          "oklch(from #afb8b7 15% c h)",
+          "oklch(from #afb8b7 26% c h)",
+          "oklch(from #afb8b7 37% c h)",
+          "oklch(from #afb8b7 49% c h)",
+          "oklch(from #afb8b7 60% c h)",
+          "oklch(from #afb8b7 72% c h)",
+          "oklch(from #afb8b7 84% c h)",
+          "oklch(from #afb8b7 95% c h)"
+        ]
+      },
+      "shell": {
+        "role": "neutral",
+        "displayName": "Shell",
+        "tonalRamp": [
+          "oklch(from #e7eae4 15% c h)",
+          "oklch(from #e7eae4 26% c h)",
+          "oklch(from #e7eae4 37% c h)",
+          "oklch(from #e7eae4 49% c h)",
+          "oklch(from #e7eae4 60% c h)",
+          "oklch(from #e7eae4 72% c h)",
+          "oklch(from #e7eae4 84% c h)",
+          "oklch(from #e7eae4 95% c h)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Map heading",
+        "purpose": "Primary exploration title."
+      },
+      "title": {
+        "displayName": "Inspector heading",
+        "purpose": "Explanation and coverage section titles."
+      },
+      "character": {
+        "displayName": "Selected character",
+        "purpose": "Large Songti glyph in the selected entry."
+      }
+    },
+    "shadows": [
+      {
+        "name": "known-popover",
+        "value": "0 12px 35px #203c5026",
+        "purpose": "Known-character editor only."
+      }
+    ],
+    "motion": [],
+    "breakpoints": [
+      {
+        "name": "wide-inspector",
+        "value": "1450px"
+      },
+      {
+        "name": "stack-exploration",
+        "value": "900px"
+      },
+      {
+        "name": "stack-inspector-and-search",
+        "value": "600px"
+      },
+      {
+        "name": "short-desktop-height",
+        "value": "830px"
+      },
+      {
+        "name": "short-desktop-min-width",
+        "value": "1000px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Known-state action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Explicitly mark or unmark the selected character as known.",
+      "html": "<button class=\"ds-primary\">Mark as known</button>",
+      "css": ".ds-primary{font:14px/1.5 \"Avenir Next\",\"Helvetica Neue\",\"PingFang TC\",sans-serif;background:#203c50;color:#fcfbf7;border:1px solid #203c50;border-radius:3px;padding:7px 11px;cursor:pointer}.ds-primary:hover{background:#35576d}.ds-primary:disabled{opacity:.55;cursor:default}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-field:focus-visible,.ds-nav:focus-visible,.ds-rank:focus-visible{outline:2px solid #203c50;outline-offset:3px}"
+    },
+    {
+      "name": "Secondary action",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Standard search and overview action.",
+      "html": "<button class=\"ds-secondary\">Overview</button>",
+      "css": ".ds-secondary{font:14px/1.5 \"Avenir Next\",\"Helvetica Neue\",\"PingFang TC\",sans-serif;background:#fcfbf7;color:var(--text,#25303b);border:1px solid #afb8b7;border-radius:3px;padding:7px 11px;cursor:pointer}.ds-secondary:hover{background:#e8ece6;border-color:#647d86}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-field:focus-visible,.ds-nav:focus-visible,.ds-rank:focus-visible{outline:2px solid #203c50;outline-offset:3px}"
+    },
+    {
+      "name": "Search field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Native character or pinyin search field.",
+      "html": "<input class=\"ds-field\" aria-label=\"Search a character or pinyin\" placeholder=\"Search a character or pinyin\">",
+      "css": ".ds-field{font:14px/1.5 \"Avenir Next\",\"Helvetica Neue\",\"PingFang TC\",sans-serif;background:#fcfbf7;color:var(--text,#25303b);border:1px solid #afb8b7;border-radius:3px;padding:7px 11px;caret-color:var(--gold,#94651e)}.ds-field::placeholder{color:#65706f}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-field:focus-visible,.ds-nav:focus-visible,.ds-rank:focus-visible{outline:2px solid #203c50;outline-offset:3px}"
+    },
+    {
+      "name": "Binding wordmark",
+      "kind": "nav",
+      "description": "Brand link returns the workspace to overview.",
+      "html": "<nav class=\"ds-binding\"><a class=\"ds-nav\" href=\"#\">ZIKEY <span lang=\"zh-Hant\">字鑰</span></a></nav>",
+      "css": ".ds-binding{background:#203c50;padding:14px 20px}.ds-nav{font:600 25px/1.5 Baskerville,\"Iowan Old Style\",Georgia,serif;letter-spacing:.02em;color:#f8f7f1;text-decoration:none;white-space:nowrap}.ds-nav span{font-size:15px;font-weight:400;margin-left:5px}.ds-nav:focus-visible{outline:2px solid #eed49b;outline-offset:3px}"
+    },
+    {
+      "name": "Recommendation row",
+      "kind": "custom",
+      "refersTo": "recommendation",
+      "description": "Ranked character with reading, score and signal contributions.",
+      "html": "<button class=\"ds-rank\" aria-label=\"Recommendation: 請\"><span class=\"ds-character\">請</span><span class=\"ds-reading\">qǐng</span><span class=\"ds-score\">0.432</span><span class=\"ds-bar\"><i></i><i></i><i></i><i></i></span></button>",
+      "css": ".ds-rank{font:14px/1.5 \"Avenir Next\",\"Helvetica Neue\",\"PingFang TC\",sans-serif;display:grid;grid-template-columns:36px 1fr auto;gap:4px;width:100%;padding:6px 4px;border:0;border-bottom:1px solid var(--line,#d3d6cf);background:transparent;color:var(--text,#25303b);text-align:left;cursor:pointer}.ds-rank:hover,.ds-rank:active{background:#e3e9e5}.ds-character{font:26px/1.15 \"Songti TC\",\"Songti SC\",serif}.ds-reading{font-size:13px;color:var(--muted,#5d666a)}.ds-score{font-size:13px;font-variant-numeric:tabular-nums}.ds-bar{grid-column:2/4;display:flex;height:5px;background:#dfe3dd;border-radius:3px;overflow:hidden}.ds-bar i{height:100%;width:25%;background:#43776c}.ds-bar i:nth-child(2){background:#526f91}.ds-bar i:nth-child(3){background:var(--gold,#94651e)}.ds-bar i:nth-child(4){background:#81708f}.ds-primary:focus-visible,.ds-secondary:focus-visible,.ds-field:focus-visible,.ds-nav:focus-visible,.ds-rank:focus-visible{outline:2px solid #203c50;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Contemporary Linguistic Atlas",
+    "overview": "A contemporary linguistic atlas on warm paper. Baskerville headings and Songti character entries give the workspace a reference-book character; native sans-serif controls keep search, learner state and evidence practical. Quiet rules organize a dense learning tool, with a navy binding header and restrained data colour.\n\nThe visual system supports the existing connected-character workspace. Its material is typography, paper tone and documented graph marks; decorative imagery, page curls, grain and ornamental stamps are excluded by the confirmed direction.",
+    "keyCharacteristics": [
+      "Warm paper with an ink-blue binding header.",
+      "Serif editorial hierarchy, Ming character glyphs and sans-serif controls.",
+      "Flat divided regions and explicit data encodings."
+    ],
+    "rules": [
+      {
+        "name": "The Evidence Rule",
+        "body": "Colour and marks describe real learner or source data; layout proximity is never a similarity claim.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readable Atlas Rule",
+        "body": "Keep the reading surface quiet and preserve the hierarchy between headings, character glyphs, controls and evidence.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do preserve the native search, selects, details and dialog vocabulary.",
+      "Do keep vocabulary bands, recommendation rings and score signals consistent between legends and dynamic graphics.",
+      "Do preserve the A network / B explanation / C coverage structure and responsive stacking.",
+      "Do keep selected-character reading, definition and source evidence together."
+    ],
+    "donts": [
+      "Don't add decorative imagery, grain, page curls, gradients or ornamental stamps.",
+      "Don't turn the atlas into a literal book prop or replace the workspace with a hero or card grid.",
+      "Don't imply that graph proximity is linguistic similarity or that pilot vocabulary bands are official character levels."
+    ]
+  }
+}

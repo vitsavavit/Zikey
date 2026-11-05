@@ -1,0 +1,101 @@
+{
+  "learning_characters": 290,
+  "words": 450,
+  "component_edges": 556,
+  "graph_nodes": 506,
+  "upstream_parsed_words": 7292,
+  "excluded_entries": {
+    "annotated_or_non_cjk": 124
+  },
+  "missing_character_definition": [],
+  "missing_character_pinyin": [],
+  "missing_word_meaning": [
+    "妳們",
+    "甚麼",
+    "周末",
+    "一半兒",
+    "一下子兒",
+    "唸書"
+  ],
+  "missing_etymology": 30,
+  "sense_review_needed": [
+    "姊",
+    "姊姊",
+    "個",
+    "星期",
+    "星期天",
+    "星期日",
+    "起來",
+    "看見",
+    "一會",
+    "一會兒",
+    "學期"
+  ],
+  "reviewed_demo_senses": [
+    "清",
+    "青"
+  ],
+  "radical_groups": 114,
+  "display_relations": 781,
+  "unknown_decomposition": [
+    "人",
+    "今",
+    "年",
+    "一",
+    "五",
+    "八",
+    "弟",
+    "姊",
+    "歲",
+    "覺",
+    "學",
+    "以",
+    "水",
+    "久",
+    "友",
+    "不",
+    "那",
+    "車",
+    "有",
+    "也",
+    "沒",
+    "女",
+    "先",
+    "手",
+    "自",
+    "己",
+    "非",
+    "會",
+    "為",
+    "門",
+    "雨",
+    "牛",
+    "用",
+    "方",
+    "每",
+    "又",
+    "介",
+    "心"
+  ],
+  "family": {
+    "情": [
+      "qíng"
+    ],
+    "晴": [
+      "qíng"
+    ],
+    "清": [
+      "qīng"
+    ],
+    "睛": [
+      "jīng"
+    ],
+    "請": [
+      "qǐng"
+    ],
+    "青": [
+      "qīng"
+    ]
+  },
+  "selection": "Forced TOCFL demo words, then earliest level/row entries fitting 290 characters, stop at 450 words. Exact slash alternatives expanded; annotated/non-CJK entries excluded."
+}

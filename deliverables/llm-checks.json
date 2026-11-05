@@ -1,0 +1,57 @@
+[
+  {
+    "sentences": [
+      "The largest contribution to 青's score comes from component reuse.",
+      "青 occurs in 1 of the 450 pilot vocabulary entries."
+    ],
+    "mode": "Local LLM · supported evidence selection",
+    "model": "qwen2.5-coder:7b",
+    "cached": false,
+    "character": "青",
+    "seconds": 14.21
+  },
+  {
+    "sentences": [
+      "The largest contribution to 清's score comes from new readable words.",
+      "清 occurs in 2 of the 450 pilot vocabulary entries."
+    ],
+    "mode": "Local LLM · supported evidence selection",
+    "model": "qwen2.5-coder:7b",
+    "cached": false,
+    "character": "清",
+    "seconds": 3.03
+  },
+  {
+    "sentences": [
+      "The largest contribution to 晴's score comes from new readable words.",
+      "With your current known characters, learning 晴 unlocks 2 words, including 晴天, 晴."
+    ],
+    "mode": "Local LLM · supported evidence selection",
+    "model": "qwen2.5-coder:7b",
+    "cached": false,
+    "character": "晴",
+    "seconds": 3.33
+  },
+  {
+    "sentences": [
+      "The largest contribution to 請's score comes from new readable words.",
+      "請 occurs in 3 of the 450 pilot vocabulary entries."
+    ],
+    "mode": "Local LLM · supported evidence selection",
+    "model": "qwen2.5-coder:7b",
+    "cached": false,
+    "character": "請",
+    "seconds": 3.1
+  },
+  {
+    "sentences": [
+      "The largest contribution to 情's score comes from new readable words.",
+      "情 occurs in 3 of the 450 pilot vocabulary entries."
+    ],
+    "mode": "Local LLM · supported evidence selection",
+    "model": "qwen2.5-coder:7b",
+    "cached": false,
+    "character": "情",
+    "seconds": 2.93
+  }
+]

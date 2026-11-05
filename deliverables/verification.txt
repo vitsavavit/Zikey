@@ -1,0 +1,20 @@
+test_linked_selection_goal_and_known_toggle (test_app.AppTests.test_linked_selection_goal_and_known_toggle) ... 2026-11-04 20:38:02.154 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_curves_share_start_and_are_monotone (test_core.RecommendationTests.test_curves_share_start_and_are_monotone) ... ok
+test_empty_data_and_all_known (test_core.RecommendationTests.test_empty_data_and_all_known) ... ok
+test_goal_can_change_ranking (test_core.RecommendationTests.test_goal_can_change_ranking) ... ok
+test_known_characters_excluded_and_parts_sum (test_core.RecommendationTests.test_known_characters_excluded_and_parts_sum) ... ok
+test_repeated_character_is_only_one_requirement (test_core.RecommendationTests.test_repeated_character_is_only_one_requirement) ... ok
+test_search_handles_tones_numbers_and_multiple_readings (test_core.RecommendationTests.test_search_handles_tones_numbers_and_multiple_readings) ... ok
+test_unlock_requires_all_other_characters (test_core.RecommendationTests.test_unlock_requires_all_other_characters) ... ok
+test_zero_weights_fall_back_and_invalid_weights_rejected (test_core.RecommendationTests.test_zero_weights_fall_back_and_invalid_weights_rejected) ... ok
+test_interrupted_cache_write_does_not_crash (test_explain.ExplanationTests.test_interrupted_cache_write_does_not_crash) ... ok
+test_non_object_json_uses_labelled_fallback (test_explain.ExplanationTests.test_non_object_json_uses_labelled_fallback) ... ok
+test_offline_model_keeps_explanation_and_ranking_usable (test_explain.ExplanationTests.test_offline_model_keeps_explanation_and_ranking_usable) ... ok
+test_unsupported_model_output_uses_labelled_fallback (test_explain.ExplanationTests.test_unsupported_model_output_uses_labelled_fallback) ... ok
+test_valid_evidence_cached_but_known_set_changes_key (test_explain.ExplanationTests.test_valid_evidence_cached_but_known_set_changes_key) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.724s
+
+OK

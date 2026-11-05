@@ -1,0 +1,36 @@
+{
+  "tocfl_workbook": "華語八千詞(內含注音字型檔)/華語八千詞表20240923.xlsx",
+  "sources": [
+    {
+      "file": "tocfl.zip",
+      "url": "https://tocfl.edu.tw/tocfl/assets/files/vocabulary/8000zhuyin_202409.zip",
+      "downloaded_at": "2026-11-04T11:22:09.875351+00:00",
+      "sha256": "080dc5f66714ca1893a71fe21853043b3e7aaad7ceac7092687f6d367d0020ac",
+      "license": "SC-TOP copyright; public download, no open redistribution license identified. Local coursework use; retain source URL."
+    },
+    {
+      "file": "makemeahanzi.jsonl",
+      "url": "https://raw.githubusercontent.com/skishore/makemeahanzi/master/dictionary.txt",
+      "downloaded_at": "2026-11-04T11:22:10.406060+00:00",
+      "sha256": "744bb05d5b0742e9ee35c37791f94d56a173349b3367569e7ca11e510364d203",
+      "license": "LGPL v3 or later; see retained COPYING and upstream LGPL."
+    },
+    {
+      "file": "makemeahanzi-COPYING",
+      "url": "https://raw.githubusercontent.com/skishore/makemeahanzi/master/COPYING",
+      "downloaded_at": "2026-11-04T11:22:24.236760+00:00",
+      "sha256": "26fa6b699b32401de4b75a4af574c2e0a99b3df6cb12df9313d257ee4634359c",
+      "license": "Upstream license notice."
+    },
+    {
+      "file": "cedict.gz",
+      "url": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
+      "downloaded_at": "2026-11-04T11:22:23.853179+00:00",
+      "sha256": "68f54ba4159aa8234326c881482705e81277b4a84e8e67e090a1318068e5e0aa",
+      "license": "CC BY-SA 4.0; derived English gloss data retains attribution and ShareAlike."
+    }
+  ],
+  "cedict_version": "2026-11-04T07:19:40Z",
+  "makemeahanzi_version": "master snapshot identified by SHA-256",
+  "derived_data": "Original source terms apply to respective fields. Do not publish the bundled TOCFL snapshot without checking permission."
+}

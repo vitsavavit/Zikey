@@ -1,0 +1,29 @@
+<div id="workspace" class="zk" aria-label="ZIKEY learning workspace">
+  <header class="zk-toolbar">
+    <a class="zk-brand" href="#" id="brand">ZIKEY <span lang="zh-Hant">字鑰</span></a>
+    <form id="search-form" role="search"><input id="query" aria-label="Search a character or pinyin" placeholder="Search a character or pinyin" autocomplete="off"><button type="submit">Search</button></form>
+    <div class="zk-goal"><label for="goal">Learning goal</label><select id="goal"><option>Default</option><option>Read more</option><option>See structure</option></select></div>
+    <details class="zk-known"><summary id="known-count">Known characters</summary><div><label for="known-editor">Your known characters</label><textarea id="known-editor" rows="3"></textarea><p>Starts with a sample learner. Replace with your own pilot characters.</p><button id="apply-known">Apply</button><button id="reset">Reset demo</button></div></details>
+  </header>
+  <div id="error" class="zk-alert" role="alert" hidden></div>
+  <div class="zk-grid">
+    <section class="zk-explore" aria-labelledby="map-title">
+      <div class="zk-map-heading"><div><h1 id="map-title">Your learning galaxy</h1><p id="map-description"></p></div><div class="zk-panel-actions"><button id="overview">Overview</button><button data-expand="network" aria-label="Expand network">Expand</button></div></div>
+      <div class="zk-search-results" id="results" aria-live="polite"></div>
+      <div class="zk-map-wrap"><div id="galaxy"><div class="zk-zoom"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit">Fit</button></div></div><div class="zk-map-hint" id="map-hint"></div></div>
+      <div class="zk-map-legend"><span class="zk-band novice">Novice</span><span class="zk-band a">A</span><span class="zk-band b">B</span><span class="zk-band c">C</span><span class="zk-band unknown">Unknown</span><span>Vocabulary band · derived from pilot words</span><br><span>Size: prevalence · Position: layout only · Ochre ring: recommended · Check: known · Diamond: component</span><br><span>Lines: ochre = sound · green = meaning · grey = IDS leaf part</span></div>
+      <div id="selection" class="zk-selection" aria-live="polite"></div>
+    </section>
+    <aside class="zk-inspector">
+      <section class="zk-why" aria-labelledby="why-title"><div class="zk-section-head"><h2 id="why-title">Why this next?</h2><button data-expand="recommendations" aria-label="Expand recommendations">Expand</button><select id="scope" aria-label="Recommendation scope"><option value="Overall">Overall</option><option value="This family">This family</option></select></div><p id="scope-label" class="zk-muted"></p>
+        <div id="rankings"></div><div class="zk-signal-legend"><span>Prevalence</span><span>Reuse</span><span>Unlock</span><span>Heat</span></div>
+        <div id="selected-score"></div><p id="rationale"></p><button id="explain">Explain with local AI</button><p id="ai-status" class="zk-muted"></p>
+        <details class="zk-advanced"><summary>Advanced weights & data</summary><div id="weight-controls"></div><label><input type="checkbox" id="simulated"> Use simulated heat</label><label><input type="checkbox" id="logging"> Opt in to session lookup totals</label><p id="heat-status"></p><p>Session-only character totals; no names or free-text queries stored.</p></details>
+      </section>
+      <section class="zk-coverage" aria-labelledby="coverage-title"><div class="zk-section-head"><h2 id="coverage-title">Coverage compare</h2><span id="coverage-now"></span><button data-expand="coverage" aria-label="Expand coverage">Expand</button></div><p class="zk-muted">Overall plans · same starting learner and pilot vocabulary</p><div id="coverage-plot" aria-label="Vocabulary coverage comparison"></div><p id="coverage-note" class="zk-muted"></p></section>
+    </aside>
+  </div>
+  <footer class="zk-footer"><span id="dataset-summary"></span><button id="methods-button">Data & methods</button></footer>
+  <dialog id="word-dialog"><button class="zk-close" id="close-word" aria-label="Close word details">Close</button><div id="word-detail"></div></dialog>
+  <dialog id="methods-dialog"><button class="zk-close" id="close-methods">Close</button><h2>Data, AI and limitations</h2><div id="methods-detail"></div></dialog>
+</div>

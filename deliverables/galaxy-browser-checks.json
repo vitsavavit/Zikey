@@ -1,0 +1,28 @@
+{
+  "checked_at": "2026-11-05T05:30:54.761951+08:00",
+  "method": "Manual CUA browser interaction and DOM/screenshot inspection; no claim of independent automated browser suite",
+  "checks": {
+    "qing_search": "青 清 晴 請 情 found; 睛 appears only in documented family with jīng",
+    "graph_keyboard_selection": "Enter selected 請 and synchronized views",
+    "mark_unmark": "21→22 known;4.9→5.6%;請 excluded; reversible",
+    "goal": "See structure changed family first rank to 青;selection remained 請",
+    "word_details": "請問 source gloss shown;one missing distinct character",
+    "local_ai": "Supported evidence selection;cached labelled",
+    "camera_restore": "identical transform translate(-175,-113.75000000000006) scale(1.35)",
+    "radical_scope": "言 focus retains Overall unknown269",
+    "no_family": "我 uses Overall and character structure",
+    "plotly_shadow_layers": "three SVG layers aligned to same y650.875 within panel",
+    "phone_overflow": "390 viewport workspace371/scroll369;320 viewport workspace301/scroll299"
+  },
+  "screenshots": {
+    "complete_three_views": "1440×1000",
+    "laptop": "1280×800;vertical scrolling available",
+    "phone": "390×844;vertical layout"
+  },
+  "independent_review": "READY for progress demo; final five desktop screenshots reviewed",
+  "not_checked": [
+    "Learner or linguistic expert study",
+    "Exhaustive device/accessibility audit",
+    "Native PowerPoint application"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "origin": "CUA screenshots of the actual local ZIKEY app; no generated or sourced artwork",
+  "views": {
+    "desktop.png": "1440\u00d71000 focus \u8acb Default21known",
+    "mobile.png": "390\u00d7844 same focus",
+    "user-1280.png": "1280\u00d7720 same focus",
+    "user-overview.png": "1280\u00d7720 first overview render, before stronger node borders"
+  },
+  "model": "no image generation used",
+  "files": [
+    "static/workspace.html",
+    "static/workspace.css",
+    "static/workspace.js",
+    "app.py"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "origin": "OpenAI built-in image_gen__imagegen",
+  "mode": "generate",
+  "source": "/Users/7svv/.codex/generated_images/01a1a995-6b91-7593-944b-0ed207201994/exec-5f0d6dc5-b1a4-432a-86a7-d47458787c40.png",
+  "prompt": "Use case: photorealistic-natural\nAsset type: opaque repeating background texture for a learning graph interface\nPrimary request: a blank flat warm ivory notebook paper material, viewed perfectly perpendicular with no perspective. Entire square image is the same quiet paper surface. Tiny natural paper fibres, extremely faint neutral grey square ruling, barely visible. Grid is straight, even and regular, approximately 40 squares across. Paper base close to #f6f2e7 and grid close to #e8e4da. Uniform flat soft illumination, completely light enough behind black text.\nComposition: edge-to-edge material swatch, seamless repeatable tile, no page boundary.\nConstraints: blank material only. No text, handwriting, diagrams, icons, stains, objects, scene, photographic edges, binding, holes, shadows, gradients, vignetting or watermark. Do not render UI. Keep texture subtle and restrained.",
+  "transparent_background": false,
+  "postprocessing": "None; original PNG copied without modification."
+}
