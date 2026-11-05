@@ -30,10 +30,10 @@
 .zk-brand,.zk-brand span{color:#fff3d5}.zk-toolbar summary,.zk-goal label{color:#f2dfbd}
 .zk-explore{background:#f5efdf url('/app/static/paper-texture.png') center/cover}
 .zk-inspector{background:#eee5d2}.zk-coverage{background:#f5efdf}
-.zk h1,.zk h2{font-family:Noteworthy,"Segoe Print",cursive;font-weight:700}
+.zk h1,.zk h2{font-family:"Patrick Hand","Avenir Next",sans-serif;font-weight:700}
 .zk h1{font-size:27px}.zk h2{font-size:22px}
 .zk-map-heading h1{text-decoration:underline;text-decoration-color:#b6a07c;text-decoration-thickness:1px;text-underline-offset:6px}
-.zk-map-description,.zk-map-hint{font-family:Noteworthy,"Segoe Print",cursive}
+.zk-map-description,.zk-map-hint{font-family:"Patrick Hand","Avenir Next",sans-serif}
 .zk-panel-actions{display:flex;gap:8px;flex-shrink:0}
 .zk-section-head h2{min-width:0;flex:1}.zk-section-head button[data-expand]{font-size:11px;padding:4px 6px;white-space:nowrap}.zk-section-head select{max-width:105px}
 .zk-word-gloss{font-size:18px}.zk-source-note{font-size:13px;color:var(--muted);max-width:68ch}.zk-senses{padding-left:20px}.zk-senses li{margin:12px 0}.zk-senses li>span{display:block;font-size:12px;color:var(--muted)}
