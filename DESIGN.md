@@ -107,6 +107,23 @@ components:
 
 ## Approved walnut library — current direction
 
+### User correction, 2026-11-06 — compact paper and physical books
+
+The latest supplied mockup is the visual target. Header spacing is compact; the
+photograph is a narrow framing band rather than a tall hero. Outer paper surfaces
+use `rag-paper.jpg`, while the network, ranking list, coverage plot and character
+record retain their notebook grid. The outer network page sizes to its content.
+The recommended-book controls use a generated transparent leather-cover sprite,
+with source-free labels rendered from the real ranked characters. A 3D spine,
+page block and hinged cover replace flat rectangular controls. At rest, the volume
+turns 78 degrees to expose its spine. Hover, focus or selection pulls it forward
+34px, lifts it 6px and turns it toward the reader over 550ms; the cover opens
+25 degrees with a 100ms delay. Reduced motion removes these transitions and leaves
+a legible static book angle. Stable recommendation DOM is retained across selection
+changes so touch selection can animate. Mobile uses a two-row toolbar and stacked
+panels, with 44px minimum book hit areas. This correction supersedes the 240ms
+flat-cover motion and full-page grid/background treatment described below.
+
 User selected preview B on 2026-11-05. A photographic-style generated walnut bookcase
 frames the paper toolbar and right inspector. The left network stays on the sketchbook
 surface; recommendations and coverage stay legible on ivory paper. A shelf of up to five

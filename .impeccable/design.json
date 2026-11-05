@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-05T12:47:19.522899+00:00",
+  "generatedAt": "2026-11-05T17:04:11.317522+00:00",
   "title": "Design System: ZIKEY 字鑰",
   "extensions": {
     "colorMeta": {
@@ -361,9 +361,9 @@
     ],
     "motion": [
       {
-        "name": "library-book-selection",
-        "value": "240ms cubic-bezier(.16,1,.3,1)",
-        "purpose": "5px pull-out with 14deg cover turn; disabled with prefers-reduced-motion."
+        "name": "spine-pull-and-hinge",
+        "value": "550ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "From spine angle to 34px forward / 6px lift; 25deg cover hinge delayed 100ms. Reduced motion is static."
       }
     ],
     "breakpoints": [
@@ -432,7 +432,7 @@
   ],
   "narrative": {
     "northStar": "The Contemporary Linguistic Atlas",
-    "overview": "User-approved B: walnut library framing a working sketchbook. Live recommendation books above the right paper inspector; A/B/C and source data preserved.",
+    "overview": "Compact walnut library: rag-paper outer surfaces, grid inside data regions, and photographic leather books with spine-first pull-out and hinged covers. A/B/C preserved.",
     "keyCharacteristics": [
       "Photographic walnut bookcase header and right inspector.",
       "Ivory sketchbook network and readable paper evidence.",

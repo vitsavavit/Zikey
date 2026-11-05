@@ -6,9 +6,10 @@ from pathlib import Path
 def workspace_assets(directory):
     directory = Path(directory)
     css = (directory / 'workspace.css').read_text()
-    for name in ('paper-texture.png', 'library-shelves.png', 'walnut-library.jpg'):
+    for name in ('paper-texture.png', 'library-shelves.png', 'walnut-library.jpg',
+                 'rag-paper.jpg', 'leather-books.webp'):
         encoded = base64.b64encode((directory / name).read_bytes()).decode('ascii')
-        mime = 'image/jpeg' if name.endswith('.jpg') else 'image/png'
+        mime = {'.jpg': 'image/jpeg', '.webp': 'image/webp'}.get(Path(name).suffix, 'image/png')
         css = css.replace('/app/static/' + name, 'data:' + mime + ';base64,' + encoded)
     font = base64.b64encode((directory / 'PatrickHand-Regular.ttf').read_bytes()).decode('ascii')
     css = css.replace('/app/static/PatrickHand-Regular.ttf', 'data:font/ttf;base64,' + font)

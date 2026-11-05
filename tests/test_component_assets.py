@@ -10,6 +10,7 @@ class ComponentAssetTests(unittest.TestCase):
         self.assertNotIn('/app/static/', css)
         self.assertIn('data:image/png;base64,', css)
         self.assertIn('data:image/jpeg;base64,', css)
+        self.assertIn('data:image/webp;base64,', css)
         self.assertIn('data:font/ttf;base64,', css)
         self.assertIn('font-family:"Patrick Hand"', css)
         self.assertIn("new FontFace('Patrick Hand'", js)

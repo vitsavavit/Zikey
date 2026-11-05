@@ -81,8 +81,16 @@ export default async function(component) {
   }else{const b=document.createElement('button');b.textContent='Start with qing';b.onclick=()=>send({type:'search',query:'qing'});$('results').append(b);}
   $('scope-label').textContent=D.scope==='This family'?`Best within ${D.family.root} family · ${D.rank_count} unknown`:`All ${D.rank_count} unknown characters${D.global_next?' · next '+D.global_next:''}`;
   $('book-shelf').hidden=!D.ranked.length;
-  $('book-shelf').innerHTML=D.ranked.map((r,i)=>`<button class="zk-book ${r.character===D.selected?'active':''}" data-character="${esc(r.character)}" data-cover="${i}" aria-pressed="${r.character===D.selected}" aria-label="Open recommended character ${esc(r.character)}"><span class="zk-book-character" lang="zh-Hant">${esc(r.character)}</span><span class="zk-book-reading">${esc(D.characters[r.character].pinyin[0]||'')}</span></button>`).join('');
-  $('book-shelf').querySelectorAll('button').forEach(b=>b.onclick=()=>select(b.dataset.character));
+  const shelfKey=D.ranked.map(r=>r.character).join('');
+  if(S.shelfKey!==shelfKey){
+    S.shelfKey=shelfKey;
+    $('book-shelf').innerHTML=D.ranked.map((r,i)=>`<button class="zk-book" data-character="${esc(r.character)}" data-cover="${i}" aria-label="Open recommended character ${esc(r.character)}"><span class="zk-book-volume" aria-hidden="true"><span class="zk-book-pages"></span><span class="zk-book-spine"><span lang="zh-Hant">${esc(r.character)}</span></span><span class="zk-book-cover"><span class="zk-book-character" lang="zh-Hant">${esc(r.character)}</span><span class="zk-book-reading">${esc(D.characters[r.character].pinyin[0]||'')}</span></span></span></button>`).join('');
+  }
+  $('book-shelf').querySelectorAll('button').forEach(b=>{
+    b.classList.toggle('active',b.dataset.character===D.selected);
+    b.setAttribute('aria-pressed',String(b.dataset.character===D.selected));
+    b.onclick=()=>select(b.dataset.character);
+  });
   $('rankings').innerHTML=D.ranked.map((r,i)=>`<button class="zk-rank ${r.character===D.selected?'active':''}" data-character="${esc(r.character)}" aria-label="Recommendation ${i+1}: ${esc(r.character)}"><span class="character">${esc(r.character)}</span><span class="reading">${esc(D.characters[r.character].pinyin.join('/'))}</span><span class="score">${r.score.toFixed(3)}</span><span class="bar">${signals.map((s,j)=>`<i style="width:${r.parts[s]*100}%;background:${signalColors[j]}"></i>`).join('')}</span></button>`).join('')||'<p class="zk-muted">No unknown characters in this scope. Choose Overall or edit known characters.</p>';
   $('rankings').querySelectorAll('button').forEach(b=>b.onclick=()=>select(b.dataset.character));
   $('selected-score').textContent=D.selected?`${D.selected} · ${D.selected_known?'already known':D.selected_score?'score '+D.selected_score.score.toFixed(3):'not ranked'} · +${D.unlocks.length} readable entries`: 'Select a character to inspect its score and words.';
@@ -205,7 +213,7 @@ export default async function(component) {
       S.zoom.extent([[box.x-28,box.y-28],[box.x+box.width+28,box.y+box.height+28]]);
     }
   };
-  if(!S.resizeObserver){S.resizeObserver=new ResizeObserver(()=>S.frame());S.resizeObserver.observe(container);}
+  if(!S.resizeObserver){S.resizeObserver=new ResizeObserver(()=>requestAnimationFrame(()=>S.resizeViews?.()));S.resizeObserver.observe(container);}
   S.resizeViews=()=>{
     S.frame();
     const plot=$('coverage-plot');

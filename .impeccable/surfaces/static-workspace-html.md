@@ -72,3 +72,11 @@ in DESIGN.md: generated bookcase material, cream toolbar ribbon, live recommenda
 and ivory evidence sheets. Preserve sketch lettering, original A/B/C structure, expansion,
 keyboard controls and all calculations. Cover colours are decorative. Book selection uses
 240ms pull-out motion with reduced-motion support. No presentation changes.
+
+
+## User correction — 2026-11-06
+
+Follow the compact header and paper proportions in the supplied B mockup. Warm rag
+paper is the outer surface only; data areas retain a grid. Use real leather-cover
+material on a 3D spine/page/cover component. Hover pulls a spine out and opens its
+cover; touch selects the same state. Preserve reduced-motion and mobile stacking.
