@@ -2,12 +2,17 @@
 
 import hashlib
 import json
+import os
 from pathlib import Path
 
 import requests
 
 MODEL = "qwen2.5-coder:7b"
 CACHE = Path(__file__).parent / ".runtime/explanations"
+
+
+def explanation_backend():
+    return 'ollama' if os.environ.get('ZIKEY_EXPLANATION_BACKEND') == 'ollama' else 'template'
 
 
 def evidence_for(data, character, known, weights, heat=None):
@@ -37,6 +42,10 @@ def evidence_for(data, character, known, weights, heat=None):
 
 def explain(data, character, known, weights, heat=None, *, model=MODEL, timeout=60):
     facts = evidence_for(data, character, known, weights, heat)
+    if explanation_backend() == 'template':
+        return {'sentences': facts[:1] + facts[2:3],
+                'mode': 'Template explanation · computed evidence · no AI request',
+                'model': None, 'cached': False}
     key = hashlib.sha256(json.dumps([model, facts], ensure_ascii=False).encode()).hexdigest()
     target = CACHE / f"{key}.json"
     if target.exists():

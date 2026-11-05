@@ -13,6 +13,8 @@ Open https://share.streamlit.io/ and choose Create app → deploy from GitHub.
 The platform installs requirements.txt; static serving is enabled in .streamlit/config.toml.
 Do not upload .venv, .runtime, .build, raw snapshots or secrets.
 
+The default explanation backend is template mode: no AI network request or paid API.
+To use a co-located Ollama service explicitly set `ZIKEY_EXPLANATION_BACKEND=ollama`.
 The hosted server cannot reach Ollama on your Mac. Without a co-located Ollama service,
 Explain uses the explicitly labelled template fallback; ranking and all linked views still work.
 The deployment does not claim hosted LLM inference is enabled.

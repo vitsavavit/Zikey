@@ -11,6 +11,9 @@ from explain import evidence_for, explain
 
 class ExplanationTests(unittest.TestCase):
     def setUp(self):
+        self.backend_patch = patch.dict('os.environ', {'ZIKEY_EXPLANATION_BACKEND': 'ollama'})
+        self.backend_patch.start()
+        self.addCleanup(self.backend_patch.stop)
         self.data = Dataset.load()
         self.known = SEED_KNOWN & set(self.data.characters)
         self.tmp = tempfile.TemporaryDirectory()
@@ -18,6 +21,17 @@ class ExplanationTests(unittest.TestCase):
         self.cache_patch = patch("explain.CACHE", Path(self.tmp.name))
         self.cache_patch.start()
         self.addCleanup(self.cache_patch.stop)
+
+    @patch('explain.requests.post')
+    def test_template_mode_never_calls_model_or_reads_cached_ai_output(self, post):
+        explain(self.data, '請', self.known, PRESETS['Default'])
+        with patch.dict('os.environ', {'ZIKEY_EXPLANATION_BACKEND': 'template'}):
+            post.reset_mock()
+            result = explain(self.data, '請', self.known, PRESETS['Default'])
+            post.assert_not_called()
+            self.assertIn('no AI request', result['mode'])
+            self.assertIsNone(result['model'])
+            self.assertFalse(result['cached'])
 
     @patch("explain.requests.post")
     def test_unsupported_model_output_uses_labelled_fallback(self, post):

@@ -6,7 +6,7 @@ from pathlib import Path
 import streamlit as st
 
 from core import Dataset, SIGNALS
-from explain import evidence_for, explain
+from explain import evidence_for, explain, explanation_backend
 from workflow import initial_state, apply_action, heat_for
 from component_assets import workspace_assets
 
@@ -114,10 +114,12 @@ if explanation:
     ai_status = explanation['mode'] + (' · cached' if explanation.get('cached') else '')
 elif selected:
     rationale = evidence_for(data, selected, known, state['weights'], heat)[0]
-    ai_status = 'Computed evidence · local LLM available on request'
+    ai_status = ('Computed evidence · local LLM available on request' if explanation_backend() == 'ollama'
+                 else 'Template mode · computed evidence · no AI request')
 else:
     rationale = 'Choose a character to see why it is useful for your current knowledge.'
-    ai_status = 'Local inference · no paid API'
+    ai_status = ('Local inference · no paid API' if explanation_backend() == 'ollama'
+                 else 'Template mode · no paid API or model request')
 if selected_score and not selected_score['score']:
     rationale = 'No active signal contributes to this score. Adjust weights or collect lookup data.'
 
@@ -129,7 +131,8 @@ payload = {**{k: v for k, v in state.items() if k not in ('events', 'explanation
            'nodes': nodes, 'links': [{'source': a, 'target': b, 'kinds': sorted(k)} for (a, b), k in links.items()],
            'graph_key': graph_key, 'ring_words': ring, 'related_count': len(related),
            'unlocks': data.unlocks(selected, known) if selected else [],
-           'rationale': rationale, 'ai_status': ai_status, 'coverage': data.coverage(known),
+           'rationale': rationale, 'ai_status': ai_status, 'explanation_backend': explanation_backend(),
+           'coverage': data.coverage(known),
            'curves': compare(tuple(sorted(known)), tuple(state['weights']), tuple(sorted(heat.items()))),
            'quality': json.loads((ROOT/'data/processed/quality_report.json').read_text()),
            'radical_count': len({e['radical'] for e in data.characters.values()}),

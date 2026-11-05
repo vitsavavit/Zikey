@@ -7418,6 +7418,7 @@
           "simplified": "我"
         }
       ],
+      "dictionary_headword": "我",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7440,6 +7441,7 @@
           "simplified": "你"
         }
       ],
+      "dictionary_headword": "你",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7467,6 +7469,7 @@
           "simplified": "奶"
         }
       ],
+      "dictionary_headword": "妳",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7489,6 +7492,7 @@
           "simplified": "他"
         }
       ],
+      "dictionary_headword": "他",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7511,6 +7515,7 @@
           "simplified": "她"
         }
       ],
+      "dictionary_headword": "她",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7533,6 +7538,7 @@
           "simplified": "我们"
         }
       ],
+      "dictionary_headword": "我們",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7555,6 +7561,7 @@
           "simplified": "你们"
         }
       ],
+      "dictionary_headword": "你們",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7566,11 +7573,18 @@
       "band": "Novice",
       "sheet": "準備級一級(Novice 1)",
       "row": 6,
-      "meaning": "Not available",
-      "sense_status": "Missing dictionary entry",
+      "meaning": "you (plural)",
+      "sense_status": "Variant spelling — dictionary entry 你們",
       "part_of_speech": "N",
       "context": "個人資料",
-      "dictionary_readings": [],
+      "dictionary_readings": [
+        {
+          "pinyin": "ni3 men5",
+          "meaning": "you (plural)",
+          "simplified": "你们"
+        }
+      ],
+      "dictionary_headword": "你們",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7593,6 +7607,7 @@
           "simplified": "他们"
         }
       ],
+      "dictionary_headword": "他們",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7615,6 +7630,7 @@
           "simplified": "她们"
         }
       ],
+      "dictionary_headword": "她們",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7637,6 +7653,7 @@
           "simplified": "您"
         }
       ],
+      "dictionary_headword": "您",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7659,6 +7676,7 @@
           "simplified": "谁"
         }
       ],
+      "dictionary_headword": "誰",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7681,6 +7699,7 @@
           "simplified": "姓名"
         }
       ],
+      "dictionary_headword": "姓名",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7703,6 +7722,7 @@
           "simplified": "人"
         }
       ],
+      "dictionary_headword": "人",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7730,6 +7750,7 @@
           "simplified": "国"
         }
       ],
+      "dictionary_headword": "國",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7752,6 +7773,7 @@
           "simplified": "中国"
         }
       ],
+      "dictionary_headword": "中國",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7774,6 +7796,7 @@
           "simplified": "美国"
         }
       ],
+      "dictionary_headword": "美國",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7796,6 +7819,7 @@
           "simplified": "日本"
         }
       ],
+      "dictionary_headword": "日本",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7818,6 +7842,7 @@
           "simplified": "台湾"
         }
       ],
+      "dictionary_headword": "台灣",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7840,6 +7865,7 @@
           "simplified": "台湾"
         }
       ],
+      "dictionary_headword": "臺灣",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7862,6 +7888,7 @@
           "simplified": "家"
         }
       ],
+      "dictionary_headword": "家",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7884,6 +7911,7 @@
           "simplified": "电话"
         }
       ],
+      "dictionary_headword": "電話",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7906,6 +7934,7 @@
           "simplified": "时间"
         }
       ],
+      "dictionary_headword": "時間",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7928,6 +7957,7 @@
           "simplified": "小时"
         }
       ],
+      "dictionary_headword": "小時",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7950,6 +7980,7 @@
           "simplified": "现在"
         }
       ],
+      "dictionary_headword": "現在",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7972,6 +8003,7 @@
           "simplified": "今年"
         }
       ],
+      "dictionary_headword": "今年",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -7994,6 +8026,7 @@
           "simplified": "今天"
         }
       ],
+      "dictionary_headword": "今天",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8016,6 +8049,7 @@
           "simplified": "明天"
         }
       ],
+      "dictionary_headword": "明天",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8038,6 +8072,7 @@
           "simplified": "昨天"
         }
       ],
+      "dictionary_headword": "昨天",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8060,6 +8095,7 @@
           "simplified": "早上"
         }
       ],
+      "dictionary_headword": "早上",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8082,6 +8118,7 @@
           "simplified": "上午"
         }
       ],
+      "dictionary_headword": "上午",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8104,6 +8141,7 @@
           "simplified": "中午"
         }
       ],
+      "dictionary_headword": "中午",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8126,6 +8164,7 @@
           "simplified": "下午"
         }
       ],
+      "dictionary_headword": "下午",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8148,6 +8187,7 @@
           "simplified": "晚上"
         }
       ],
+      "dictionary_headword": "晚上",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8170,6 +8210,7 @@
           "simplified": "一"
         }
       ],
+      "dictionary_headword": "一",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8192,6 +8233,7 @@
           "simplified": "二"
         }
       ],
+      "dictionary_headword": "二",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8219,6 +8261,7 @@
           "simplified": "三"
         }
       ],
+      "dictionary_headword": "三",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8241,6 +8284,7 @@
           "simplified": "四"
         }
       ],
+      "dictionary_headword": "四",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8263,6 +8307,7 @@
           "simplified": "五"
         }
       ],
+      "dictionary_headword": "五",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8290,6 +8335,7 @@
           "simplified": "六"
         }
       ],
+      "dictionary_headword": "六",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8312,6 +8358,7 @@
           "simplified": "七"
         }
       ],
+      "dictionary_headword": "七",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8334,6 +8381,7 @@
           "simplified": "八"
         }
       ],
+      "dictionary_headword": "八",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8356,6 +8404,7 @@
           "simplified": "九"
         }
       ],
+      "dictionary_headword": "九",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8378,6 +8427,7 @@
           "simplified": "十"
         }
       ],
+      "dictionary_headword": "十",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8400,6 +8450,7 @@
           "simplified": "两"
         }
       ],
+      "dictionary_headword": "兩",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8422,6 +8473,7 @@
           "simplified": "时候"
         }
       ],
+      "dictionary_headword": "時候",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8449,6 +8501,7 @@
           "simplified": "百"
         }
       ],
+      "dictionary_headword": "百",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8471,6 +8524,7 @@
           "simplified": "半"
         }
       ],
+      "dictionary_headword": "半",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8493,6 +8547,7 @@
           "simplified": "千"
         }
       ],
+      "dictionary_headword": "千",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8515,6 +8570,7 @@
           "simplified": "爸"
         }
       ],
+      "dictionary_headword": "爸",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8537,6 +8593,7 @@
           "simplified": "爸爸"
         }
       ],
+      "dictionary_headword": "爸爸",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8559,6 +8616,7 @@
           "simplified": "妈"
         }
       ],
+      "dictionary_headword": "媽",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8581,6 +8639,7 @@
           "simplified": "妈妈"
         }
       ],
+      "dictionary_headword": "媽媽",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8603,6 +8662,7 @@
           "simplified": "哥"
         }
       ],
+      "dictionary_headword": "哥",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8625,6 +8685,7 @@
           "simplified": "哥哥"
         }
       ],
+      "dictionary_headword": "哥哥",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8652,6 +8713,7 @@
           "simplified": "弟"
         }
       ],
+      "dictionary_headword": "弟",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8674,6 +8736,7 @@
           "simplified": "弟弟"
         }
       ],
+      "dictionary_headword": "弟弟",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8696,6 +8759,7 @@
           "simplified": "姊"
         }
       ],
+      "dictionary_headword": "姊",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8718,6 +8782,7 @@
           "simplified": "姊姊"
         }
       ],
+      "dictionary_headword": "姊姊",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8740,6 +8805,7 @@
           "simplified": "姐"
         }
       ],
+      "dictionary_headword": "姐",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8762,6 +8828,7 @@
           "simplified": "姐姐"
         }
       ],
+      "dictionary_headword": "姐姐",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8784,6 +8851,7 @@
           "simplified": "妹"
         }
       ],
+      "dictionary_headword": "妹",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8806,6 +8874,7 @@
           "simplified": "妹妹"
         }
       ],
+      "dictionary_headword": "妹妹",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8843,6 +8912,7 @@
           "simplified": "的"
         }
       ],
+      "dictionary_headword": "的",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8865,6 +8935,7 @@
           "simplified": "第"
         }
       ],
+      "dictionary_headword": "第",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8892,6 +8963,7 @@
           "simplified": "分"
         }
       ],
+      "dictionary_headword": "分",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8914,6 +8986,7 @@
           "simplified": "点"
         }
       ],
+      "dictionary_headword": "點",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8941,6 +9014,7 @@
           "simplified": "个"
         }
       ],
+      "dictionary_headword": "個",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8963,6 +9037,7 @@
           "simplified": "岁"
         }
       ],
+      "dictionary_headword": "歲",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -8990,6 +9065,7 @@
           "simplified": "年"
         }
       ],
+      "dictionary_headword": "年",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9012,6 +9088,7 @@
           "simplified": "住"
         }
       ],
+      "dictionary_headword": "住",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9034,6 +9111,7 @@
           "simplified": "来"
         }
       ],
+      "dictionary_headword": "來",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9056,6 +9134,7 @@
           "simplified": "是"
         }
       ],
+      "dictionary_headword": "是",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9078,6 +9157,7 @@
           "simplified": "姓"
         }
       ],
+      "dictionary_headword": "姓",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9100,6 +9180,7 @@
           "simplified": "觉得"
         }
       ],
+      "dictionary_headword": "覺得",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9122,6 +9203,7 @@
           "simplified": "喜欢"
         }
       ],
+      "dictionary_headword": "喜歡",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9144,6 +9226,7 @@
           "simplified": "打电话"
         }
       ],
+      "dictionary_headword": "打電話",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9166,6 +9249,7 @@
           "simplified": "漂亮"
         }
       ],
+      "dictionary_headword": "漂亮",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9193,6 +9277,7 @@
           "simplified": "高"
         }
       ],
+      "dictionary_headword": "高",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9215,6 +9300,7 @@
           "simplified": "老"
         }
       ],
+      "dictionary_headword": "老",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9242,6 +9328,7 @@
           "simplified": "好"
         }
       ],
+      "dictionary_headword": "好",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9264,6 +9351,7 @@
           "simplified": "很"
         }
       ],
+      "dictionary_headword": "很",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9286,6 +9374,7 @@
           "simplified": "真"
         }
       ],
+      "dictionary_headword": "真",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9308,6 +9397,7 @@
           "simplified": "电脑"
         }
       ],
+      "dictionary_headword": "電腦",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9330,6 +9420,7 @@
           "simplified": "老师"
         }
       ],
+      "dictionary_headword": "老師",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9352,6 +9443,7 @@
           "simplified": "买"
         }
       ],
+      "dictionary_headword": "買",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9374,6 +9466,7 @@
           "simplified": "忙"
         }
       ],
+      "dictionary_headword": "忙",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9396,6 +9489,7 @@
           "simplified": "学生"
         }
       ],
+      "dictionary_headword": "學生",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9423,6 +9517,7 @@
           "simplified": "大学"
         }
       ],
+      "dictionary_headword": "大學",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9445,6 +9540,7 @@
           "simplified": "学校"
         }
       ],
+      "dictionary_headword": "學校",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9467,6 +9563,7 @@
           "simplified": "中文"
         }
       ],
+      "dictionary_headword": "中文",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9489,6 +9586,7 @@
           "simplified": "同学"
         }
       ],
+      "dictionary_headword": "同學",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9511,6 +9609,7 @@
           "simplified": "字"
         }
       ],
+      "dictionary_headword": "字",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9533,6 +9632,7 @@
           "simplified": "笔"
         }
       ],
+      "dictionary_headword": "筆",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9555,6 +9655,7 @@
           "simplified": "学"
         }
       ],
+      "dictionary_headword": "學",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9577,6 +9678,7 @@
           "simplified": "问"
         }
       ],
+      "dictionary_headword": "問",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9604,6 +9706,7 @@
           "simplified": "说"
         }
       ],
+      "dictionary_headword": "說",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9631,6 +9734,7 @@
           "simplified": "写"
         }
       ],
+      "dictionary_headword": "寫",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9653,6 +9757,7 @@
           "simplified": "听"
         }
       ],
+      "dictionary_headword": "聽",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9675,6 +9780,7 @@
           "simplified": "对"
         }
       ],
+      "dictionary_headword": "對",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9702,6 +9808,7 @@
           "simplified": "能"
         }
       ],
+      "dictionary_headword": "能",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9724,6 +9831,7 @@
           "simplified": "可以"
         }
       ],
+      "dictionary_headword": "可以",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9746,6 +9854,7 @@
           "simplified": "上课"
         }
       ],
+      "dictionary_headword": "上課",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9768,6 +9877,7 @@
           "simplified": "知道"
         }
       ],
+      "dictionary_headword": "知道",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9795,6 +9905,7 @@
           "simplified": "水"
         }
       ],
+      "dictionary_headword": "水",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9817,6 +9928,7 @@
           "simplified": "久"
         }
       ],
+      "dictionary_headword": "久",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9839,6 +9951,7 @@
           "simplified": "早"
         }
       ],
+      "dictionary_headword": "早",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9861,6 +9974,7 @@
           "simplified": "再"
         }
       ],
+      "dictionary_headword": "再",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9888,6 +10002,7 @@
           "simplified": "书"
         }
       ],
+      "dictionary_headword": "書",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9910,6 +10025,7 @@
           "simplified": "电影"
         }
       ],
+      "dictionary_headword": "電影",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9932,6 +10048,7 @@
           "simplified": "以前"
         }
       ],
+      "dictionary_headword": "以前",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9954,6 +10071,7 @@
           "simplified": "以后"
         }
       ],
+      "dictionary_headword": "以後",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9976,6 +10094,7 @@
           "simplified": "走"
         }
       ],
+      "dictionary_headword": "走",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -9998,6 +10117,7 @@
           "simplified": "等"
         }
       ],
+      "dictionary_headword": "等",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10025,6 +10145,7 @@
           "simplified": "看"
         }
       ],
+      "dictionary_headword": "看",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10047,6 +10168,7 @@
           "simplified": "就"
         }
       ],
+      "dictionary_headword": "就",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10069,6 +10191,7 @@
           "simplified": "什么"
         }
       ],
+      "dictionary_headword": "什麼",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10080,11 +10203,18 @@
       "band": "Novice",
       "sheet": "準備級一級(Novice 1)",
       "row": 108,
-      "meaning": "Not available",
-      "sense_status": "Missing dictionary entry",
+      "meaning": "what?/something; anything",
+      "sense_status": "Variant spelling — dictionary entry 什麼",
       "part_of_speech": "N",
       "context": "與他人的關係",
-      "dictionary_readings": [],
+      "dictionary_readings": [
+        {
+          "pinyin": "shen2 me5",
+          "meaning": "what?/something; anything",
+          "simplified": "什么"
+        }
+      ],
+      "dictionary_headword": "什麼",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10107,6 +10237,7 @@
           "simplified": "朋友"
         }
       ],
+      "dictionary_headword": "朋友",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10134,6 +10265,7 @@
           "simplified": "东西"
         }
       ],
+      "dictionary_headword": "東西",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10166,6 +10298,7 @@
           "simplified": "吧"
         }
       ],
+      "dictionary_headword": "吧",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10193,6 +10326,7 @@
           "simplified": "呢"
         }
       ],
+      "dictionary_headword": "呢",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10225,6 +10359,7 @@
           "simplified": "吗"
         }
       ],
+      "dictionary_headword": "嗎",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10247,6 +10382,7 @@
           "simplified": "找"
         }
       ],
+      "dictionary_headword": "找",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10269,6 +10405,7 @@
           "simplified": "做"
         }
       ],
+      "dictionary_headword": "做",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10291,6 +10428,7 @@
           "simplified": "再见"
         }
       ],
+      "dictionary_headword": "再見",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10313,6 +10451,7 @@
           "simplified": "怎么样"
         }
       ],
+      "dictionary_headword": "怎麼樣",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10335,6 +10474,7 @@
           "simplified": "叫"
         }
       ],
+      "dictionary_headword": "叫",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10357,6 +10497,7 @@
           "simplified": "谢谢"
         }
       ],
+      "dictionary_headword": "謝謝",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10379,6 +10520,7 @@
           "simplified": "对不起"
         }
       ],
+      "dictionary_headword": "對不起",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10401,6 +10543,7 @@
           "simplified": "请问"
         }
       ],
+      "dictionary_headword": "請問",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10428,6 +10571,7 @@
           "simplified": "这"
         }
       ],
+      "dictionary_headword": "這",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10470,6 +10614,7 @@
           "simplified": "那"
         }
       ],
+      "dictionary_headword": "那",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10492,6 +10637,7 @@
           "simplified": "公共汽车"
         }
       ],
+      "dictionary_headword": "公共汽車",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10514,6 +10660,7 @@
           "simplified": "公车"
         }
       ],
+      "dictionary_headword": "公車",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10536,6 +10683,7 @@
           "simplified": "到"
         }
       ],
+      "dictionary_headword": "到",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10558,6 +10706,7 @@
           "simplified": "去"
         }
       ],
+      "dictionary_headword": "去",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10585,6 +10734,7 @@
           "simplified": "回"
         }
       ],
+      "dictionary_headword": "回",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10612,6 +10762,7 @@
           "simplified": "坐"
         }
       ],
+      "dictionary_headword": "坐",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10634,6 +10785,7 @@
           "simplified": "这儿"
         }
       ],
+      "dictionary_headword": "這兒",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10656,6 +10808,7 @@
           "simplified": "这里"
         }
       ],
+      "dictionary_headword": "這裏",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10678,6 +10831,7 @@
           "simplified": "这里"
         }
       ],
+      "dictionary_headword": "這裡",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10700,6 +10854,7 @@
           "simplified": "那儿"
         }
       ],
+      "dictionary_headword": "那兒",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10722,6 +10877,7 @@
           "simplified": "那里"
         }
       ],
+      "dictionary_headword": "那裏",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10744,6 +10900,7 @@
           "simplified": "那里"
         }
       ],
+      "dictionary_headword": "那裡",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10766,6 +10923,7 @@
           "simplified": "哪儿"
         }
       ],
+      "dictionary_headword": "哪兒",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10788,6 +10946,7 @@
           "simplified": "哪里"
         }
       ],
+      "dictionary_headword": "哪裏",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10810,6 +10969,7 @@
           "simplified": "哪里"
         }
       ],
+      "dictionary_headword": "哪裡",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10832,6 +10992,7 @@
           "simplified": "开车"
         }
       ],
+      "dictionary_headword": "開車",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10859,6 +11020,7 @@
           "simplified": "钱"
         }
       ],
+      "dictionary_headword": "錢",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10886,6 +11048,7 @@
           "simplified": "多少"
         }
       ],
+      "dictionary_headword": "多少",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10913,6 +11076,7 @@
           "simplified": "给"
         }
       ],
+      "dictionary_headword": "給",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10940,6 +11104,7 @@
           "simplified": "贵"
         }
       ],
+      "dictionary_headword": "貴",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10967,6 +11132,7 @@
           "simplified": "便宜"
         }
       ],
+      "dictionary_headword": "便宜",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -10994,6 +11160,7 @@
           "simplified": "大"
         }
       ],
+      "dictionary_headword": "大",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11016,6 +11183,7 @@
           "simplified": "小"
         }
       ],
+      "dictionary_headword": "小",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11043,6 +11211,7 @@
           "simplified": "难"
         }
       ],
+      "dictionary_headword": "難",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11065,6 +11234,7 @@
           "simplified": "容易"
         }
       ],
+      "dictionary_headword": "容易",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11087,6 +11257,7 @@
           "simplified": "有"
         }
       ],
+      "dictionary_headword": "有",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11109,6 +11280,7 @@
           "simplified": "想"
         }
       ],
+      "dictionary_headword": "想",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11136,6 +11308,7 @@
           "simplified": "几"
         }
       ],
+      "dictionary_headword": "幾",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11158,6 +11331,7 @@
           "simplified": "块"
         }
       ],
+      "dictionary_headword": "塊",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11180,6 +11354,7 @@
           "simplified": "位"
         }
       ],
+      "dictionary_headword": "位",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11202,6 +11377,7 @@
           "simplified": "饭"
         }
       ],
+      "dictionary_headword": "飯",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11224,6 +11400,7 @@
           "simplified": "吃"
         }
       ],
+      "dictionary_headword": "吃",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11246,6 +11423,7 @@
           "simplified": "请"
         }
       ],
+      "dictionary_headword": "請",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11273,6 +11451,7 @@
           "simplified": "也"
         }
       ],
+      "dictionary_headword": "也",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11295,6 +11474,7 @@
           "simplified": "不"
         }
       ],
+      "dictionary_headword": "不",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11322,6 +11502,7 @@
           "simplified": "没"
         }
       ],
+      "dictionary_headword": "沒",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11354,6 +11535,7 @@
           "simplified": "都"
         }
       ],
+      "dictionary_headword": "都",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11381,6 +11563,7 @@
           "simplified": "只"
         }
       ],
+      "dictionary_headword": "只",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11403,6 +11586,7 @@
           "simplified": "可是"
         }
       ],
+      "dictionary_headword": "可是",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11425,6 +11609,7 @@
           "simplified": "还是"
         }
       ],
+      "dictionary_headword": "還是",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11452,6 +11637,7 @@
           "simplified": "了"
         }
       ],
+      "dictionary_headword": "了",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11489,6 +11675,7 @@
           "simplified": "得"
         }
       ],
+      "dictionary_headword": "得",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11521,6 +11708,7 @@
           "simplified": "过"
         }
       ],
+      "dictionary_headword": "過",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11543,6 +11731,7 @@
           "simplified": "没有"
         }
       ],
+      "dictionary_headword": "沒有",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11565,6 +11754,7 @@
           "simplified": "男"
         }
       ],
+      "dictionary_headword": "男",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11592,6 +11782,7 @@
           "simplified": "女"
         }
       ],
+      "dictionary_headword": "女",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11614,6 +11805,7 @@
           "simplified": "孩子"
         }
       ],
+      "dictionary_headword": "孩子",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11636,6 +11828,7 @@
           "simplified": "小姐"
         }
       ],
+      "dictionary_headword": "小姐",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11658,6 +11851,7 @@
           "simplified": "先生"
         }
       ],
+      "dictionary_headword": "先生",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11680,6 +11874,7 @@
           "simplified": "太太"
         }
       ],
+      "dictionary_headword": "太太",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11702,6 +11897,7 @@
           "simplified": "女儿"
         }
       ],
+      "dictionary_headword": "女兒",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11724,6 +11920,7 @@
           "simplified": "儿子"
         }
       ],
+      "dictionary_headword": "兒子",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11746,6 +11943,7 @@
           "simplified": "大家"
         }
       ],
+      "dictionary_headword": "大家",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11773,6 +11971,7 @@
           "simplified": "路"
         }
       ],
+      "dictionary_headword": "路",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11795,6 +11994,7 @@
           "simplified": "手机"
         }
       ],
+      "dictionary_headword": "手機",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11817,6 +12017,7 @@
           "simplified": "明年"
         }
       ],
+      "dictionary_headword": "明年",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11839,6 +12040,7 @@
           "simplified": "去年"
         }
       ],
+      "dictionary_headword": "去年",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11861,6 +12063,7 @@
           "simplified": "生日"
         }
       ],
+      "dictionary_headword": "生日",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11883,6 +12086,7 @@
           "simplified": "月"
         }
       ],
+      "dictionary_headword": "月",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11905,6 +12109,7 @@
           "simplified": "日"
         }
       ],
+      "dictionary_headword": "日",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11927,6 +12132,7 @@
           "simplified": "星期"
         }
       ],
+      "dictionary_headword": "星期",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11949,6 +12155,7 @@
           "simplified": "星期天"
         }
       ],
+      "dictionary_headword": "星期天",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11971,6 +12178,7 @@
           "simplified": "星期日"
         }
       ],
+      "dictionary_headword": "星期日",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -11993,6 +12201,7 @@
           "simplified": "礼拜天"
         }
       ],
+      "dictionary_headword": "禮拜天",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12004,11 +12213,18 @@
       "band": "Novice",
       "sheet": "準備級二級(Novice 2)",
       "row": 21,
-      "meaning": "Not available",
-      "sense_status": "Missing dictionary entry",
+      "meaning": "weekend",
+      "sense_status": "Variant spelling — dictionary entry 週末",
       "part_of_speech": "N",
       "context": "個人資料",
-      "dictionary_readings": [],
+      "dictionary_readings": [
+        {
+          "pinyin": "zhou1 mo4",
+          "meaning": "weekend",
+          "simplified": "周末"
+        }
+      ],
+      "dictionary_headword": "週末",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12031,6 +12247,7 @@
           "simplified": "周末"
         }
       ],
+      "dictionary_headword": "週末",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12058,6 +12275,7 @@
           "simplified": "号"
         }
       ],
+      "dictionary_headword": "號",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12080,6 +12298,7 @@
           "simplified": "天"
         }
       ],
+      "dictionary_headword": "天",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12107,6 +12326,7 @@
           "simplified": "从"
         }
       ],
+      "dictionary_headword": "從",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12129,6 +12349,7 @@
           "simplified": "在"
         }
       ],
+      "dictionary_headword": "在",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12151,6 +12372,7 @@
           "simplified": "爱"
         }
       ],
+      "dictionary_headword": "愛",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12173,6 +12395,7 @@
           "simplified": "快乐"
         }
       ],
+      "dictionary_headword": "快樂",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12195,6 +12418,7 @@
           "simplified": "太"
         }
       ],
+      "dictionary_headword": "太",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12217,6 +12441,7 @@
           "simplified": "公园"
         }
       ],
+      "dictionary_headword": "公園",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12239,6 +12464,7 @@
           "simplified": "国家"
         }
       ],
+      "dictionary_headword": "國家",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12261,6 +12487,7 @@
           "simplified": "分钟"
         }
       ],
+      "dictionary_headword": "分鐘",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12283,6 +12510,7 @@
           "simplified": "家人"
         }
       ],
+      "dictionary_headword": "家人",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12310,6 +12538,7 @@
           "simplified": "胖"
         }
       ],
+      "dictionary_headword": "胖",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12332,6 +12561,7 @@
           "simplified": "矮"
         }
       ],
+      "dictionary_headword": "矮",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12354,6 +12584,7 @@
           "simplified": "瘦"
         }
       ],
+      "dictionary_headword": "瘦",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12381,6 +12612,7 @@
           "simplified": "万"
         }
       ],
+      "dictionary_headword": "萬",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12403,6 +12635,7 @@
           "simplified": "钟头"
         }
       ],
+      "dictionary_headword": "鐘頭",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12425,6 +12658,7 @@
           "simplified": "晚"
         }
       ],
+      "dictionary_headword": "晚",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12447,6 +12681,7 @@
           "simplified": "前天"
         }
       ],
+      "dictionary_headword": "前天",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12469,6 +12704,7 @@
           "simplified": "后天"
         }
       ],
+      "dictionary_headword": "後天",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12491,6 +12727,7 @@
           "simplified": "前年"
         }
       ],
+      "dictionary_headword": "前年",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12513,6 +12750,7 @@
           "simplified": "后年"
         }
       ],
+      "dictionary_headword": "後年",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12535,6 +12773,7 @@
           "simplified": "自己"
         }
       ],
+      "dictionary_headword": "自己",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12557,6 +12796,7 @@
           "simplified": "它"
         }
       ],
+      "dictionary_headword": "它",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12579,6 +12819,7 @@
           "simplified": "它们"
         }
       ],
+      "dictionary_headword": "它們",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12601,6 +12842,7 @@
           "simplified": "最"
         }
       ],
+      "dictionary_headword": "最",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12628,6 +12870,7 @@
           "simplified": "怕"
         }
       ],
+      "dictionary_headword": "怕",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12655,6 +12898,7 @@
           "simplified": "美"
         }
       ],
+      "dictionary_headword": "美",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12687,6 +12931,7 @@
           "simplified": "应"
         }
       ],
+      "dictionary_headword": "應",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12709,6 +12954,7 @@
           "simplified": "应该"
         }
       ],
+      "dictionary_headword": "應該",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12731,6 +12977,7 @@
           "simplified": "真的"
         }
       ],
+      "dictionary_headword": "真的",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12753,6 +13000,7 @@
           "simplified": "非常"
         }
       ],
+      "dictionary_headword": "非常",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12775,6 +13023,7 @@
           "simplified": "工作"
         }
       ],
+      "dictionary_headword": "工作",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12797,6 +13046,7 @@
           "simplified": "医师"
         }
       ],
+      "dictionary_headword": "醫師",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12819,6 +13069,7 @@
           "simplified": "医生"
         }
       ],
+      "dictionary_headword": "醫生",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12841,6 +13092,7 @@
           "simplified": "一点"
         }
       ],
+      "dictionary_headword": "一點",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12863,6 +13115,7 @@
           "simplified": "一点儿"
         }
       ],
+      "dictionary_headword": "一點兒",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12885,6 +13138,7 @@
           "simplified": "一点点"
         }
       ],
+      "dictionary_headword": "一點點",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12907,6 +13161,7 @@
           "simplified": "一些"
         }
       ],
+      "dictionary_headword": "一些",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12929,6 +13184,7 @@
           "simplified": "本"
         }
       ],
+      "dictionary_headword": "本",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12956,6 +13212,7 @@
           "simplified": "张"
         }
       ],
+      "dictionary_headword": "張",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -12978,6 +13235,7 @@
           "simplified": "英文"
         }
       ],
+      "dictionary_headword": "英文",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13000,6 +13258,7 @@
           "simplified": "纸"
         }
       ],
+      "dictionary_headword": "紙",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13022,6 +13281,7 @@
           "simplified": "问题"
         }
       ],
+      "dictionary_headword": "問題",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13044,6 +13304,7 @@
           "simplified": "意思"
         }
       ],
+      "dictionary_headword": "意思",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13066,6 +13327,7 @@
           "simplified": "饭馆"
         }
       ],
+      "dictionary_headword": "飯館",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13088,6 +13350,7 @@
           "simplified": "餐厅"
         }
       ],
+      "dictionary_headword": "餐廳",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13110,6 +13373,7 @@
           "simplified": "画"
         }
       ],
+      "dictionary_headword": "畫",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13132,6 +13396,7 @@
           "simplified": "画儿"
         }
       ],
+      "dictionary_headword": "畫兒",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13159,6 +13424,7 @@
           "simplified": "读"
         }
       ],
+      "dictionary_headword": "讀",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13186,6 +13452,7 @@
           "simplified": "会"
         }
       ],
+      "dictionary_headword": "會",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13208,6 +13475,7 @@
           "simplified": "为什么"
         }
       ],
+      "dictionary_headword": "為什麼",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13230,6 +13498,7 @@
           "simplified": "下课"
         }
       ],
+      "dictionary_headword": "下課",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13252,6 +13521,7 @@
           "simplified": "说话"
         }
       ],
+      "dictionary_headword": "說話",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13274,6 +13544,7 @@
           "simplified": "考试"
         }
       ],
+      "dictionary_headword": "考試",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13296,6 +13567,7 @@
           "simplified": "懂"
         }
       ],
+      "dictionary_headword": "懂",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13318,6 +13590,7 @@
           "simplified": "念"
         }
       ],
+      "dictionary_headword": "唸",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13340,6 +13613,7 @@
           "simplified": "念"
         }
       ],
+      "dictionary_headword": "念",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13362,6 +13636,7 @@
           "simplified": "课"
         }
       ],
+      "dictionary_headword": "課",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13394,6 +13669,7 @@
           "simplified": "教"
         }
       ],
+      "dictionary_headword": "教",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13421,6 +13697,7 @@
           "simplified": "告诉"
         }
       ],
+      "dictionary_headword": "告訴",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13448,6 +13725,7 @@
           "simplified": "错"
         }
       ],
+      "dictionary_headword": "錯",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13470,6 +13748,7 @@
           "simplified": "功课"
         }
       ],
+      "dictionary_headword": "功課",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13492,6 +13771,7 @@
           "simplified": "教室"
         }
       ],
+      "dictionary_headword": "教室",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13514,6 +13794,7 @@
           "simplified": "句子"
         }
       ],
+      "dictionary_headword": "句子",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13536,6 +13817,7 @@
           "simplified": "休息"
         }
       ],
+      "dictionary_headword": "休息",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13558,6 +13840,7 @@
           "simplified": "房间"
         }
       ],
+      "dictionary_headword": "房間",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13585,6 +13868,7 @@
           "simplified": "楼"
         }
       ],
+      "dictionary_headword": "樓",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13612,6 +13896,7 @@
           "simplified": "门"
         }
       ],
+      "dictionary_headword": "門",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13634,6 +13919,7 @@
           "simplified": "门口"
         }
       ],
+      "dictionary_headword": "門口",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13656,6 +13942,7 @@
           "simplified": "床"
         }
       ],
+      "dictionary_headword": "床",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13678,6 +13965,7 @@
           "simplified": "开"
         }
       ],
+      "dictionary_headword": "開",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13700,6 +13988,7 @@
           "simplified": "低"
         }
       ],
+      "dictionary_headword": "低",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13722,6 +14011,7 @@
           "simplified": "不错"
         }
       ],
+      "dictionary_headword": "不錯",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13744,6 +14034,7 @@
           "simplified": "天气"
         }
       ],
+      "dictionary_headword": "天氣",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13766,6 +14057,7 @@
           "simplified": "空气"
         }
       ],
+      "dictionary_headword": "空氣",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13793,6 +14085,7 @@
           "simplified": "冷"
         }
       ],
+      "dictionary_headword": "冷",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13815,6 +14108,7 @@
           "simplified": "热"
         }
       ],
+      "dictionary_headword": "熱",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13842,6 +14136,7 @@
           "simplified": "雨"
         }
       ],
+      "dictionary_headword": "雨",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13864,6 +14159,7 @@
           "simplified": "下雨"
         }
       ],
+      "dictionary_headword": "下雨",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13886,6 +14182,7 @@
           "simplified": "风"
         }
       ],
+      "dictionary_headword": "風",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13913,6 +14210,7 @@
           "simplified": "山"
         }
       ],
+      "dictionary_headword": "山",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13940,6 +14238,7 @@
           "simplified": "花"
         }
       ],
+      "dictionary_headword": "花",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13967,6 +14266,7 @@
           "simplified": "花儿"
         }
       ],
+      "dictionary_headword": "花兒",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -13989,6 +14289,7 @@
           "simplified": "枝"
         }
       ],
+      "dictionary_headword": "枝",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14016,6 +14317,7 @@
           "simplified": "鱼"
         }
       ],
+      "dictionary_headword": "魚",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14038,6 +14340,7 @@
           "simplified": "鸡"
         }
       ],
+      "dictionary_headword": "雞",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14065,6 +14368,7 @@
           "simplified": "牛"
         }
       ],
+      "dictionary_headword": "牛",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14087,6 +14391,7 @@
           "simplified": "猪"
         }
       ],
+      "dictionary_headword": "豬",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14109,6 +14414,7 @@
           "simplified": "咖啡"
         }
       ],
+      "dictionary_headword": "咖啡",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14131,6 +14437,7 @@
           "simplified": "茶"
         }
       ],
+      "dictionary_headword": "茶",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14153,6 +14460,7 @@
           "simplified": "用"
         }
       ],
+      "dictionary_headword": "用",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14175,6 +14483,7 @@
           "simplified": "穿"
         }
       ],
+      "dictionary_headword": "穿",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14197,6 +14506,7 @@
           "simplified": "起床"
         }
       ],
+      "dictionary_headword": "起床",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14219,6 +14529,7 @@
           "simplified": "方便"
         }
       ],
+      "dictionary_headword": "方便",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14241,6 +14552,7 @@
           "simplified": "睡觉"
         }
       ],
+      "dictionary_headword": "睡覺",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14268,6 +14580,7 @@
           "simplified": "起来"
         }
       ],
+      "dictionary_headword": "起來",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14290,6 +14603,7 @@
           "simplified": "先"
         }
       ],
+      "dictionary_headword": "先",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14317,6 +14631,7 @@
           "simplified": "常"
         }
       ],
+      "dictionary_headword": "常",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14339,6 +14654,7 @@
           "simplified": "常常"
         }
       ],
+      "dictionary_headword": "常常",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14361,6 +14677,7 @@
           "simplified": "每"
         }
       ],
+      "dictionary_headword": "每",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14388,6 +14705,7 @@
           "simplified": "打"
         }
       ],
+      "dictionary_headword": "打",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14410,6 +14728,7 @@
           "simplified": "玩"
         }
       ],
+      "dictionary_headword": "玩",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14432,6 +14751,7 @@
           "simplified": "运动"
         }
       ],
+      "dictionary_headword": "運動",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14454,6 +14774,7 @@
           "simplified": "走路"
         }
       ],
+      "dictionary_headword": "走路",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14476,6 +14797,7 @@
           "simplified": "唱歌"
         }
       ],
+      "dictionary_headword": "唱歌",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14498,6 +14820,7 @@
           "simplified": "跳"
         }
       ],
+      "dictionary_headword": "跳",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14530,6 +14853,7 @@
           "simplified": "还"
         }
       ],
+      "dictionary_headword": "還",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14552,6 +14876,7 @@
           "simplified": "唱"
         }
       ],
+      "dictionary_headword": "唱",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14574,6 +14899,7 @@
           "simplified": "歌"
         }
       ],
+      "dictionary_headword": "歌",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14596,6 +14922,7 @@
           "simplified": "跳舞"
         }
       ],
+      "dictionary_headword": "跳舞",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14618,6 +14945,7 @@
           "simplified": "又"
         }
       ],
+      "dictionary_headword": "又",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14640,6 +14968,7 @@
           "simplified": "球"
         }
       ],
+      "dictionary_headword": "球",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14662,6 +14991,7 @@
           "simplified": "介绍"
         }
       ],
+      "dictionary_headword": "介紹",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14684,6 +15014,7 @@
           "simplified": "事"
         }
       ],
+      "dictionary_headword": "事",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14706,6 +15037,7 @@
           "simplified": "事儿"
         }
       ],
+      "dictionary_headword": "事兒",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14728,6 +15060,7 @@
           "simplified": "怎么"
         }
       ],
+      "dictionary_headword": "怎麼",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14765,6 +15098,7 @@
           "simplified": "哪"
         }
       ],
+      "dictionary_headword": "哪",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14787,6 +15121,7 @@
           "simplified": "里"
         }
       ],
+      "dictionary_headword": "裏",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14809,6 +15144,7 @@
           "simplified": "里"
         }
       ],
+      "dictionary_headword": "裡",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14841,6 +15177,7 @@
           "simplified": "中"
         }
       ],
+      "dictionary_headword": "中",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14863,6 +15200,7 @@
           "simplified": "快"
         }
       ],
+      "dictionary_headword": "快",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14885,6 +15223,7 @@
           "simplified": "手"
         }
       ],
+      "dictionary_headword": "手",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14907,6 +15246,7 @@
           "simplified": "眼睛"
         }
       ],
+      "dictionary_headword": "眼睛",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14934,6 +15274,7 @@
           "simplified": "头"
         }
       ],
+      "dictionary_headword": "頭",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14956,6 +15297,7 @@
           "simplified": "一样"
         }
       ],
+      "dictionary_headword": "一樣",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -14983,6 +15325,7 @@
           "simplified": "见"
         }
       ],
+      "dictionary_headword": "見",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15005,6 +15348,7 @@
           "simplified": "看见"
         }
       ],
+      "dictionary_headword": "看見",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15027,6 +15371,7 @@
           "simplified": "听见"
         }
       ],
+      "dictionary_headword": "聽見",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15049,6 +15394,7 @@
           "simplified": "一共"
         }
       ],
+      "dictionary_headword": "一共",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15071,6 +15417,7 @@
           "simplified": "共"
         }
       ],
+      "dictionary_headword": "共",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15098,6 +15445,7 @@
           "simplified": "少"
         }
       ],
+      "dictionary_headword": "少",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15120,6 +15468,7 @@
           "simplified": "多"
         }
       ],
+      "dictionary_headword": "多",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15142,6 +15491,7 @@
           "simplified": "小吃"
         }
       ],
+      "dictionary_headword": "小吃",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15164,6 +15514,7 @@
           "simplified": "一起"
         }
       ],
+      "dictionary_headword": "一起",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15186,6 +15537,7 @@
           "simplified": "可能"
         }
       ],
+      "dictionary_headword": "可能",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15208,6 +15560,7 @@
           "simplified": "有一点"
         }
       ],
+      "dictionary_headword": "有一點",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15230,6 +15583,7 @@
           "simplified": "有一点儿"
         }
       ],
+      "dictionary_headword": "有一點兒",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15252,6 +15606,7 @@
           "simplified": "有点"
         }
       ],
+      "dictionary_headword": "有點",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15274,6 +15629,7 @@
           "simplified": "大人"
         }
       ],
+      "dictionary_headword": "大人",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15296,6 +15652,7 @@
           "simplified": "老人"
         }
       ],
+      "dictionary_headword": "老人",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15318,6 +15675,7 @@
           "simplified": "男生"
         }
       ],
+      "dictionary_headword": "男生",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15340,6 +15698,7 @@
           "simplified": "女生"
         }
       ],
+      "dictionary_headword": "女生",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15362,6 +15721,7 @@
           "simplified": "名"
         }
       ],
+      "dictionary_headword": "名",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15384,6 +15744,7 @@
           "simplified": "礼拜"
         }
       ],
+      "dictionary_headword": "禮拜",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15406,6 +15767,7 @@
           "simplified": "从前"
         }
       ],
+      "dictionary_headword": "從前",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15428,6 +15790,7 @@
           "simplified": "一会"
         }
       ],
+      "dictionary_headword": "一會",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15450,6 +15813,7 @@
           "simplified": "一会儿"
         }
       ],
+      "dictionary_headword": "一會兒",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15472,6 +15836,7 @@
           "simplified": "可爱"
         }
       ],
+      "dictionary_headword": "可愛",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15494,6 +15859,7 @@
           "simplified": "生气"
         }
       ],
+      "dictionary_headword": "生氣",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15516,6 +15882,7 @@
           "simplified": "难过"
         }
       ],
+      "dictionary_headword": "難過",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15538,6 +15905,7 @@
           "simplified": "工人"
         }
       ],
+      "dictionary_headword": "工人",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15560,6 +15928,7 @@
           "simplified": "机会"
         }
       ],
+      "dictionary_headword": "機會",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15582,6 +15951,7 @@
           "simplified": "小学"
         }
       ],
+      "dictionary_headword": "小學",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15609,6 +15979,7 @@
           "simplified": "高中"
         }
       ],
+      "dictionary_headword": "高中",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15631,6 +16002,7 @@
           "simplified": "上学"
         }
       ],
+      "dictionary_headword": "上學",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15653,6 +16025,7 @@
           "simplified": "开学"
         }
       ],
+      "dictionary_headword": "開學",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15675,6 +16048,7 @@
           "simplified": "课本"
         }
       ],
+      "dictionary_headword": "課本",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15697,6 +16071,7 @@
           "simplified": "读书"
         }
       ],
+      "dictionary_headword": "讀書",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15724,6 +16099,7 @@
           "simplified": "句"
         }
       ],
+      "dictionary_headword": "句",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15746,6 +16122,7 @@
           "simplified": "清楚"
         }
       ],
+      "dictionary_headword": "清楚",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15768,6 +16145,7 @@
           "simplified": "有用"
         }
       ],
+      "dictionary_headword": "有用",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15795,6 +16173,7 @@
           "simplified": "间"
         }
       ],
+      "dictionary_headword": "間",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15817,6 +16196,7 @@
           "simplified": "大楼"
         }
       ],
+      "dictionary_headword": "大樓",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15839,6 +16219,7 @@
           "simplified": "楼上"
         }
       ],
+      "dictionary_headword": "樓上",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15861,6 +16242,7 @@
           "simplified": "楼下"
         }
       ],
+      "dictionary_headword": "樓下",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15883,6 +16265,7 @@
           "simplified": "客厅"
         }
       ],
+      "dictionary_headword": "客廳",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15915,6 +16298,7 @@
           "simplified": "台"
         }
       ],
+      "dictionary_headword": "台",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15937,6 +16321,7 @@
           "simplified": "电"
         }
       ],
+      "dictionary_headword": "電",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15959,6 +16344,7 @@
           "simplified": "有空"
         }
       ],
+      "dictionary_headword": "有空",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -15981,6 +16367,7 @@
           "simplified": "有空儿"
         }
       ],
+      "dictionary_headword": "有空兒",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16003,6 +16390,7 @@
           "simplified": "餐"
         }
       ],
+      "dictionary_headword": "餐",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16025,6 +16413,7 @@
           "simplified": "过年"
         }
       ],
+      "dictionary_headword": "過年",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16047,6 +16436,7 @@
           "simplified": "有时"
         }
       ],
+      "dictionary_headword": "有時",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16069,6 +16459,7 @@
           "simplified": "后来"
         }
       ],
+      "dictionary_headword": "後來",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16091,6 +16482,7 @@
           "simplified": "客人"
         }
       ],
+      "dictionary_headword": "客人",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16113,6 +16505,7 @@
           "simplified": "不客气"
         }
       ],
+      "dictionary_headword": "不客氣",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16135,6 +16528,7 @@
           "simplified": "不好意思"
         }
       ],
+      "dictionary_headword": "不好意思",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16157,6 +16551,7 @@
           "simplified": "小朋友"
         }
       ],
+      "dictionary_headword": "小朋友",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16179,6 +16574,7 @@
           "simplified": "听说"
         }
       ],
+      "dictionary_headword": "聽說",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16201,6 +16597,7 @@
           "simplified": "事情"
         }
       ],
+      "dictionary_headword": "事情",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16223,6 +16620,7 @@
           "simplified": "汽车"
         }
       ],
+      "dictionary_headword": "汽車",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16245,6 +16643,7 @@
           "simplified": "路口"
         }
       ],
+      "dictionary_headword": "路口",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16267,6 +16666,7 @@
           "simplified": "十字路口"
         }
       ],
+      "dictionary_headword": "十字路口",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16294,6 +16694,7 @@
           "simplified": "西"
         }
       ],
+      "dictionary_headword": "西",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16321,6 +16722,7 @@
           "simplified": "东"
         }
       ],
+      "dictionary_headword": "東",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16343,6 +16745,7 @@
           "simplified": "中间"
         }
       ],
+      "dictionary_headword": "中間",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16365,6 +16768,7 @@
           "simplified": "最后"
         }
       ],
+      "dictionary_headword": "最後",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16387,6 +16791,7 @@
           "simplified": "心"
         }
       ],
+      "dictionary_headword": "心",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16409,6 +16814,7 @@
           "simplified": "小心"
         }
       ],
+      "dictionary_headword": "小心",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16431,6 +16837,7 @@
           "simplified": "试"
         }
       ],
+      "dictionary_headword": "試",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16453,6 +16860,7 @@
           "simplified": "样子"
         }
       ],
+      "dictionary_headword": "樣子",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16475,6 +16883,7 @@
           "simplified": "点心"
         }
       ],
+      "dictionary_headword": "點心",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16497,6 +16906,7 @@
           "simplified": "道"
         }
       ],
+      "dictionary_headword": "道",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16519,22 +16929,30 @@
           "simplified": "一半"
         }
       ],
+      "dictionary_headword": "一半",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
       "word": "一半兒",
-      "pinyin": "yībàn / yībànr",
+      "pinyin": "yībàn",
       "source_pinyin": "yībàn/yībànr",
       "level": "Level 1",
       "level_index": 2,
       "band": "A",
       "sheet": "入門級(Level 1)",
       "row": 316,
-      "meaning": "Not available",
-      "sense_status": "Missing dictionary entry",
+      "meaning": "half",
+      "sense_status": "Variant spelling — dictionary entry 一半",
       "part_of_speech": "Det",
       "context": "飲食",
-      "dictionary_readings": [],
+      "dictionary_readings": [
+        {
+          "pinyin": "yi1 ban4",
+          "meaning": "half",
+          "simplified": "一半"
+        }
+      ],
+      "dictionary_headword": "一半",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16557,6 +16975,7 @@
           "simplified": "那么"
         }
       ],
+      "dictionary_headword": "那麼",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16579,6 +16998,7 @@
           "simplified": "这么"
         }
       ],
+      "dictionary_headword": "這麼",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16601,6 +17021,7 @@
           "simplified": "本来"
         }
       ],
+      "dictionary_headword": "本來",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16623,6 +17044,7 @@
           "simplified": "以为"
         }
       ],
+      "dictionary_headword": "以為",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16645,22 +17067,30 @@
           "simplified": "有的"
         }
       ],
+      "dictionary_headword": "有的",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
       "word": "一下子兒",
-      "pinyin": "yīxià(zi) / yīxiàzir",
+      "pinyin": "yīxià(zi)",
       "source_pinyin": "yīxià(zi)/yīxiàzir",
       "level": "Level 1",
       "level_index": 2,
       "band": "A",
       "sheet": "入門級(Level 1)",
       "row": 346,
-      "meaning": "Not available",
-      "sense_status": "Missing dictionary entry",
+      "meaning": "once; one time/(following a verb) for a moment; briefly/for a little while; in no time; almost immediately/all at once; all of a sudden",
+      "sense_status": "Variant spelling — dictionary entry 一下子",
       "part_of_speech": "N",
       "context": "其他",
-      "dictionary_readings": [],
+      "dictionary_readings": [
+        {
+          "pinyin": "yi1 xia4 zi5",
+          "meaning": "once; one time/(following a verb) for a moment; briefly/for a little while; in no time; almost immediately/all at once; all of a sudden",
+          "simplified": "一下子"
+        }
+      ],
+      "dictionary_headword": "一下子",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16683,6 +17113,7 @@
           "simplified": "不过"
         }
       ],
+      "dictionary_headword": "不過",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16705,6 +17136,7 @@
           "simplified": "不同"
         }
       ],
+      "dictionary_headword": "不同",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16727,6 +17159,7 @@
           "simplified": "钟"
         }
       ],
+      "dictionary_headword": "鐘",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16749,6 +17182,7 @@
           "simplified": "时钟"
         }
       ],
+      "dictionary_headword": "時鐘",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16771,6 +17205,7 @@
           "simplified": "日子"
         }
       ],
+      "dictionary_headword": "日子",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16798,6 +17233,7 @@
           "simplified": "时"
         }
       ],
+      "dictionary_headword": "時",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16820,6 +17256,7 @@
           "simplified": "不久"
         }
       ],
+      "dictionary_headword": "不久",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16842,6 +17279,7 @@
           "simplified": "早点"
         }
       ],
+      "dictionary_headword": "早點",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16864,6 +17302,7 @@
           "simplified": "男人"
         }
       ],
+      "dictionary_headword": "男人",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16891,6 +17330,7 @@
           "simplified": "女人"
         }
       ],
+      "dictionary_headword": "女人",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16913,6 +17353,7 @@
           "simplified": "开心"
         }
       ],
+      "dictionary_headword": "開心",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16935,6 +17376,7 @@
           "simplified": "心情"
         }
       ],
+      "dictionary_headword": "心情",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16957,6 +17399,7 @@
           "simplified": "教书"
         }
       ],
+      "dictionary_headword": "教書",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -16979,6 +17422,7 @@
           "simplified": "开会"
         }
       ],
+      "dictionary_headword": "開會",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17001,6 +17445,7 @@
           "simplified": "打工"
         }
       ],
+      "dictionary_headword": "打工",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17023,6 +17468,7 @@
           "simplified": "考"
         }
       ],
+      "dictionary_headword": "考",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17050,6 +17496,7 @@
           "simplified": "题"
         }
       ],
+      "dictionary_headword": "題",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17061,11 +17508,18 @@
       "band": "A",
       "sheet": "基礎級(Level 2)",
       "row": 82,
-      "meaning": "Not available",
-      "sense_status": "Missing dictionary entry",
+      "meaning": "to read; to study/to attend school",
+      "sense_status": "Variant spelling — dictionary entry 念書",
       "part_of_speech": "V-sep",
       "context": "教育",
-      "dictionary_readings": [],
+      "dictionary_readings": [
+        {
+          "pinyin": "nian4 shu1",
+          "meaning": "to read; to study/to attend school",
+          "simplified": "念书"
+        }
+      ],
+      "dictionary_headword": "念書",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17088,6 +17542,7 @@
           "simplified": "念书"
         }
       ],
+      "dictionary_headword": "念書",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17110,6 +17565,7 @@
           "simplified": "作文"
         }
       ],
+      "dictionary_headword": "作文",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17132,6 +17588,7 @@
           "simplified": "国小"
         }
       ],
+      "dictionary_headword": "國小",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17154,6 +17611,7 @@
           "simplified": "中学"
         }
       ],
+      "dictionary_headword": "中學",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17176,6 +17634,7 @@
           "simplified": "大学生"
         }
       ],
+      "dictionary_headword": "大學生",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17198,6 +17657,7 @@
           "simplified": "学期"
         }
       ],
+      "dictionary_headword": "學期",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17220,6 +17680,7 @@
           "simplified": "室友"
         }
       ],
+      "dictionary_headword": "室友",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17242,6 +17703,7 @@
           "simplified": "校园"
         }
       ],
+      "dictionary_headword": "校園",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17264,6 +17726,7 @@
           "simplified": "位子"
         }
       ],
+      "dictionary_headword": "位子",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17286,6 +17749,7 @@
           "simplified": "本子"
         }
       ],
+      "dictionary_headword": "本子",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17308,6 +17772,7 @@
           "simplified": "同意"
         }
       ],
+      "dictionary_headword": "同意",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17330,6 +17795,7 @@
           "simplified": "以上"
         }
       ],
+      "dictionary_headword": "以上",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17352,6 +17818,7 @@
           "simplified": "以下"
         }
       ],
+      "dictionary_headword": "以下",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17374,6 +17841,7 @@
           "simplified": "意见"
         }
       ],
+      "dictionary_headword": "意見",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17396,6 +17864,7 @@
           "simplified": "用功"
         }
       ],
+      "dictionary_headword": "用功",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17418,6 +17887,7 @@
           "simplified": "书房"
         }
       ],
+      "dictionary_headword": "書房",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17440,6 +17910,7 @@
           "simplified": "打开"
         }
       ],
+      "dictionary_headword": "打開",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17467,6 +17938,7 @@
           "simplified": "大门"
         }
       ],
+      "dictionary_headword": "大門",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17489,6 +17961,7 @@
           "simplified": "房东"
         }
       ],
+      "dictionary_headword": "房東",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17511,6 +17984,7 @@
           "simplified": "开水"
         }
       ],
+      "dictionary_headword": "開水",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17533,6 +18007,7 @@
           "simplified": "月亮"
         }
       ],
+      "dictionary_headword": "月亮",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17555,6 +18030,7 @@
           "simplified": "星星"
         }
       ],
+      "dictionary_headword": "星星",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17577,6 +18053,7 @@
           "simplified": "晴天"
         }
       ],
+      "dictionary_headword": "晴天",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17599,6 +18076,7 @@
           "simplified": "画家"
         }
       ],
+      "dictionary_headword": "畫家",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17621,6 +18099,7 @@
           "simplified": "可怕"
         }
       ],
+      "dictionary_headword": "可怕",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17643,6 +18122,7 @@
           "simplified": "看起来"
         }
       ],
+      "dictionary_headword": "看起來",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17665,6 +18145,7 @@
           "simplified": "舞"
         }
       ],
+      "dictionary_headword": "舞",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17687,6 +18168,7 @@
           "simplified": "请客"
         }
       ],
+      "dictionary_headword": "請客",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17714,6 +18196,7 @@
           "simplified": "清"
         }
       ],
+      "dictionary_headword": "清",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17736,6 +18219,7 @@
           "simplified": "晴"
         }
       ],
+      "dictionary_headword": "晴",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17758,6 +18242,7 @@
           "simplified": "情"
         }
       ],
+      "dictionary_headword": "情",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     },
     {
@@ -17785,6 +18270,7 @@
           "simplified": "青"
         }
       ],
+      "dictionary_headword": "青",
       "source": "TOCFL 20240923; CC-CEDICT for English gloss"
     }
   ],

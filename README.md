@@ -1,3 +1,11 @@
+## Current hosted explanation mode
+
+Template explanations are the default, as requested. No model/API request is sent.
+To opt into a co-located Ollama service locally:
+`ZIKEY_EXPLANATION_BACKEND=ollama .venv/bin/python -m streamlit run app.py`
+This overrides older instructions below that assumed local AI was always enabled.
+Dictionary variants and remaining review items: `data/processed/REVIEW-NOTES.md`.
+
 # ZIKEY 字鑰
 
 เว็บ progress สำหรับ Information Visualization ใช้ข้อมูลจริง **290 อักษร / 450 คำ**

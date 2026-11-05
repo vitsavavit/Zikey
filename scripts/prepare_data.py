@@ -25,6 +25,10 @@ SOURCES = {
     "cedict.gz": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz",
 }
 
+# Exact reviewed spellings only; this is not automatic script conversion.
+DICTIONARY_VARIANTS = {'妳們': '你們', '甚麼': '什麼', '周末': '週末',
+                       '一半兒': '一半', '一下子兒': '一下子', '唸書': '念書'}
+
 
 def cjk(text):
     return bool(re.fullmatch(r"[\u3400-\u9fff]+", text))
@@ -32,7 +36,7 @@ def cjk(text):
 
 def reading_signature(text):
     tones = {'\u0304': '1', '\u0301': '2', '\u030c': '3', '\u0306': '3', '\u0300': '4'}
-    decomposed = unicodedata.normalize('NFD', text.lower().replace('u:', 'ü').replace('v', 'ü'))
+    decomposed = unicodedata.normalize('NFD', text.lower().replace('u:', 'ü').replace('v', 'ü').replace('ɑ', 'a'))
     letters = ''.join(c for c in decomposed if c.isalpha() or c == '\u0308')
     return letters, ''.join(tones.get(c, c if c in '1234' else '') for c in decomposed)
 
@@ -67,6 +71,13 @@ def choose_sense(word, pinyin, senses):
     if not senses:
         return 'Not available', 'Missing dictionary entry'
     return 'Multiple or unmatched readings — open dictionary senses', 'Needs review'
+
+
+def dictionary_senses(word, dictionary):
+    if dictionary.get(word):
+        return word, dictionary[word]
+    headword = DICTIONARY_VARIANTS.get(word, word)
+    return headword, dictionary.get(headword, [])
 
 
 def build():
@@ -112,9 +123,16 @@ def build():
                     continue
                 seen.add(word)
                 pinyin = str(row[offset + 1] or '').strip()
-                meaning, sense_status = choose_sense(word, pinyin, cedict.get(word, []))
+                headword, senses = dictionary_senses(word, cedict)
+                meaning, sense_status = choose_sense(word, pinyin, senses)
+                if headword != word:
+                    # Erhua variants retain the source pronunciation; the gloss is for the named base entry.
+                    common = [s for s in senses if s['pinyin'][:1].islower()]
+                    if len(common) == 1:
+                        meaning = common[0]['meaning']
+                        sense_status = 'Variant spelling — dictionary entry ' + headword
                 alternatives = [p.strip() for p in re.split(r'[/／]', pinyin) if p.strip()]
-                head_readings = {reading_signature(s['pinyin'])[0] for s in cedict.get(word, [])}
+                head_readings = {reading_signature(s['pinyin'])[0] for s in senses}
                 matched = [p for p in alternatives if reading_signature(p)[0] in head_readings]
                 display_pinyin = ' / '.join(dict.fromkeys(matched or alternatives))
                 all_words.append({"word": word, "pinyin": standard_pinyin(display_pinyin), "source_pinyin": pinyin,
@@ -123,7 +141,7 @@ def build():
                                   "meaning": meaning, "sense_status": sense_status,
                                   "part_of_speech": str(row[offset + 2] or '').strip(),
                                   "context": str(row[0] or '').strip() if offset else None,
-                                  "dictionary_readings": cedict.get(word, []),
+                                  "dictionary_readings": senses, "dictionary_headword": headword,
                                   "source": "TOCFL 20240923; CC-CEDICT for English gloss"})
 
     family = set("青清晴請情睛")

@@ -59,7 +59,7 @@ export default async function(component) {
     $('reset').onclick=()=>{S.camera={};S.positions={};send({type:'reset'});};
     $('simulated').onchange=()=>send({type:'heat',enabled:$('simulated').checked});
     $('logging').onchange=()=>send({type:'logging',enabled:$('logging').checked});
-    $('explain').onclick=()=>{$('explain').disabled=true;$('ai-status').textContent='Running the local model…';send({type:'explain'});};
+    $('explain').onclick=()=>{$('explain').disabled=true;$('ai-status').textContent=S.data.explanation_backend==='ollama'?'Running the local model…':'Preparing computed evidence…';send({type:'explain'});};
     $('close-word').onclick=()=>$('word-dialog').close();
     $('close-methods').onclick=()=>$('methods-dialog').close();
     $('methods-button').onclick=()=>$('methods-dialog').showModal();
@@ -84,7 +84,7 @@ export default async function(component) {
   $('rankings').querySelectorAll('button').forEach(b=>b.onclick=()=>select(b.dataset.character));
   $('selected-score').textContent=D.selected?`${D.selected} · ${D.selected_known?'already known':D.selected_score?'score '+D.selected_score.score.toFixed(3):'not ranked'} · +${D.unlocks.length} readable entries`: 'Select a character to inspect its score and words.';
   $('rationale').textContent=D.rationale;
-  $('explain').disabled=!D.selected;$('explain').textContent='Explain with local AI';
+  $('explain').disabled=!D.selected;$('explain').textContent=D.explanation_backend==='ollama'?'Explain with local AI':'Explain recommendation';
   $('ai-status').textContent=D.ai_status;
   $('weight-controls').innerHTML=signals.map((s,i)=>`<label class="zk-weight"><span>${['Prevalence','Reuse','Unlock','Heat'][i]}</span><input type="range" min="0" max="100" value="${D.weights[i]}" aria-label="${s} weight"><output>${D.weights[i]}</output></label>`).join('');
   $('weight-controls').querySelectorAll('input').forEach(input=>{input.oninput=()=>input.nextElementSibling.value=input.value;input.onchange=()=>send({type:'weights',weights:[...$('weight-controls').querySelectorAll('input')].map(x=>+x.value)});});

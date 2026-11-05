@@ -3,13 +3,21 @@ import unittest
 from pathlib import Path
 
 from core import Dataset, PRESETS, SEED_KNOWN
-from scripts.prepare_data import reading_signature, choose_sense
+from scripts.prepare_data import reading_signature, choose_sense, dictionary_senses
 
 
 class RedesignTests(unittest.TestCase):
     def test_sense_matching_keeps_tone_unlike_search(self):
         self.assertEqual(reading_signature('qĭngwèn'), reading_signature('qing3 wen4'))
         self.assertNotEqual(reading_signature('qīng'), reading_signature('qing3'))
+        self.assertEqual(reading_signature('kànjiɑn'), reading_signature('kan4 jian5'))
+
+    def test_dictionary_variants_are_explicit_and_do_not_replace_exact_entries(self):
+        source = {'週末': [{'pinyin': 'zhou1 mo4', 'meaning': 'weekend'}]}
+        self.assertEqual(dictionary_senses('周末', source), ('週末', source['週末']))
+        source['周末'] = [{'pinyin': 'zhou1 mo4', 'meaning': 'exact entry'}]
+        self.assertEqual(dictionary_senses('周末', source)[1][0]['meaning'], 'exact entry')
+        self.assertEqual(dictionary_senses('無資料', source), ('無資料', []))
 
     def test_alternative_readings_and_neutral_tone_differences_keep_glosses(self):
         senses=[{'pinyin':'yi1 gong4','meaning':'in total; altogether'}]

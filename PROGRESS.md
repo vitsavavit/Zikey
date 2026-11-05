@@ -75,3 +75,11 @@ Native PowerPoint application was not opened; no course-system upload performed.
 - DESIGN.md and .impeccable/design.json describe the built system. No new UI images or dependencies.
 - Existing presentation/video retain the previous theme; current captures are book-workspace.png
   and book-overview.png. This follow-up changes the web UI, not the submitted deck.
+
+## Hosted follow-up — presentation paused
+
+- Explicit template backend by default; no AI request or paid API. Ollama opt-in environment variable.
+-6missing exact word entries now use named dictionary variants;11sense reviews still open.
+-27tests pass; original ranking/coverage unchanged.
+-Production browser verification remains blocked: CUA still reports disabled after user enabled it.
+-No claim that rendered cloud PoC has passed live testing. No presentation files touched.
