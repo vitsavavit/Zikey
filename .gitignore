@@ -4,3 +4,8 @@ __pycache__/
 .build/
 data/raw/
 *.log
+.chart-data-*/
+.DS_Store
+.streamlit/secrets.toml
+.env
+.env.*
