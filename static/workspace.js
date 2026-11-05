@@ -71,7 +71,7 @@ export default async function(component) {
   $('simulated').checked=D.simulated;$('logging').checked=D.logging;
   $('error').hidden=!D.error;$('error').textContent=D.error||'';
   $('heat-status').textContent=D.simulated?'SIMULATED counts · not community data':D.logging?`Local session totals · ${D.event_count} lookups`:'Heat unavailable until opt-in lookups; currently zero.';
-  $('map-title').textContent=D.mode==='overview'?'Your learning galaxy':D.mode==='radical'?`${D.radical} · radical group`:D.mode==='search'?'Search results':D.family?`${D.family.root} · sound family`:`${D.selected} · character structure`;
+  $('map-title').textContent=D.mode==='overview'?'Your Learning Library':D.mode==='radical'?`${D.radical} · radical group`:D.mode==='search'?'Search results':D.family?`${D.family.root} · sound family`:`${D.selected} · character structure`;
   $('map-description').textContent=D.mode==='overview'?'290 characters, grouped by dictionary radical. Choose a cluster or start with qing.':D.mode==='radical'?'Dictionary group, not a guaranteed meaning category. Select a character to explore.':D.mode==='search'?`${D.matches.length} exact pronunciation matches; different sound families may be represented.`:D.family?'Documented sound relationships. Modern readings and tones may differ.':'No documented sound family. Explore available structure and vocabulary.';
   $('map-hint').textContent=D.mode==='overview'?'Click a group to zoom · click a character to learn':'Ochre ring: recommended in '+D.scope.toLowerCase()+' · dashed words: one missing character';
   $('results').replaceChildren();
@@ -125,7 +125,7 @@ export default async function(component) {
   }
   const container=$('galaxy');
   if(!S.svg){
-    S.svg=d3.select(container).append('svg').attr('viewBox','0 0 1000 650').attr('role','group').attr('aria-label','Interactive learning galaxy');
+    S.svg=d3.select(container).append('svg').attr('viewBox','0 0 1000 650').attr('role','group').attr('aria-label','Interactive learning library');
     S.layer=S.svg.append('g');
     S.zoom=d3.zoom().extent([[0,0],[1000,650]]).scaleExtent([.6,7]).on('zoom',event=>{S.layer.attr('transform',event.transform);S.camera[S.viewKey]={x:event.transform.x,y:event.transform.y,k:event.transform.k};S.layer.selectAll('.overview-label').attr('opacity',n=>S.data.mode!=='overview'||n.r*event.transform.k>=10?1:0);});
     S.svg.call(S.zoom).on('dblclick.zoom',null);
