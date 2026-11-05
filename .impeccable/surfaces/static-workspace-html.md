@@ -52,3 +52,14 @@ Existing A/B/C layout and calculations stay intact. Each panel gains a local Exp
 with Escape exit and preserved selection/learner state. Repeated Home/Overview actions must
 receive an acknowledgement and must never leave controls locked.
 The previous prohibition on imagery and grain is superseded by these explicit supplied references.
+
+
+## Coloured sketch controls — latest user direction
+
+User supplied four explicit hand-drawn UI references and requested colour, not monochrome.
+Keep the A/B/C structure, interactions and quantitative encodings. Extend the notebook into
+outlined native controls, a pale paper toolbar (replacing the photographic header), marker-yellow
+map heading, marker-green active recommendation/known action, and marker-blue explanation action.
+Patrick Hand is embedded under OFL so Linux/cloud matches local typography; pinyin, Chinese
+glyphs, score numerals and chart axes remain precise. Pen contours annotate existing real graph
+nodes; no fake data or decorative illustrated scene. Presentation remains paused.

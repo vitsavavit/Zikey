@@ -141,6 +141,10 @@ export default async function(component) {
   S.layer.append('g').selectAll('path').data(links).join('path').attr('fill','none').attr('d',l=>{const a=byId.get(l.source),b=byId.get(l.target);return `M${a.x},${a.y} Q${(a.x+b.x)/2+7},${(a.y+b.y)/2-5} ${b.x},${b.y}`;}).attr('stroke-linecap','round').attr('stroke',l=>l.kinds.includes('Sound')?'#916228':l.kinds.includes('Meaning')?'#4d7254':'#7c8589').attr('stroke-width',l=>l.kinds.includes('Sound')?2.5:1.5).attr('stroke-opacity',.8).append('title').text(l=>`${l.source} → ${l.target}: ${l.kinds.join(', ')} · Make Me a Hanzi`);
   const glyphs=S.layer.append('g').selectAll('g').data(nodes).join('g').attr('class','character-node').attr('data-character',n=>n.id).attr('transform',n=>`translate(${n.x},${n.y})`).attr('tabindex',0).attr('role','button').attr('aria-label',n=>`Select ${n.id}${n.known?', known':''}${n.component?', structural component':''}`);
   glyphs.filter(n=>!n.component).append('circle').attr('r',n=>n.r).attr('fill',n=>palette[n.band]||palette.Unknown).attr('fill-opacity',n=>D.heat_active ? .65+.35*n.heat/Math.max(1,D.max_heat):1).attr('stroke',n=>n.recommended?'#916228':n.id===D.selected?'#4a3524':'#71867e').attr('stroke-width',n=>n.recommended||n.id===D.selected?3:1);
+  glyphs.filter(n=>!n.component&&n.r>=8).append('ellipse').attr('class','sketch-contour')
+    .attr('rx',n=>n.r+1.8).attr('ry',n=>n.r-1.1).attr('transform','rotate(-7)')
+    .attr('fill','none').attr('stroke','#554f43').attr('stroke-width',.65)
+    .attr('stroke-opacity',.65).style('pointer-events','none');
   glyphs.filter(n=>n.component).append('path').attr('d',n=>`M0,${-n.r-4} L${n.r+4},0 L0,${n.r+4} L${-n.r-4},0 Z`).attr('fill','#fffaf0').attr('stroke','#778b8b').attr('stroke-width',1.5);
   glyphs.filter(n=>n.id===D.selected&&n.recommended).append('circle').attr('r',n=>n.r+5).attr('fill','none').attr('stroke','#4a3524').attr('stroke-width',1.5);
   glyphs.append('text').attr('class','overview-label').attr('opacity',n=>D.mode!=='overview'||n.r*camera.k>=10?1:0).attr('text-anchor','middle').attr('dy','.35em').attr('fill',n=>n.component?'#332e27':'#332e27').attr('font-size',n=>D.mode==='overview'?Math.min(20,n.r*1.25):26).attr('font-family','"Songti TC","Songti SC",serif').text(n=>n.id).style('pointer-events','none');
@@ -167,7 +171,7 @@ export default async function(component) {
     const pills=layer.selectAll('g').data(displayedWords).join('g').attr('class','word-node').attr('data-word',w=>w.word).attr('transform',w=>`translate(${w.x},${w.y})`).attr('role','button').attr('tabindex',0).attr('aria-label',w=>`Word ${w.word}, ${w.missing.length?'one character missing':'readable now'}`);
     pills.append('rect').attr('x',-56).attr('y',-19).attr('width',112).attr('height',38).attr('rx',2).attr('fill','#fffaf0').attr('stroke',w=>w.missing.length?'#778b8b':'#4d7254').attr('stroke-dasharray',w=>w.missing.length?'5 3':null);
     pills.append('text').attr('class','word-label').attr('text-anchor','middle').attr('dy',-1).attr('fill','#332e27').attr('font-size',15).text(w=>w.word);
-    pills.append('text').attr('class','word-status-label').attr('font-family','Noteworthy, Segoe Print, cursive').attr('text-anchor','middle').attr('dy',13).attr('fill','#675f52').attr('font-size',8).text(w=>w.missing.length?'Need '+w.missing.join(' '):'Readable now');
+    pills.append('text').attr('class','word-status-label').attr('font-family','Patrick Hand, Avenir Next, sans-serif').attr('text-anchor','middle').attr('dy',13).attr('fill','#675f52').attr('font-size',8).text(w=>w.missing.length?'Need '+w.missing.join(' '):'Readable now');
     pills.on('click',(e,w)=>wordDetails(w.word)).on('keydown',(e,w)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();wordDetails(w.word);}});
   }
   S.frame=()=>{

@@ -52,3 +52,41 @@
 .zk[data-focus="coverage"] .zk-coverage{max-width:1500px;margin:auto;padding:24px}
 .zk[data-focus="coverage"] #coverage-plot{height:calc(100dvh - 250px);min-height:380px}
 @media(max-width:600px){.zk-map-heading{display:block}.zk-panel-actions{justify-content:flex-end;margin-top:10px}.zk[data-focus="recommendations"] .zk-why,.zk[data-focus="coverage"] .zk-coverage{padding:18px 14px}.zk[data-focus="network"] #galaxy{height:400px;min-height:360px}}
+/* User-directed coloured sketchbook: real controls, pen outlines, marker states. */
+@font-face{font-family:"Patrick Hand";src:url('/app/static/PatrickHand-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+.zk{--pen:#413c34;--marker-yellow:#f4df94;--marker-green:#d9e8bd;--marker-blue:#d6e7ef;--sketch-outline:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='60' viewBox='0 0 160 60'%3E%3Cpath d='M4 5 Q78 2 155 5 L156 55 Q80 58 4 55 Z M5 7 Q80 4 153 6 L154 53 Q82 56 6 54 Z' fill='none' stroke='%23413c34' stroke-width='1.2' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.zk button,.zk input:not([type=range]):not([type=checkbox]),.zk select,.zk textarea{border:2px solid var(--pen);border-image:var(--sketch-outline) 8 stretch;border-radius:3px 7px 4px 6px;background-color:#fffaf0;box-shadow:none}
+.zk button{font-family:"Patrick Hand","Avenir Next",sans-serif;font-size:16px;line-height:1.25}
+.zk button:hover{background-color:var(--marker-blue)}.zk button:active{background-color:#c9dbd9}
+.zk button:disabled{background-color:#eee8dc;opacity:.65}
+.zk h1,.zk h2,.zk-map-hint{font-family:"Patrick Hand","Avenir Next",sans-serif;font-weight:400}
+.zk h1{font-size:31px}.zk h2{font-size:27px}
+.zk-toolbar{background:#eee4cf;border-top:2px solid var(--pen);border-bottom:2px solid var(--pen);color:#332e27}
+.zk-brand{font-family:"Patrick Hand","Avenir Next",sans-serif;font-size:32px;font-weight:400;letter-spacing:0;color:#332e27}
+.zk-brand span{color:#685334}.zk-toolbar summary,.zk-goal label{color:#514b40}
+.zk-toolbar input,.zk-toolbar select,.zk-toolbar button{color:#332e27;background-color:#fffaf0}
+.zk-toolbar :focus-visible{outline-color:#376b7b}
+.zk-map-heading h1{text-decoration:none;box-shadow:inset 0 -.24em 0 var(--marker-yellow);width:fit-content;padding:0 4px 3px}
+.zk-map-heading p{margin-top:7px}.zk-map-description{font-family:"Avenir Next","Helvetica Neue",sans-serif}
+.zk-why{background:#faf5e8;border-bottom:1px solid #a79d89}
+.zk-section-head{flex-wrap:wrap}.zk-section-head h2{flex:1;min-width:130px}
+.zk-section-head button[data-expand]{font-size:15px;padding:4px 8px}.zk-section-head select{font-size:12px;max-width:108px}
+.zk-search-results button{font-family:"Avenir Next","PingFang TC",sans-serif;font-size:13px;background-color:#f8efd2}
+.zk-search-results button:hover{background-color:var(--marker-yellow)}
+.zk-rank{border:0!important;border-bottom:1px solid #c8bfa9!important;border-image:none!important;border-radius:0!important;background:transparent!important}
+.zk-rank.active,.zk-rank.active:hover{background:var(--marker-green)!important}
+.zk-rank:hover{background:#e9f0e5!important}
+.zk-rank .score,.zk-rank .reading{font-family:"Avenir Next","Helvetica Neue",sans-serif}
+.zk-rank .bar{height:7px;border:1px solid #9e9a89;border-radius:3px 1px 4px 2px;background:#e9e7dc}
+.zk-rank .bar i{border-radius:1px 3px 1px 2px}
+.zk-selection{background:#fffaf0;padding:14px 10px;border-top:1px solid #8c816d}
+.zk #mark-known{background:var(--marker-green);color:#263a2d;border-color:var(--pen)}
+.zk #mark-known:hover{background:#c6dca4}.zk #explain{background:var(--marker-blue);border-color:var(--pen)}
+.zk #explain:hover{background:#bedce9}
+.zk-coverage{border-top:1px solid #8c816d;background:#f8f2e3}
+.zk dialog{background:#fffaf0;border:2px solid #413c34;border-radius:3px 9px 5px 7px}
+.zk input[type=range]{accent-color:#52765c}.zk input[type=checkbox]{accent-color:#52765c}
+.zk .zk-advanced summary,.zk .zk-known summary{font-family:"Patrick Hand","Avenir Next",sans-serif;font-size:16px}
+.zk .word-status{display:inline-block;background:var(--marker-yellow);padding:2px 6px;color:#634514}
+.zk-footer{background:#eee4cf;border-top:1px solid #8c816d}.zk-footer button{font-size:13px}
+@media(max-width:600px){.zk-brand{font-size:27px}.zk h1{font-size:29px}.zk h2{font-size:26px}.zk-goal select{font-size:13px}.zk-toolbar{gap:10px}.zk-panel-actions button{min-height:36px}}

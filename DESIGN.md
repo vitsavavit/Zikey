@@ -2,35 +2,45 @@
 name: ZIKEY 字鑰
 description: A contemporary linguistic atlas for character learning.
 colors:
-  paper: "#f7f5ee"
-  inspector: "#f0f0e8"
-  control: "#fcfbf7"
-  binding: "#203c50"
-  binding-hover: "#35576d"
-  ink: "#25303b"
-  muted: "#5d666a"
-  rule: "#d3d6cf"
-  ochre: "#94651e"
-  green: "#43776c"
-  blue: "#526f91"
+  sketch-pen: "#413c34"
+  marker-yellow: "#f4df94"
+  marker-green: "#d9e8bd"
+  marker-blue: "#d6e7ef"
+  toolbar-paper: "#eee4cf"
+  paper: "#f5efdf"
+  inspector: "#eee5d2"
+  control: "#fffaf0"
+  binding: "#4a3524"
+  binding-hover: "#65472d"
+  ink: "#332e27"
+  muted: "#675f52"
+  rule: "#d1c3a9"
+  ochre: "#916228"
+  green: "#4d7254"
+  blue: "#526982"
   violet: "#81708f"
-  novice: "#a5c8b8"
-  band-a: "#aac6da"
-  band-b: "#dfc080"
-  band-c: "#c7b9dc"
-  unknown: "#c7ccc5"
-  active-row: "#e3e9e5"
-  control-border: "#afb8b7"
-  shell: "#e7eae4"
+  novice: "#b7c9a7"
+  band-a: "#b9cfd8"
+  band-b: "#e6ca8b"
+  band-c: "#d3bfca"
+  unknown: "#c7c4b7"
+  active-row: "#e4e9d8"
+  control-border: "#b1a58c"
+  shell: "#30271f"
 typography:
-  headline:
+  wordmark:
     fontFamily: 'Baskerville, "Iowan Old Style", Georgia, serif'
-    fontSize: "26px"
+    fontSize: "25px"
+    fontWeight: 600
+    lineHeight: 1.5
+  headline:
+    fontFamily: '"Patrick Hand", "Avenir Next", sans-serif'
+    fontSize: "31px"
     fontWeight: 600
     lineHeight: 1.15
   title:
-    fontFamily: 'Baskerville, "Iowan Old Style", Georgia, serif'
-    fontSize: "23px"
+    fontFamily: '"Patrick Hand", "Avenir Next", sans-serif'
+    fontSize: "27px"
     fontWeight: 600
     lineHeight: 1.15
   body:
@@ -92,7 +102,7 @@ components:
 
 **Creative North Star: "The Contemporary Linguistic Atlas"**
 
-A contemporary linguistic atlas on warm paper. Baskerville headings and Songti character entries give the workspace a reference-book character; native sans-serif controls keep search, learner state and evidence practical. Quiet rules organize a dense learning tool, with a navy binding header and restrained data colour.
+A contemporary linguistic atlas on warm paper. Noteworthy headings, the Baskerville wordmark and Songti character entries give the workspace a reference-book character; native sans-serif controls keep search, learner state and evidence practical. Quiet rules organize a dense learning tool, with a navy binding header and restrained data colour.
 
 The visual system supports the existing connected-character workspace. Its material is typography, paper tone and documented graph marks; decorative imagery, page curls, grain and ornamental stamps are excluded by the confirmed direction.
 
@@ -123,7 +133,12 @@ Novice, A, B and C use muted green, blue, ochre and violet fills; Unknown is gre
 
 ## Typography
 
-Baskerville with Iowan Old Style and Georgia fallbacks supplies headings and the wordmark. Body and native controls use Avenir Next, Helvetica Neue and PingFang TC. Songti TC / Songti SC supplies large selected characters and recommendation glyphs; no web font is downloaded.
+Latest user-directed library/notebook revision: Noteworthy with Segoe Print/cursive fallbacks
+is intentional for section headings and handwritten graph annotations. Native controls, scores
+and pinyin labels retain the readable sans-serif stack; Chinese glyphs retain Songti.
+This supersedes the earlier Baskerville section-heading guidance below.
+
+Baskerville with Iowan Old Style and Georgia fallbacks supplies only the wordmark; Noteworthy supplies section headings. Body and native controls use Avenir Next, Helvetica Neue and PingFang TC. Songti TC / Songti SC supplies large selected characters and recommendation glyphs; no web font is downloaded.
 
 The headline and section-title roles are defined in the frontmatter. Reading text is (17px); recommendation glyphs are (26px), with reading and score at (13px). Supporting evidence is generally (12px), while dense legends and plot labels are smaller. Chart text uses the sans-serif stack. Graph label sizes adapt to the focus framing scale rather than inheriting the selected-entry size.
 
@@ -139,7 +154,7 @@ Zoom buttons sit inside the map; the map hint occupies normal flow below it. The
 
 ## Elevation & Depth
 
-Main reading regions are flat, separated by rules and tonal shifts. Only the known-character popover uses an ambient shadow (`0 12px 35px #203c5026`). Native dialogs use a navy translucent backdrop (`#203c5066`). No decorative lighting or layered card system is used.
+Main reading regions are flat, separated by rules and tonal shifts. Only the known-character popover uses an ambient shadow (`0 12px 35px #4a352426`). Native dialogs use a navy translucent backdrop (`#4a352466`). No decorative lighting or layered card system is used.
 
 ## Shapes
 
@@ -179,3 +194,17 @@ Native dialogs show word/source details and methods. Native details reveal known
 - Don't add decorative imagery, grain, page curls, gradients or ornamental stamps.
 - Don't turn the atlas into a literal book prop or replace the workspace with a hero or card grid.
 - Don't imply that graph proximity is linguistic similarity or that pilot vocabulary bands are official character levels.
+
+
+## Coloured sketch UI amendment
+
+Latest user-supplied sketches supersede the photographic toolbar. The toolbar is pale paper
+#eee4cf with ink#413c34 outlines. Real native controls use double-stroke SVG border images,
+not rotated hit areas or illustrated buttons. Patrick Hand is bundled and registered through
+FontFace for shadow-root/cloud support (SIL OFL in static/PatrickHand-OFL.txt). Headings and
+button labels use this face; Chinese, pinyin, numbers and plot axes retain their readable faces.
+Marker yellow#f4df94 identifies map heading/search emphasis; green#d9e8bd identifies the active
+recommendation and known action; blue#d6e7ef identifies explanation actions. These do not replace
+the four quantitative signal colours or vocabulary bands. Node contours are pointer-transparent
+ellipses following real circles. No data geometry or score changes. Existing paper texture retained.
+No new screenshot validation: local browser API reports disabled; rendered verification is pending.

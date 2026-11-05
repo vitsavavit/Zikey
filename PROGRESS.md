@@ -83,3 +83,11 @@ Native PowerPoint application was not opened; no course-system upload performed.
 -27tests pass; original ranking/coverage unchanged.
 -Production browser verification remains blocked: CUA still reports disabled after user enabled it.
 -No claim that rendered cloud PoC has passed live testing. No presentation files touched.
+
+## Coloured sketch UI —5November
+
+User-directed pen-outlined controls, marker highlights and bundled Patrick Hand(OFL).
+Precise CJK/pinyin/numerals and quantitative values preserved; A/B/C and Expand unchanged.
+27tests pass, bundled module syntax checked. No new screenshot verification: browser disabled.
+Detector's score-legend3px rule is a data key, not a card; older palette drift is documented
+in current tokens. Full rendered finish review remains pending. Presentation untouched.
