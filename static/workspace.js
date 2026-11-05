@@ -1,5 +1,4 @@
 export default async function(component) {
-  await Promise.all([import(new URL('/app/static/d3.min.js', window.location.href).href), import(new URL('/app/static/plotly.min.js', window.location.href).href)]);
   const d3=globalThis.d3, Plotly=globalThis.Plotly;
   const root=component.parentElement.querySelector('#workspace');
   if(!root) return;

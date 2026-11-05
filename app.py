@@ -8,6 +8,7 @@ import streamlit as st
 from core import Dataset, SIGNALS
 from explain import evidence_for, explain
 from workflow import initial_state, apply_action, heat_for
+from component_assets import workspace_assets
 
 ROOT = Path(__file__).parent
 st.set_page_config(page_title='ZIKEY 字鑰', page_icon='字', layout='wide')
@@ -26,10 +27,9 @@ def load_data(data_version):
 
 @st.cache_resource
 def workspace_component(asset_version):
+    html, css, js = workspace_assets(ROOT/'static')
     return st.components.v2.component('zikey_learning_workspace',
-        html=(ROOT/'static/workspace.html').read_text(),
-        css=(ROOT/'static/workspace.css').read_text(),
-        js=(ROOT/'static/workspace.js').read_text())
+        html=html, css=css, js=js)
 
 
 @st.cache_data(show_spinner=False)
