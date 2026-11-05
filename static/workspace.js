@@ -213,7 +213,7 @@ export default async function(component) {
       S.zoom.extent([[box.x-28,box.y-28],[box.x+box.width+28,box.y+box.height+28]]);
     }
   };
-  if(!S.resizeObserver){S.resizeObserver=new ResizeObserver(()=>requestAnimationFrame(()=>S.resizeViews?.()));S.resizeObserver.observe(container);}
+  if(!S.resizeObserver){S.resizeObserver=new ResizeObserver(()=>requestAnimationFrame(()=>S.resizeViews?.()));S.resizeObserver.observe(container);S.resizeObserver.observe($('coverage-plot'));}
   S.resizeViews=()=>{
     S.frame();
     const plot=$('coverage-plot');
