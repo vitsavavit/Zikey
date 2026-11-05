@@ -90,3 +90,31 @@
 .zk .word-status{display:inline-block;background:var(--marker-yellow);padding:2px 6px;color:#634514}
 .zk-footer{background:#eee4cf;border-top:1px solid #8c816d}.zk-footer button{font-size:13px}
 @media(max-width:600px){.zk-brand{font-size:27px}.zk h1{font-size:29px}.zk h2{font-size:26px}.zk-goal select{font-size:13px}.zk-toolbar{gap:10px}.zk-panel-actions button{min-height:36px}}
+/* Approved B: walnut shelving frames the working sketchbook, with live book shortcuts. */
+.zk{--walnut:#51311d;--shelf-edge:#795535;--leather-green:#334734;--leather-blue:#34495b;--leather-red:#693c39;--leather-ochre:#805726;--book-gold:#e8d398;background-color:var(--walnut)}
+.zk-toolbar{display:block;padding:82px 14px 14px;background:#51311d url('/app/static/walnut-library.jpg') center top/100% auto no-repeat;border:0;border-bottom:10px solid var(--walnut)}
+.zk-toolbar-paper{display:flex;align-items:center;gap:18px;padding:13px 16px;background:#fffaf0 url('/app/static/paper-texture.png') center/cover;border-radius:2px 5px 3px 2px;box-shadow:0 4px 10px #261c1233}
+.zk-brand{font-family:Baskerville,"Iowan Old Style",Georgia,serif;font-size:30px;font-weight:600;letter-spacing:.02em;flex-shrink:0}.zk-brand span{font-family:"Songti TC","Songti SC",serif;font-size:19px}
+.zk-toolbar-paper .zk-goal{margin-left:auto}.zk-toolbar-paper form{max-width:none}.zk-toolbar-paper .zk-known{flex-shrink:0}
+.zk-grid{grid-template-columns:minmax(0,1fr) minmax(355px,35%);gap:12px;padding:0 12px 12px}
+.zk-explore{border-radius:4px 8px 6px 3px;box-shadow:0 3px 12px #261c1233;padding-top:20px}
+.zk-inspector{background:#51311d url('/app/static/walnut-library.jpg') center 44%/auto 1050px;border:0;padding:0 12px 16px;gap:16px}
+.zk-book-shelf{display:flex;align-items:flex-end;justify-content:center;gap:10px;min-height:164px;padding:18px 9px 0;border-bottom:12px solid var(--shelf-edge);perspective:900px;box-shadow:0 5px 7px #261c1233}
+.zk-book-shelf[hidden]{display:none}
+.zk button.zk-book{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;flex:1;min-width:0;max-width:72px;height:128px;padding:12px 5px 23px;color:var(--book-gold);background:var(--leather-green);border:1px solid #b29a68;border-image:none;border-radius:2px 6px 4px 2px;box-shadow:inset 5px 0 8px #0003,3px 3px 8px #261c124d;transform-origin:10% center;transition:transform 240ms cubic-bezier(.16,1,.3,1),box-shadow 240ms cubic-bezier(.16,1,.3,1)}
+.zk .zk-book:before{content:"";position:absolute;inset:8px 6px 10px 8px;border:1px solid #b29a68;pointer-events:none}
+.zk .zk-book:after{content:"";position:absolute;left:12px;right:10px;bottom:17px;height:5px;border-top:1px solid #b29a68;border-bottom:1px solid #b29a68;pointer-events:none}
+.zk button.zk-book[data-cover="1"]{background:var(--leather-blue);height:120px}.zk button.zk-book[data-cover="2"]{background:var(--leather-red);height:133px}.zk button.zk-book[data-cover="3"]{background:var(--leather-ochre);height:125px}.zk button.zk-book[data-cover="4"]{background:var(--leather-green);height:130px}
+.zk .zk-book-character{font-family:"Songti TC","Songti SC",serif;font-size:31px;line-height:1.2}.zk .zk-book-reading{font-family:"Avenir Next","Helvetica Neue",sans-serif;font-size:11px;line-height:1.3;overflow-wrap:anywhere;text-align:center}
+.zk button.zk-book:hover,.zk button.zk-book:focus-visible,.zk button.zk-book.active{transform:translateY(-5px) rotateY(-14deg);box-shadow:inset 5px 0 8px #0003,8px 7px 12px #261c1266}
+.zk button.zk-book:focus-visible{outline:3px solid var(--book-gold);outline-offset:4px}.zk button.zk-book:disabled{opacity:.65;transform:none}
+.zk-why,.zk-coverage{position:relative;background:#fffaf0 url('/app/static/paper-texture.png') center/cover;border:0;border-radius:2px 6px 4px 2px;box-shadow:0 4px 10px #261c1233;margin:0;padding:16px 16px 18px}
+.zk-why:after,.zk-coverage:after{content:"";position:absolute;height:9px;bottom:-9px;left:-12px;right:-12px;background:var(--shelf-edge);pointer-events:none}
+.zk-coverage{margin-top:auto}.zk-selection{border:1px solid var(--line);margin-top:8px;padding:16px 12px}.zk-footer{margin:0 12px 12px;background:#fffaf0}
+.zk[data-focus="recommendations"] .zk-book-shelf,.zk[data-focus="coverage"] .zk-book-shelf{display:none}
+.zk[data-focus="recommendations"] .zk-inspector,.zk[data-focus="coverage"] .zk-inspector{padding:16px}
+@media(min-width:1450px){.zk-grid{grid-template-columns:minmax(0,1fr) minmax(390px,35%)}}
+@media(max-width:1100px){.zk-toolbar-paper{flex-wrap:wrap;gap:10px}.zk-toolbar-paper form{order:3;flex-basis:100%;max-width:none}.zk-toolbar-paper .zk-goal{margin-left:auto}.zk-toolbar{padding-top:70px}}
+@media(max-width:900px){.zk-grid{grid-template-columns:minmax(0,1fr)}.zk-inspector{display:flex}.zk-book-shelf{gap:15px;min-height:170px}.zk-book-shelf .zk-book{max-width:80px}.zk-coverage{margin-top:6px}.zk-toolbar-paper form{order:3}.zk-explore{padding:16px}}
+@media(max-width:600px){.zk-toolbar{padding:62px 8px 8px}.zk-toolbar-paper{padding:12px;gap:8px}.zk-toolbar-paper .zk-goal{margin-left:0}.zk-toolbar-paper .zk-known{margin-left:auto}.zk-brand{font-size:26px}.zk-brand span{font-size:16px}.zk-grid{padding:0 6px 8px;gap:12px}.zk-inspector{padding:0 8px 14px}.zk-book-shelf{gap:8px;padding-inline:5px}.zk button.zk-book{height:121px}.zk .zk-book-character{font-size:28px}.zk-why,.zk-coverage{padding:16px 12px}.zk-why:after,.zk-coverage:after{left:-8px;right:-8px}.zk-footer{margin:0 6px 8px}.zk-selection{gap:10px}}
+@media(prefers-reduced-motion:reduce){.zk button.zk-book{transition:none!important;transform:none!important}}

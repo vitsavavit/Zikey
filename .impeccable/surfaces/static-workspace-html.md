@@ -63,3 +63,12 @@ map heading, marker-green active recommendation/known action, and marker-blue ex
 Patrick Hand is embedded under OFL so Linux/cloud matches local typography; pinyin, Chinese
 glyphs, score numerals and chart axes remain precise. Pen contours annotate existing real graph
 nodes; no fake data or decorative illustrated scene. Presentation remains paused.
+
+
+## Approved B — walnut library
+
+User selected preview B on 2026-11-05. Current direction is the walnut-library amendment
+in DESIGN.md: generated bookcase material, cream toolbar ribbon, live recommendation books
+and ivory evidence sheets. Preserve sketch lettering, original A/B/C structure, expansion,
+keyboard controls and all calculations. Cover colours are decorative. Book selection uses
+240ms pull-out motion with reduced-motion support. No presentation changes.

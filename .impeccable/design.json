@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-05T07:14:53.061249+00:00",
+  "generatedAt": "2026-11-05T12:47:19.522899+00:00",
   "title": "Design System: ZIKEY 字鑰",
   "extensions": {
     "colorMeta": {
@@ -283,6 +283,55 @@
           "oklch(from #30271f 84% c h)",
           "oklch(from #30271f 95% c h)"
         ]
+      },
+      "walnut": {
+        "role": "brand",
+        "displayName": "Walnut",
+        "tonalRamp": [
+          "#51311d"
+        ]
+      },
+      "shelf-edge": {
+        "role": "brand",
+        "displayName": "Shelf Edge",
+        "tonalRamp": [
+          "#795535"
+        ]
+      },
+      "leather-green": {
+        "role": "brand",
+        "displayName": "Leather Green",
+        "tonalRamp": [
+          "#334734"
+        ]
+      },
+      "leather-blue": {
+        "role": "brand",
+        "displayName": "Leather Blue",
+        "tonalRamp": [
+          "#34495b"
+        ]
+      },
+      "leather-red": {
+        "role": "brand",
+        "displayName": "Leather Red",
+        "tonalRamp": [
+          "#693c39"
+        ]
+      },
+      "leather-ochre": {
+        "role": "brand",
+        "displayName": "Leather Ochre",
+        "tonalRamp": [
+          "#805726"
+        ]
+      },
+      "book-gold": {
+        "role": "brand",
+        "displayName": "Book Gold",
+        "tonalRamp": [
+          "#e8d398"
+        ]
       }
     },
     "typographyMeta": {
@@ -310,7 +359,13 @@
         "purpose": "Known-character editor only."
       }
     ],
-    "motion": [],
+    "motion": [
+      {
+        "name": "library-book-selection",
+        "value": "240ms cubic-bezier(.16,1,.3,1)",
+        "purpose": "5px pull-out with 14deg cover turn; disabled with prefers-reduced-motion."
+      }
+    ],
     "breakpoints": [
       {
         "name": "wide-inspector",
@@ -377,11 +432,11 @@
   ],
   "narrative": {
     "northStar": "The Contemporary Linguistic Atlas",
-    "overview": "Coloured sketch notebook with pen-outlined native controls and marker state highlights; original A/B/C learning structure preserved. Latest amendment in DESIGN.md supersedes earlier library-photo header.",
+    "overview": "User-approved B: walnut library framing a working sketchbook. Live recommendation books above the right paper inspector; A/B/C and source data preserved.",
     "keyCharacteristics": [
-      "Warm paper with an ink-blue binding header.",
-      "Serif editorial hierarchy, Ming character glyphs and sans-serif controls.",
-      "Flat divided regions and explicit data encodings."
+      "Photographic walnut bookcase header and right inspector.",
+      "Ivory sketchbook network and readable paper evidence.",
+      "Live book shortcuts with restrained opt-out motion."
     ],
     "rules": [
       {
@@ -402,8 +457,6 @@
       "Do keep selected-character reading, definition and source evidence together."
     ],
     "donts": [
-      "Don't add decorative imagery, grain, page curls, gradients or ornamental stamps.",
-      "Don't turn the atlas into a literal book prop or replace the workspace with a hero or card grid.",
       "Don't imply that graph proximity is linguistic similarity or that pilot vocabulary bands are official character levels."
     ]
   }

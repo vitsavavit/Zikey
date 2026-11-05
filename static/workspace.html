@@ -1,9 +1,11 @@
 <div id="workspace" class="zk" aria-label="ZIKEY learning workspace">
   <header class="zk-toolbar">
+    <div class="zk-toolbar-paper">
     <a class="zk-brand" href="#" id="brand">ZIKEY <span lang="zh-Hant">字鑰</span></a>
     <form id="search-form" role="search"><input id="query" aria-label="Search a character or pinyin" placeholder="Search a character or pinyin" autocomplete="off"><button type="submit">Search</button></form>
     <div class="zk-goal"><label for="goal">Learning goal</label><select id="goal"><option>Default</option><option>Read more</option><option>See structure</option></select></div>
     <details class="zk-known"><summary id="known-count">Known characters</summary><div><label for="known-editor">Your known characters</label><textarea id="known-editor" rows="3"></textarea><p>Starts with a sample learner. Replace with your own pilot characters.</p><button id="apply-known">Apply</button><button id="reset">Reset demo</button></div></details>
+    </div>
   </header>
   <div id="error" class="zk-alert" role="alert" hidden></div>
   <div class="zk-grid">
@@ -15,6 +17,7 @@
       <div id="selection" class="zk-selection" aria-live="polite"></div>
     </section>
     <aside class="zk-inspector">
+      <div class="zk-book-shelf" id="book-shelf" role="group" aria-label="Recommended characters on the library shelf"></div>
       <section class="zk-why" aria-labelledby="why-title"><div class="zk-section-head"><h2 id="why-title">Why this next?</h2><button data-expand="recommendations" aria-label="Expand recommendations">Expand</button><select id="scope" aria-label="Recommendation scope"><option value="Overall">Overall</option><option value="This family">This family</option></select></div><p id="scope-label" class="zk-muted"></p>
         <div id="rankings"></div><div class="zk-signal-legend"><span>Prevalence</span><span>Reuse</span><span>Unlock</span><span>Heat</span></div>
         <div id="selected-score"></div><p id="rationale"></p><button id="explain">Explain with local AI</button><p id="ai-status" class="zk-muted"></p>

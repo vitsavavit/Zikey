@@ -2,6 +2,13 @@
 name: ZIKEY 字鑰
 description: A contemporary linguistic atlas for character learning.
 colors:
+  walnut: "#51311d"
+  shelf-edge: "#795535"
+  leather-green: "#334734"
+  leather-blue: "#34495b"
+  leather-red: "#693c39"
+  leather-ochre: "#805726"
+  book-gold: "#e8d398"
   sketch-pen: "#413c34"
   marker-yellow: "#f4df94"
   marker-green: "#d9e8bd"
@@ -97,6 +104,20 @@ components:
 ---
 
 # Design System: ZIKEY 字鑰
+
+## Approved walnut library — current direction
+
+User selected preview B on 2026-11-05. A photographic-style generated walnut bookcase
+frames the paper toolbar and right inspector. The left network stays on the sketchbook
+surface; recommendations and coverage stay legible on ivory paper. A shelf of up to five
+real recommended characters appears above Why this next?. These native buttons select
+the same character as the ranked list, with explicit accessible labels and pressed state.
+Leather cover colours are decorative, not an additional vocabulary or score encoding.
+Hover, keyboard focus and selection pull a book out by 5px with a 14-degree cover angle,
+over 240ms. Reduced-motion preferences disable this transform and transition. Mobile
+stacks A, the book shelf, B and C. Expand mode hides the shelf to focus on B or C.
+`static/walnut-library.jpg` is bundled as an embedded JPEG for cloud compatibility.
+This amendment supersedes earlier descriptions of the header and right inspector.
 
 ## Overview
 
