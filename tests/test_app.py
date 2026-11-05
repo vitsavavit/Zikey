@@ -37,6 +37,15 @@ class AppTests(unittest.TestCase):
         self.assertEqual(state['scope'],'Overall')
         with self.assertRaises(ValueError):apply_action(state,data,{'type':'scope','scope':'This family'})
 
+    def test_opening_a_book_keeps_the_overall_shelf(self):
+        data = Dataset.load()
+        state = initial_state(data)
+        self.assertIsNotNone(data.family('點'))
+        apply_action(state, data, {'type': 'select_book', 'character': '點'})
+        self.assertEqual((state['selected'], state['mode'], state['scope']), ('點', 'focus', 'Overall'))
+        apply_action(state, data, {'type': 'select', 'character': '點'})
+        self.assertEqual(state['scope'], 'This family')
+
     def test_search_empty_multi_family_and_heat_separation(self):
         data=Dataset.load();state=initial_state(data)
         apply_action(state,data,{'type':'search','query':'shi'})

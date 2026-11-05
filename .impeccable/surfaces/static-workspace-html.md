@@ -80,3 +80,12 @@ Follow the compact header and paper proportions in the supplied B mockup. Warm r
 paper is the outer surface only; data areas retain a grid. Use real leather-cover
 material on a 3D spine/page/cover component. Hover pulls a spine out and opens its
 cover; touch selects the same state. Preserve reduced-motion and mobile stacking.
+
+
+## Bounded click-to-open shelf
+
+Use real recommendation count and 44–60px spine widths. Only a click opens the
+book: neighbors slide, intact cover pulls forward, then paper opens with Chinese
+on the left and pinyin on the right. Leave room around sparse shelves. Fix the
+mobile intro to span the whole character record. Keep an inner scroll area for
+open spreads on narrow screens, and reduced-motion support.

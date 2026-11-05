@@ -30,3 +30,22 @@ expanded-panel selector priority. The design detector reported no warnings and
 Limits: no physical mobile-device or cross-browser matrix test; reduced motion
 was checked in CSS, not by changing the operating-system preference. No scoring,
 learner data, presentation or paid-API changes.
+
+## Click-to-open shelf follow-up
+
+- At 1440px, five closed spines stayed about 57.6px wide. Opening the middle
+  book produced a centered 184px spread; both pairs of neighbors moved aside
+  without stretching. Selecting 點 from Overall retained all five books.
+- The one-book scope rendered one centered 57.6px spine. Marking it known
+  hid the shelf when there were no recommendations. The shelf backdrop uses
+  only the bare wood crop so it does not suggest extra selectable books.
+- Opening begins with the 76px intact cover, holds that cover, then opens the
+  two paper leaves. The browser reported the 1.12s animation and hidden text
+  at activation; the settled spread showed Chinese left and pinyin right.
+- At 320px, the initial introduction used 233px of its 257px card instead of
+  the glyph column. The first and last books both opened fully in the shelf
+  with no page-wide horizontal overflow. At 390px the spread fit without
+  internal scrolling. Enter opened a book and focus was restored on response.
+- Independent code QA found a scope change that replaced neighbors mid-motion
+  and a delayed closing fade. Both were corrected; the scope regression test
+  failed before the fix and passed afterward. Total: 28 Python tests.

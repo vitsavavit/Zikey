@@ -107,6 +107,20 @@ components:
 
 ## Approved walnut library — current direction
 
+### Click-to-open shelf, 2026-11-06
+
+Show only available ranked recommendations. Closed leather spines stay 44–60px
+wide with 4px gaps, centered when they fit; a single book never fills the shelf.
+The shelf has a crop of the bare walnut panel behind the actual books. Clicking a
+book reserves room by sliding its neighbors, pulls forward a fixed-width cover,
+holds the intact cover briefly, then hinges it open into two rag-paper pages.
+Reveal the character on the left and pinyin on the right after the 1120ms opening
+sequence. Hover only lifts a closed spine. A narrow shelf scrolls internally to
+keep the open book in view; reduced motion uses an immediate spread. Book opening
+preserves the current overall recommendation scope and keyboard focus. The empty
+character-record introduction spans both columns on mobile. This replaces the
+earlier hover-to-open interaction below.
+
 ### User correction, 2026-11-06 — compact paper and physical books
 
 The latest supplied mockup is the visual target. Header spacing is compact; the

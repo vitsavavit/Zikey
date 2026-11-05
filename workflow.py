@@ -26,8 +26,11 @@ def apply_action(state, data, action):
     state['revision'] = revision
     state['error'] = None
     kind = action.get('type')
-    if kind == 'select':
+    if kind in ('select', 'select_book'):
+        keep_overall = kind == 'select_book' and state['scope'] == 'Overall'
         select(state, data, action.get('character'))
+        if keep_overall:
+            state['scope'] = 'Overall'
     elif kind == 'search':
         query = str(action.get('query', ''))[:80].strip()
         matches = data.search(query)
