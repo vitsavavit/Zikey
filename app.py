@@ -26,8 +26,11 @@ def load_data(data_version):
 
 
 @st.cache_resource
-def workspace_component(asset_version):
+def workspace_component(asset_version, _data):
     html, css, js = workspace_assets(ROOT/'static')
+    library = json.dumps({'characters': _data.characters, 'words': _data.words},
+                         ensure_ascii=False, separators=(',', ':')).replace('<', r'\u003c')
+    js = f'const libraryData = {library};\n' + js
     return st.components.v2.component('zikey_learning_workspace',
         html=html, css=css, js=js)
 
@@ -37,7 +40,8 @@ def compare(known, weights, heat_items):
     return data.compare(set(known), weights, dict(heat_items))
 
 
-data = load_data((ROOT/'data/processed/pilot.json').stat().st_mtime_ns)
+data_version = (ROOT/'data/processed/pilot.json').stat().st_mtime_ns
+data = load_data(data_version)
 if 'workspace' not in st.session_state:
     st.session_state.workspace = initial_state(data)
 state = st.session_state.workspace
@@ -108,30 +112,34 @@ for word in related:
     if len(ring) == 6:
         break
 
+facts = evidence_for(data, selected, known, state['weights'], heat) if selected else []
+backend = explanation_backend()
 explanation = state['explanation']
 if explanation:
     rationale = ' '.join(explanation['sentences'])
     ai_status = explanation['mode'] + (' · cached' if explanation.get('cached') else '')
 elif selected:
-    rationale = evidence_for(data, selected, known, state['weights'], heat)[0]
-    ai_status = ('Computed evidence · local LLM available on request' if explanation_backend() == 'ollama'
+    rationale = facts[0]
+    ai_status = ('Computed evidence · local LLM available on request' if backend == 'ollama'
                  else 'Template mode · computed evidence · no AI request')
 else:
     rationale = 'Choose a character to see why it is useful for your current knowledge.'
-    ai_status = ('Local inference · no paid API' if explanation_backend() == 'ollama'
+    ai_status = ('Local inference · no paid API' if backend == 'ollama'
                  else 'Template mode · no paid API or model request')
 if selected_score and not selected_score['score']:
     rationale = 'No active signal contributes to this score. Adjust weights or collect lookup data.'
 
 payload = {**{k: v for k, v in state.items() if k not in ('events', 'explanation')},
            'family': {'root': family[0], 'members': family[1]} if family else None,
-           'characters': data.characters, 'words': data.words, 'ranked': scoped[:5],
+           'ranked': scoped[:5],
            'rank_count': len(scoped), 'global_next': ranked[0]['character'] if ranked else None,
            'selected_score': selected_score, 'selected_known': selected in known,
            'nodes': nodes, 'links': [{'source': a, 'target': b, 'kinds': sorted(k)} for (a, b), k in links.items()],
            'graph_key': graph_key, 'ring_words': ring, 'related_count': len(related),
            'unlocks': data.unlocks(selected, known) if selected else [],
-           'rationale': rationale, 'ai_status': ai_status, 'explanation_backend': explanation_backend(),
+           'rationale': rationale, 'ai_status': ai_status, 'explanation_backend': backend,
+           'template_rationale': (' '.join(facts[:1] + facts[2:3]) if selected_score is None or selected_score['score']
+                                  else rationale) if backend == 'template' else None,
            'coverage': data.coverage(known),
            'curves': compare(tuple(sorted(known)), tuple(state['weights']), tuple(sorted(heat.items()))),
            'quality': json.loads((ROOT/'data/processed/quality_report.json').read_text()),
@@ -139,4 +147,4 @@ payload = {**{k: v for k, v in state.items() if k not in ('events', 'explanation
            'heat_active': bool(state['simulated'] or state['logging']),
            'max_heat': max(heat.values(), default=1), 'event_count': len(state['events'])}
 asset_version = tuple((ROOT/'static'/name).stat().st_mtime_ns for name in ('workspace.html', 'workspace.css', 'workspace.js'))
-workspace_component(asset_version)(key='galaxy_workspace', data=payload, on_action_change=on_action)
+workspace_component((data_version, asset_version), data)(key='galaxy_workspace', data=payload, on_action_change=on_action)

@@ -7,10 +7,17 @@ export default async function(component) {
   const palette={Novice:'#b7c9a7',A:'#b9cfd8',B:'#e6ca8b',C:'#d3bfca',Unknown:'#c7c4b7'};
   const signals=['prevalence','reuse','unlock','heat'], signalColors=['#4d7254','#526982','#916228','#81708f'];
   const S=root._workspace||(root._workspace={camera:{},positions:{},viewKey:null});
-  S.data=component.data;
+  S.data={...component.data,...libraryData};
   S.pending=false;root.setAttribute('aria-busy','false');
-  root.querySelectorAll('button,input,select,textarea').forEach(el=>el.disabled=false);
-  S.send=action=>{if(S.pending)return;S.pending=true;root.setAttribute('aria-busy','true');root.querySelectorAll('button,input,select,textarea').forEach(el=>el.disabled=true);$('error').hidden=true;component.setTriggerValue('action',action);};
+  S.lockedControls?.forEach(el=>el.disabled=false);
+  S.send=action=>{
+    if(S.pending)return;
+    S.pending=true;root.setAttribute('aria-busy','true');
+    S.lockedControls=[...root.querySelectorAll('button,input,select,textarea')].filter(el=>
+      !el.disabled&&!el.matches('[data-expand],.zk-zoom button,.zk-close,#methods-button,#all-words'));
+    S.lockedControls.forEach(el=>el.disabled=true);
+    $('error').hidden=true;component.setTriggerValue('action',action);
+  };
   const send=action=>S.send(action);
   const select=c=>send({type:'select',character:c});
   S.setFocus=panel=>{
@@ -56,10 +63,19 @@ export default async function(component) {
     $('goal').onchange=()=>send({type:'goal',goal:$('goal').value});
     $('scope').onchange=()=>send({type:'scope',scope:$('scope').value});
     $('apply-known').onclick=()=>{send({type:'known',characters:$('known-editor').value});root.querySelector('.zk-known').open=false;};
-    $('reset').onclick=()=>{S.camera={};S.positions={};send({type:'reset'});};
+    $('reset').onclick=()=>{S.camera={};S.positions={};S.graphKey=null;send({type:'reset'});};
     $('simulated').onchange=()=>send({type:'heat',enabled:$('simulated').checked});
     $('logging').onchange=()=>send({type:'logging',enabled:$('logging').checked});
-    $('explain').onclick=()=>{$('explain').disabled=true;$('ai-status').textContent=S.data.explanation_backend==='ollama'?'Running the local model…':'Preparing computed evidence…';send({type:'explain'});};
+    $('explain').onclick=()=>{
+      if(S.pending||!S.data.selected)return;
+      if(S.data.explanation_backend==='template'){
+        $('rationale').textContent=S.data.template_rationale;
+        $('ai-status').textContent='Template explanation · computed evidence · no AI request';
+        return;
+      }
+      $('ai-status').textContent='Running the local model…';
+      send({type:'explain'});
+    };
     $('close-word').onclick=()=>$('word-dialog').close();
     $('close-methods').onclick=()=>$('methods-dialog').close();
     $('methods-button').onclick=()=>$('methods-dialog').showModal();
@@ -132,9 +148,16 @@ export default async function(component) {
   $('methods-detail').innerHTML=`<p>Source snapshots: TOCFL workbook 20240923, Make Me a Hanzi dictionary, CC-CEDICT. Source URLs, hashes and licenses are preserved locally.</p><p>Node colour is derived from the earliest pilot word containing that character, not an official character level. Size counts pilot vocabulary prevalence, not corpus frequency. Layout proximity is not linguistic similarity.</p><p>The deterministic score sums globally max-normalized prevalence, IDS leaf-component reuse, unlock gain and heat with the displayed weights. Family recommendations filter the same global scores. All-zero weights use Default.</p><p>Solid lines: source decomposition leaf parts. Ochre: documented sound component. Green: documented meaning component. Multiple kinds on a pair share a display edge. Typed display relations never alter scoring edges.</p><p>The local LLM selects up to two exact evidence sentences. Unsupported output is rejected. It never changes ranking. A labelled template is used when the service fails.</p><p>Coverage is the percentage of these 450 vocabulary entries whose distinct characters are all known, recomputing each learning step. It is not corpus text coverage or proof of learning effectiveness.</p><p>${D.quality.missing_word_meaning.length} missing dictionary entries · ${D.quality.sense_review_needed.length} entries need sense review · ${D.quality.missing_etymology} missing origins. Alternatives are visible in word details.</p><p>Lookup logging is opt-in and session-only; no names or free-text queries are stored. Simulated heat is labelled and never mixed with real counts. No ALS has been trained.</p><p>AI disclosure: Codex assisted development, tests and presentation. Ollama qwen2.5-coder:7b performs local evidence selection. Learner and linguistic review remain pending.</p><p><a href="https://tocfl.edu.tw/tocfl/index.php/exam/download" target="_blank" rel="noopener">TOCFL</a> · <a href="https://github.com/skishore/makemeahanzi" target="_blank" rel="noopener">Make Me a Hanzi</a> · <a href="https://www.mdbg.net/chinese/dictionary?page=cc-cedict" target="_blank" rel="noopener">CC-CEDICT</a></p>`;
   $('coverage-now').textContent=`${D.coverage.toFixed(1)}% now`;
   $('coverage-note').textContent=`${D.known.length} known at start · after ${D.curves['My goal'].length-1} additional: ${D.curves['My goal'].at(-1).toFixed(1)}% · vocabulary order baseline, not textbook.`;
-  const chartData=Object.entries(D.curves).map(([name,values],i)=>({x:values.map((_,n)=>n),y:values,name,mode:'lines',line:{color:['#7e8783','#4d7254','#526982'][i],width:2,dash:name==='Default'?'dash':'solid'},hovertemplate:`${name}: %{y:.1f}%<extra></extra>`}));
-  await Plotly.react($('coverage-plot'),chartData,{height:$('coverage-plot').clientHeight,margin:{l:32,r:6,t:8,b:48},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{family:'Avenir Next, Helvetica Neue, sans-serif',color:'#675f52',size:11},xaxis:{title:{text:'Additional characters learned',font:{size:10}},gridcolor:'#d1c3a9',zeroline:false},yaxis:{range:[0,100],ticksuffix:'%',gridcolor:'#d1c3a9',zeroline:false},legend:{orientation:'h',y:-.38,font:{size:10}},showlegend:true,uirevision:'coverage'}, {displayModeBar:false,responsive:true});
+  const plot=$('coverage-plot');
+  const chartKey=JSON.stringify(D.curves);
+  if(S.chartKey!==chartKey){
+    S.chartKey=chartKey;
+    const chartData=Object.entries(D.curves).map(([name,values],i)=>({x:values.map((_,n)=>n),y:values,name,mode:'lines',line:{color:['#7e8783','#4d7254','#526982'][i],width:2,dash:name==='Default'?'dash':'solid'},hovertemplate:`${name}: %{y:.1f}%<extra></extra>`}));
+    Plotly.react(plot,chartData,{width:plot.clientWidth||undefined,height:plot.clientHeight||undefined,margin:{l:32,r:6,t:8,b:48},paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{family:'Avenir Next, Helvetica Neue, sans-serif',color:'#675f52',size:S.focus==='coverage'?14:11},xaxis:{title:{text:'Additional characters learned',font:{size:10}},gridcolor:'#d1c3a9',zeroline:false},yaxis:{range:[0,100],ticksuffix:'%',gridcolor:'#d1c3a9',zeroline:false},legend:{orientation:'h',y:-.38,font:{size:10}},showlegend:true,uirevision:'coverage'}, {displayModeBar:false,responsive:true}).catch(error=>{S.chartKey=null;console.error(error);});
+  }
 
+  const graphKey=JSON.stringify([D.graph_key,D.mode,D.selected,D.family,D.nodes,D.links,D.ring_words,D.heat_active,D.max_heat]);
+  if(S.graphKey===graphKey)return;
   const narrow=$('galaxy').clientWidth<600;
   const viewKey=D.graph_key+(narrow?':narrow':'');
   let nodes=D.nodes.map(n=>({...n})), cluster=[];
@@ -241,10 +264,14 @@ export default async function(component) {
   S.resizeViews=()=>{
     S.frame();
     const plot=$('coverage-plot');
-    if(plot.clientWidth)Plotly.relayout(plot,{width:plot.clientWidth,height:plot.clientHeight,
-      'font.size':S.focus==='coverage'?14:11});
+    const fontSize=S.focus==='coverage'?14:11;
+    if(plot.clientWidth&&plot.layout&&(plot.layout.width!==plot.clientWidth||
+        plot.layout.height!==plot.clientHeight||plot.layout.font?.size!==fontSize)){
+      Plotly.relayout(plot,{width:plot.clientWidth,height:plot.clientHeight,'font.size':fontSize});
+    }
   };
-  S.setFocus(S.focus||'');
+  if(root.dataset.focus===undefined)S.setFocus('');
   S.frame();
+  S.graphKey=graphKey;
 }
 
