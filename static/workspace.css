@@ -101,23 +101,23 @@
 .zk-map-wrap{background:#f5efdf url('/app/static/paper-texture.png') center/cover;border:1px solid var(--line);margin-top:8px}
 #galaxy{height:clamp(270px,calc(100svh - 410px),370px);min-height:270px}
 .zk-inspector{background:#51311d var(--walnut-shelves) center bottom/1000px auto;border:0;padding:0 12px 12px;gap:12px}
-.zk-book-shelf{--spine-width:clamp(44px,4vw,60px);position:relative;display:flex;align-items:flex-end;justify-content:flex-start;justify-content:safe center;gap:4px;height:155px;min-height:155px;padding:18px 8px 0;border-bottom:9px solid var(--shelf-edge);perspective:900px;background:#51311d var(--walnut-shelves) center 49%/max(1000px,160%) auto no-repeat;box-shadow:0 5px 7px #261c1233;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:var(--shelf-edge) var(--walnut)}
+.zk-book-shelf{--shelf-leather:url('/app/static/leather-books.webp');--shelf-paper:url('/app/static/rag-paper.jpg');--spine-width:clamp(44px,4vw,60px);position:relative;display:flex;align-items:flex-end;justify-content:flex-start;justify-content:safe center;gap:4px;height:155px;min-height:155px;padding:18px 8px 0;border-bottom:9px solid var(--shelf-edge);perspective:900px;background:#51311d var(--walnut-shelves) center 49%/max(1000px,160%) auto no-repeat;box-shadow:0 5px 7px #261c1233;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:var(--shelf-edge) var(--walnut)}
 .zk-book-shelf[hidden]{display:none}
 .zk button.zk-book{--cover-position:0%;--cover-colour:var(--leather-green);position:relative;display:block;flex:0 0 var(--spine-width);min-width:44px;max-width:60px;height:128px;margin:0;padding:0;border:0;border-image:none;border-radius:0;background:transparent!important;box-shadow:none;perspective:700px;overflow:visible;touch-action:manipulation;transition:flex-basis 480ms cubic-bezier(.16,1,.3,1)}
 .zk .zk-book:before,.zk .zk-book:after{display:none}
 .zk button.zk-book[data-cover="1"]{--cover-position:25%;--cover-colour:var(--leather-blue)}.zk button.zk-book[data-cover="2"]{--cover-position:50%;--cover-colour:var(--leather-red)}.zk button.zk-book[data-cover="3"]{--cover-position:75%;--cover-colour:var(--leather-ochre)}.zk button.zk-book[data-cover="4"]{--cover-position:100%}
 .zk-book-volume{position:absolute;inset:0;transform-style:preserve-3d;transform:translateZ(0);transition:transform 480ms cubic-bezier(.16,1,.3,1);pointer-events:none}
-.zk-book-spine{position:absolute;left:50%;top:0;bottom:0;width:var(--spine-width);display:flex;align-items:center;justify-content:center;background:var(--cover-colour) url('/app/static/leather-books.webp') var(--cover-position) center/500% 100% no-repeat;border-radius:6px 4px 3px 5px;transform-origin:left center;transform:translateX(-50%) translateZ(12px);color:var(--book-gold);font-family:"Songti TC","Songti SC",serif;font-size:29px;box-shadow:inset 5px 0 8px #261c1233,2px 2px 4px #261c1233;transition:transform 300ms ease-out,opacity 180ms ease-out}
+.zk-book-spine{position:absolute;left:50%;top:0;bottom:0;width:var(--spine-width);display:flex;align-items:center;justify-content:center;background:var(--cover-colour) var(--shelf-leather) var(--cover-position) center/500% 100% no-repeat;border-radius:6px 4px 3px 5px;transform-origin:left center;transform:translateX(-50%) translateZ(12px);color:var(--book-gold);font-family:"Songti TC","Songti SC",serif;font-size:29px;box-shadow:inset 5px 0 8px #261c1233,2px 2px 4px #261c1233;transition:transform 300ms ease-out,opacity 180ms ease-out}
 .zk-book-spine:before,.zk-book-spine:after{content:"";position:absolute;left:6px;right:6px;height:4px;border-top:1px solid var(--book-gold);border-bottom:1px solid var(--book-gold);opacity:.65}.zk-book-spine:before{top:19px}.zk-book-spine:after{bottom:19px}
 .zk-book-spine>span{position:relative;line-height:1.2;text-shadow:0 1px 2px var(--walnut)}
 .zk-book-pages{position:absolute;inset:4px 0 1px;pointer-events:none;transform-style:preserve-3d}
-.zk-book-pages:before,.zk-book-pages:after,.zk-book-cover:after{content:"";position:absolute;background:#fffaf0 url('/app/static/rag-paper.jpg') center/100% 100%;border:2px solid var(--cover-colour);box-shadow:inset 0 0 0 2px var(--line);backface-visibility:hidden}
+.zk-book-pages:before,.zk-book-pages:after,.zk-book-cover:after{content:"";position:absolute;background:#fffaf0 var(--shelf-paper) center/100% 100%;border:2px solid var(--cover-colour);box-shadow:inset 0 0 0 2px var(--line);backface-visibility:hidden}
 .zk-book-pages:before{inset:0 0 0 50%;border-radius:0 5px 5px 0;visibility:hidden}
 .zk-book-pages:after{inset:0 50% 0 0;border-radius:5px 0 0 5px;visibility:hidden}
 .zk-book-page-content{position:absolute;inset:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;justify-items:center;text-align:center;opacity:0;visibility:hidden;transform:translateZ(4px);transition:opacity 180ms ease-out,visibility 0s 180ms}
 .zk .zk-book-character{font-family:"Songti TC","Songti SC",serif;font-size:36px;line-height:1.2;color:var(--text)}.zk .zk-book-reading{font-family:"Avenir Next","Helvetica Neue",sans-serif;font-size:14px;line-height:1.3;max-width:100%;padding-inline:4px;overflow-wrap:anywhere;text-align:center;color:var(--muted)}
 .zk-book-cover{position:absolute;left:50%;width:50%;top:4px;bottom:1px;transform-origin:left center;transform-style:preserve-3d;visibility:hidden}
-.zk-book-cover:before{content:"";position:absolute;inset:0;background:url('/app/static/leather-books.webp') var(--cover-position) center/500% 100% no-repeat;transform:translateZ(.1px);backface-visibility:hidden}
+.zk-book-cover:before{content:"";position:absolute;inset:0;background:var(--shelf-leather) var(--cover-position) center/500% 100% no-repeat;transform:translateZ(.1px);backface-visibility:hidden}
 .zk-book-cover:after{inset:0;border-radius:5px 0 0 5px;transform:rotateY(180deg) translateZ(.1px)}
 .zk button.zk-book.active{flex:0 0 152px;min-width:152px;max-width:152px;z-index:3}
 .zk button.zk-book.active .zk-book-volume{transform:translateY(-5px) translateZ(20px)}
@@ -148,3 +148,16 @@
 @media(max-width:900px){.zk-grid{grid-template-columns:minmax(0,1fr)}.zk-inspector{display:flex}.zk-book-shelf{gap:4px;min-height:155px}.zk-toolbar-paper form{order:3}.zk-explore{padding:14px}.zk #galaxy{height:320px;min-height:280px}}
 @media(max-width:600px){.zk-toolbar{padding:12px 8px 6px}.zk-toolbar-paper{display:grid;grid-template-columns:minmax(0,1fr) auto auto;padding:9px 10px;gap:6px}.zk-toolbar-paper form{grid-column:1/-1;grid-row:2}.zk-toolbar-paper .zk-goal,.zk-toolbar-paper .zk-known{margin-left:0}.zk-toolbar-paper .zk-goal select{max-width:95px}.zk-toolbar-paper .zk-known summary{font-size:14px}.zk-brand{font-size:22px}.zk-brand span{font-size:14px;margin-left:2px}.zk-grid{padding:0 6px 8px;gap:12px}.zk-inspector{padding:0 8px 14px}.zk-book-shelf{gap:4px;padding-inline:6px}.zk .zk-book-character{font-size:32px}.zk-why,.zk-coverage{padding:12px}.zk-why:after,.zk-coverage:after{left:-8px;right:-8px}.zk-footer{margin:0 6px 8px;flex-wrap:wrap}.zk-selection{display:grid;grid-template-columns:52px minmax(0,1fr);gap:8px}.zk-selection .zk-glyph{font-size:48px}.zk-selection>#mark-known{grid-column:1/-1;justify-self:end}.zk .zk-book-reading{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.zk button.zk-book,.zk .zk-book-volume,.zk .zk-book-spine,.zk .zk-book-pages,.zk .zk-book-page-content{transition:none!important}.zk .zk-book-volume,.zk button.zk-book.active .zk-book-volume{transform:none}.zk button.zk-book.active .zk-book-cover{animation:none;visibility:hidden}.zk button.zk-book.active .zk-book-pages:before,.zk button.zk-book.active .zk-book-pages:after{transition:none}.zk button.zk-book.active .zk-book-page-content{opacity:1;visibility:visible}}
+
+
+.zk-book-shelf.zk-shelf-3d{overflow:hidden;background-position:center 50%}
+.zk-shelf-3d canvas,.zk-shelf-ink{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.zk-shelf-ink span{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;font-family:"Songti TC",Georgia,serif;line-height:1}
+.zk-shelf-ink .spine{color:var(--book-gold);text-shadow:0 1px 2px var(--walnut)}
+.zk-shelf-ink .page{color:var(--text)}
+.zk .zk-shelf-3d button.zk-book,.zk .zk-shelf-3d button.zk-book.active{
+  position:absolute;left:var(--hit-left);top:var(--hit-top);width:var(--hit-width);height:var(--hit-height);
+  min-width:24px;max-width:none;transform:translate(-50%,-50%);transition:none;
+  background:transparent!important;border:0;box-shadow:none
+}
+.zk .zk-shelf-3d .zk-book-volume{display:none}
