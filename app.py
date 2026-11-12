@@ -112,7 +112,7 @@ for word in related:
     if len(ring) == 6:
         break
 
-facts = evidence_for(data, selected, known, state['weights'], heat) if selected else []
+facts = evidence_for(data, selected, known, state['weights'], heat, ranked=ranked) if selected else []
 backend = explanation_backend()
 explanation = state['explanation']
 if explanation:

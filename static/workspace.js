@@ -11,6 +11,15 @@ export default async function(component) {
   S.pending=false;root.setAttribute('aria-busy','false');
   S.lockedControls?.forEach(el=>el.disabled=false);
   S.send=action=>{
+    if((action.type==='select'||action.type==='select_book')&&
+        S.data.mode==='focus'&&S.data.selected===action.character){
+      S.showLibraryDetails?.();
+      return;
+    }
+    if(action.type==='overview'&&S.data.mode==='overview')return;
+    if((action.type==='goal'&&action.goal===S.data.goal)||
+       (action.type==='scope'&&action.scope===S.data.scope)||
+       (action.type==='search'&&action.query.trim()===S.data.query))return;
     if(S.pending)return;
     S.pending=true;root.setAttribute('aria-busy','true');
     S.lockedControls=[...root.querySelectorAll('button,input,select,textarea')].filter(el=>
@@ -113,7 +122,8 @@ export default async function(component) {
   const shelfChanged=S.shelfKey!==shelfKey;
   if(shelfChanged){
     S.shelfKey=shelfKey;
-    $('book-shelf').innerHTML=D.ranked.map((r,i)=>`<button class="zk-book" data-character="${esc(r.character)}" data-cover="${i}" data-reading="${esc(D.characters[r.character].pinyin[0]||'')}" aria-label="Open recommended character ${esc(r.character)}"><span class="zk-book-volume" aria-hidden="true"><span class="zk-book-pages"><span class="zk-book-page-content"><span class="zk-book-character" lang="zh-Hant">${esc(r.character)}</span><span class="zk-book-reading">${esc(D.characters[r.character].pinyin[0]||'')}</span></span></span><span class="zk-book-spine"><span lang="zh-Hant">${esc(r.character)}</span></span><span class="zk-book-cover"></span></span></button>`).join('');
+    $('book-shelf').querySelectorAll('.zk-book').forEach(button=>button.remove());
+    $('book-shelf').insertAdjacentHTML('beforeend',D.ranked.map((r,i)=>`<button class="zk-book" data-character="${esc(r.character)}" data-cover="${i}" data-reading="${esc(D.characters[r.character].pinyin[0]||'')}" aria-label="Open recommended character ${esc(r.character)}"><span class="zk-book-volume" aria-hidden="true"><span class="zk-book-pages"><span class="zk-book-page-content"><span class="zk-book-character" lang="zh-Hant">${esc(r.character)}</span><span class="zk-book-reading">${esc(D.characters[r.character].pinyin[0]||'')}</span></span></span><span class="zk-book-spine"><span lang="zh-Hant">${esc(r.character)}</span></span><span class="zk-book-cover"></span></span></button>`).join(''));
   }
   const queuedBook=S.queuedBook;
   S.queuedBook=null;
@@ -136,6 +146,10 @@ export default async function(component) {
     b.ontransitionend=e=>{if(e.target===b&&e.propertyName==='flex-basis')reveal();};
     if(shelfChanged&&focusedBook===b.dataset.character)b.focus({preventScroll:true});
     b.onclick=()=>{
+      if(S.openBook===b.dataset.character&&S.data.selected===b.dataset.character){
+        S.showLibraryDetails?.();
+        return;
+      }
       S.openBook=b.dataset.character;
       updateBookShelf();
       if(matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame(reveal);
@@ -270,6 +284,8 @@ export default async function(component) {
     S.libraryLoading=true;
     createLibraryOverview(library,D.characters,{
       select,word:wordDetails,overview:()=>send({type:'overview'}),
+      back:index=>send({type:'back',...(index===undefined?{}:{index})}),
+      mark:()=>send({type:'mark'}),allWords,details:show=>{S.showLibraryDetails=show;},
       component:character=>{
         $('word-detail').innerHTML=`<h2 class="word-title" lang="zh-Hant">${esc(character)}</h2><p>Documented structural component outside the learning vocabulary.</p>`;
         $('word-dialog').showModal();

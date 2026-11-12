@@ -6,6 +6,52 @@ async function createLibraryOverview(panel, characters, actions) {
   const backPosition=document.createComment('library back button');
   back.before(backPosition);
   const panButton = panel.querySelector('[data-library="pan"]');
+  const trail=document.createElement('nav');
+  trail.className='zk-library-history';
+  trail.setAttribute('aria-label','Library navigation history');
+  stage.before(trail);
+  const hud=document.createElement('details');
+  hud.className='zk-library-hud';
+  const hudSummary=document.createElement('summary');
+  hudSummary.textContent='Character details';
+  const hudTitle=document.createElement('h2');
+  hudTitle.lang='zh-Hant';
+  const hudReading=document.createElement('p');
+  const hudDefinition=document.createElement('p');
+  const hudEvidence=document.createElement('p');
+  const hudMark=document.createElement('button');
+  hudMark.type='button';
+  hudMark.onclick=()=>actions.mark();
+  const hudWords=document.createElement('button');
+  hudWords.type='button';
+  hudWords.textContent='Related words';
+  hudWords.onclick=()=>actions.allWords();
+  hud.append(hudSummary,hudTitle,hudReading,hudDefinition,hudEvidence,hudMark,hudWords);
+  stage.append(hud);
+  hud.hidden=true;
+  actions.details(()=>{if(!hud.hidden)hud.open=true;});
+  let currentData=null, currentView=null;
+  const cameraViews=new Map();
+  const cameraState=()=>({target:target.clone(),pan:pan.clone(),distance,elevation,azimuth});
+  const restoreCamera=view=>{
+    target.copy(view.target);pan.copy(view.pan);
+    ({distance,elevation,azimuth}=view);
+    yawSpeed=pitchSpeed=0;
+  };
+  const viewName=view=>view.selected||(
+    view.mode==='overview'?'Library':view.mode==='radical'?view.radical:'Search '+view.query);
+  function goBack(index){
+    const history=currentData?.history||[];
+    const destination=index===undefined?history.length-1:index;
+    if(destination>=0){
+      returningToBook=Boolean(returnBook&&history[destination].mode==='overview');
+      actions.back(destination);
+    }else{
+      returningToBook=Boolean(returnBook);
+      actions.overview();
+    }
+  }
+
   const families=new Map(), radicals=new Map();
   for(const [character,entry] of Object.entries(characters)){
     const radical=entry.radical;
@@ -195,6 +241,8 @@ async function createLibraryOverview(panel, characters, actions) {
     for(const {element} of labels)element.remove();
     labels.length=0;
     active=group;
+    if(trail.lastElementChild)trail.lastElementChild.textContent=group?`Book ${group.name}`:'Library';
+    hud.hidden=true;
     stage.classList.remove('zk-rotunda-paper');
     backPosition.after(back);
     back.textContent='All books';
@@ -293,6 +341,10 @@ async function createLibraryOverview(panel, characters, actions) {
         ()=>node.component?actions.component(node.id):actions.select(node.id));
       if(node.component)button.classList.add('zk-rotunda-component');
       if(node.recommended||node.id===data.selected)button.classList.add('zk-rotunda-highlight');
+      if(node.id===data.selected){
+        button.setAttribute('aria-label',`Details for ${node.id}`);
+        button.onclick=()=>{hud.open=true;};
+      }
     };
     const selected=data.nodes.find(node=>node.id===data.selected);
     if(selected)addNode(selected,new T.Vector3(0,.35,.3));
@@ -341,20 +393,53 @@ async function createLibraryOverview(panel, characters, actions) {
     schedule();
   }
   function update(data){
+    currentData=data;
+    const entry=data.selected&&characters[data.selected];
+    hud.hidden=!entry;
+    if(entry){
+      hudSummary.textContent=`${data.selected} · Details`;
+      hudTitle.textContent=data.selected;
+      hudReading.textContent=entry.pinyin.join(' / ');
+      hudDefinition.textContent=entry.definition||'Definition unavailable';
+      hudEvidence.textContent=data.rationale;
+      hudMark.textContent=data.selected_known?'Unmark as known':'Mark as known';
+      hudWords.textContent=`${data.related_count} related words`;
+    }
+    trail.replaceChildren();
+    const history=data.history||[];
+    history.forEach((view,index)=>{
+      const button=document.createElement('button');
+      button.type='button';
+      button.textContent=view.mode==='overview'&&returnBook?`Book ${returnBook.group.name}`:viewName(view);
+      button.onclick=()=>goBack(index);
+      trail.append(button);
+    });
+    const current=document.createElement('span');
+    current.textContent=viewName(data);
+    current.setAttribute('aria-current','page');
+    trail.append(current);
     const key=data.mode==='overview'?null:
       JSON.stringify([data.graph_key,data.selected,data.nodes,data.links,data.ring_words]);
+    const viewId=`${data.mode}:${data.selected||data.radical||data.query||''}`;
     if(key!==networkKey){
+      if(currentView)cameraViews.set(currentView,cameraState());
       networkKey=key;
-      if(key)showNetwork(data);
-      else{
+      currentView=viewId;
+      if(key){
+        showNetwork(data);
+        if(cameraViews.has(viewId))restoreCamera(cameraViews.get(viewId));
+      }else{
         const book=returningToBook?returnBook:null;
         returningToBook=false;
         returnBook=null;
-        if(book){
-          show(book.group,book.point);
-          resetCamera();
-        }else show(null);
+        if(book){show(book.group,book.point);resetCamera();}
+        else show(null);
       }
+    }
+    if(key){
+      const previous=history.at(-1);
+      back.textContent=history.length>1?`Back to ${viewName(previous)}`:
+        returnBook?'Back to book':'Back to library';
     }
     resize();
   }
@@ -452,7 +537,16 @@ async function createLibraryOverview(panel, characters, actions) {
     distance=T.MathUtils.clamp(distance*factor,9,42);
     schedule();
   }
-  function resize(){renderer.setSize(stage.clientWidth,stage.clientHeight,false);schedule();}
+  let renderWidth=0,renderHeight=0;
+  function resize(){
+    const width=stage.clientWidth,height=stage.clientHeight;
+    if(!width||!height)return;
+    if(width!==renderWidth||height!==renderHeight){
+      renderWidth=width;renderHeight=height;
+      renderer.setSize(width,height,false);
+      schedule();
+    }else if(networkKey!==null||active||flight||closing)schedule();
+  }
   const observer=new ResizeObserver(resize);
   observer.observe(stage);
   stage.addEventListener('pointerdown',event=>{
@@ -527,8 +621,7 @@ async function createLibraryOverview(panel, characters, actions) {
   }
   back.onclick=()=>{
     if(!networkKey){closeBook();return;}
-    returningToBook=Boolean(returnBook);
-    actions.overview();
+    goBack();
   };
   canvas.addEventListener('webglcontextlost',()=>{
     observer.disconnect();

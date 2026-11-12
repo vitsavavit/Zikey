@@ -15,8 +15,10 @@ def explanation_backend():
     return 'ollama' if os.environ.get('ZIKEY_EXPLANATION_BACKEND') == 'ollama' else 'template'
 
 
-def evidence_for(data, character, known, weights, heat=None):
-    row = next((r for r in data.rank(known, weights, heat) if r["character"] == character), None)
+def evidence_for(data, character, known, weights, heat=None, *, ranked=None):
+    if ranked is None:
+        ranked = data.rank(known, weights, heat)
+    row = next((r for r in ranked if r["character"] == character), None)
     entry = data.characters[character]
     facts = []
     if row:

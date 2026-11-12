@@ -237,3 +237,21 @@
   position:absolute;z-index:5;top:10px;left:10px;min-height:40px;
   color:#382619;background:#fff0cf;border-color:#a27a48;
 }
+
+
+.zk-library-history{display:flex;align-items:center;gap:6px;overflow-x:auto;padding:5px 0 9px;flex-shrink:0}
+.zk-library-history button{padding:3px 9px;min-height:32px;white-space:nowrap}
+.zk-library-history button:after{content:" /";margin-left:6px;color:#9b7b52}
+.zk-library-history>[aria-current]{font-size:13px;font-weight:600;white-space:nowrap}
+.zk-library-hud{position:absolute;z-index:6;top:10px;right:10px;width:min(280px,44%);max-height:75%;
+  overflow:auto;background:#fff0d4;color:#37281a;border:1px solid #aa8150;padding:8px 10px;box-shadow:0 4px 15px #301b1533}
+.zk .zk-library-hud[hidden]{display:none}
+.zk .zk-library-hud summary{color:#37281a;font-size:13px;padding:3px}
+.zk .zk-library-hud h2{font:42px "Songti TC",serif;margin-top:8px}
+.zk .zk-library-hud p{font-size:12px;margin:7px 0}
+.zk .zk-library-hud button{min-height:36px;margin:4px 3px 0 0}
+#library-immersive .zk-library-history{padding:7px 12px;color:#f4dfbb}
+#library-immersive .zk-library-history button{font-size:12px}
+
+.zk .zk-library-hud:not([open]){width:auto;max-width:44%}
+@media(max-width:600px){.zk .zk-library-hud[open]{width:calc(100% - 20px);max-width:300px;max-height:65%}}

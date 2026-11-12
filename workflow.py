@@ -8,7 +8,7 @@ def initial_state(data):
     return dict(mode='overview', selected=None, radical=None, scope='Overall', query='',
                 matches=[], known=sorted(SEED_KNOWN & set(data.characters)), goal='Default',
                 weights=list(PRESETS['Default']), simulated=False, logging=False, events=[],
-                explanation=None, error=None, revision=0)
+                explanation=None, error=None, revision=0, history=[])
 
 
 def select(state, data, char):
@@ -26,6 +26,16 @@ def apply_action(state, data, action):
     state['revision'] = revision
     state['error'] = None
     kind = action.get('type')
+    view_keys = ('mode', 'selected', 'radical', 'scope', 'query', 'matches')
+    previous = {key: state[key] for key in view_keys}
+    history = state.setdefault('history', [])
+    if kind == 'back':
+        index = action.get('index', len(history) - 1)
+        if type(index) is not int or not 0 <= index < len(history):
+            raise ValueError('Choose a previous navigation step.')
+        state.update(history[index], explanation=None)
+        del history[index:]
+        return
     if kind in ('select', 'select_book'):
         keep_overall = kind == 'select_book' and state['scope'] == 'Overall'
         select(state, data, action.get('character'))
@@ -78,6 +88,10 @@ def apply_action(state, data, action):
         state['revision'] = revision
     elif kind != 'explain':
         raise ValueError('Unknown workspace action.')
+    if kind in ('select', 'select_book', 'search', 'radical', 'overview'):
+        current = {key: state[key] for key in view_keys}
+        if current != previous:
+            history.append(previous)
 
 
 def heat_for(state, data):
