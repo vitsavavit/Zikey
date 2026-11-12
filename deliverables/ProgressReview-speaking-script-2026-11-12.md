@@ -26,7 +26,7 @@
 - Slide 9 เพิ่มการเปิดเผยว่าฉากห้องสมุดโดมเป็นภาพสร้างด้วย AI ส่วนหนังสือ โหนด และเส้นเชื่อมเป็นวัตถุและปฏิสัมพันธ์ใน Three.js
 - ตัวเลข coverage บน Slide 7 เป็นผลของสถานะผู้เรียนและอักษรที่เลือกในครั้งนั้น ให้รายงานตัวเลขบนเว็บจริงขณะเดโม ห้ามสัญญาว่าเพิ่มอักษรใดก็จะได้ 5.6%
 
-## บทพูดหลักฉบับกระชับ 7–8 นาที แล้ว Q&A 2–3 นาที
+## บทพูดหลักฉบับกระชับ 6 นาที + live demo 2–2.5 นาที + Q&A 1.5–2 นาที
 
 ใช้ส่วนนี้เป็นสคริปต์หลักในการนำเสนอ ส่วนบทพูดรายละเอียดด้านล่างเก็บไว้ตอบคำถาม
 
@@ -71,13 +71,11 @@ In the 3D library, a book is a sound family or a radical group. For example, 青
 
 The important rule is unlock gain. Learning 請 `qǐng` does not unlock 請問 `qǐngwèn` unless 問 `wèn` is already known. Changing the goal changes the weights, and marking a character known recalculates the ranking and coverage.”
 
-### Slide 6 — 2 นาทีเดโม
+### Slide 6 — 25 วินาที อธิบาย task ก่อนเดโม
 
-“Now I will show one complete task. I search `qing`. The result separates same-looking sound families from the exact current reading. I select 青 `qīng`, then inspect 清 `qīng`, 晴 `qíng`, 請 `qǐng`, and 情 `qíng`.
+“This is the core learner task that I will demonstrate at the end. A learner searches `qing`, inspects related characters, understands why one is recommended, and marks it as known.
 
-I open 請 `qǐng` and show its component and related words. The system shows that 請問 `qǐngwèn` still needs 問 `wèn`. Next, I change the learning goal and select Mark as known. The recommendation list and coverage update from the same learner state.
-
-In the 3D view, I can open the related book, inspect a character on the paper spread, then close it or step back through the navigation history. This is interactive exploration, not a static chart.”
+The correctness check is that 請問 `qǐngwèn` is not unlocked after learning 請 `qǐng` alone while 問 `wèn` remains unknown.”
 
 ### Slide 7 — 35 วินาที
 
@@ -95,11 +93,27 @@ Next, I will expand and review the data, measure interaction latency on devices,
 
 “The data sources are TOCFL, Make Me a Hanzi, and CC-CEDICT. The library background is AI-generated visual material. The book objects, graph links, scoring, and learner interactions are implemented in the prototype.
 
-ZIKEY’s contribution is not claiming that AI knows the best answer. It shows the learner the data-backed reasons for a recommendation. Thank you. I welcome questions.”
+ZIKEY’s contribution is not claiming that AI knows the best answer. It shows the learner the data-backed reasons for a recommendation. I’ll finish by showing the same flow live.”
 
-### Q&A — กันเวลา 2–3 นาที
+### Live demo at the end — 2–2.5 นาที
 
-ถ้าเวลาสั้น ให้ข้ามคำอธิบาย 3D เพิ่มเติมใน Slide 4 และลดเดโมเหลือค้น `qing` → เปิด 請 `qǐng` → mark as known → ดูคำแนะนำเปลี่ยน
+ก่อนเริ่ม ให้ reset sample learner state ที่ 請 `qǐng` และ 問 `wèn` ยัง unknown แล้วเปิดหน้าเว็บไว้ที่ overview ไม่ใช่ 3D full library
+
+“I’ll now show the exact task from the slides. First, I search `qing`. 青 is `qīng`, 清 is `qīng`, 晴 is `qíng`, 請 is `qǐng`, and 情 is `qíng`. The app keeps their shared family and different tones visible.
+
+I select 請, pronounced `qǐng`. Its detail view shows source-based structure, related words, and the separate score signals.
+
+I now mark 請 as known. 請問, pronounced `qǐngwèn`, is still not readable because 問, pronounced `wèn`, is missing. When I also mark 問 as known, 請問 becomes readable. Coverage and the next recommendations update from the same learner state.
+
+Finally, I open the 3D library as a second exploration mode, open the related book, and return without losing the selection. This proves the data, recommendation, learner action, and coverage calculation work as one loop.”
+
+ถ้าเวลาเหลือ 15 วินาที
+
+“The 3D library is an alternate exploration mode. I will keep it short here and focus feedback on whether the recommendation explanation is understandable.”
+
+### Q&A — กันเวลา 1.5–2 นาที
+
+ถ้าเวลาสั้น ให้ข้ามการเปิด 3D library แล้วจบที่ค้น `qing` → เปิด 請 `qǐng` → mark 請 และ 問 as known → ดูคำแนะนำกับ coverage เปลี่ยน
 
 ## Slide 1 — Which character should I learn next and why?
 
