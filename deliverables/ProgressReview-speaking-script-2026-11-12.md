@@ -57,11 +57,11 @@ For the word 請問, pronounced `qǐngwèn`, the system stores the two distinct 
 
 “This proof of concept uses 290 characters, 450 vocabulary entries, and 556 component edges. It is deliberately a pilot dataset, not a claim of full Chinese coverage.
 
-The data quality report is visible. The current processing report has zero missing word glosses, eleven senses needing review, and thirty characters without origin records. Missing evidence stays missing. The system does not invent it.”
+The slide shows the earlier audit, with six missing word glosses and eighty-four senses needing review. After the latest data pass, those counts are now zero missing glosses and eleven senses needing review. Thirty characters still have no origin record. Missing evidence stays missing. The system does not invent it.”
 
 ### Slide 4 — 45 วินาที
 
-“The learner can explore a 2D graph or an immersive 3D library. In the 2D graph, colour is a vocabulary band and size is vocabulary prevalence in this pilot set.
+“The original prototype was a linked 2D graph. The current version keeps that 2D graph and adds an immersive 3D library. In the 2D graph, colour is a vocabulary band and size is vocabulary prevalence in this pilot set.
 
 In the 3D library, a book is a sound family or a radical group. For example, 青 `qīng` connects to 請 `qǐng` through a documented component relationship. The library is for exploration. The edges and source data remain the evidence.”
 
@@ -81,13 +81,13 @@ In the 3D view, I can open the related book, inspect a character on the paper sp
 
 ### Slide 7 — 35 วินาที
 
-“The current codebase has 32 automated tests passing. They cover scoring, unlock logic, coverage monotonicity, and navigation history. I also tested the core browser path.
+“This slide records the earlier checkpoint of 22 automated tests and the example learner change from 21 to 22 known characters, where coverage rose from 4.9 to 5.6 percent. The current codebase has 32 tests passing. The live coverage can differ because it always depends on the current known-character state and selected sequence.
 
 The coverage value is the share of pilot vocabulary whose distinct characters are all known. It is not a percentage of all Chinese text a learner can read.”
 
 ### Slide 8 — 35 วินาที
 
-“The main limitation is that this is a 290-character pilot and not evidence that users learn faster. The public deployment uses a clearly labelled template explanation, not a paid cloud LLM. Ollama remains an optional local experiment.
+“This slide previously listed cloud hosting as deferred. The prototype is now deployed publicly, but the main limitation remains that this is a 290-character pilot and not evidence that users learn faster. The public deployment uses a clearly labelled template explanation, not a paid cloud LLM. Ollama remains an optional local experiment.
 
 Next, I will expand and review the data, measure interaction latency on devices, and run task-based tests with learners. ALS, accounts, and a 10,000-node graph are intentionally deferred.”
 
