@@ -26,6 +26,81 @@
 - Slide 9 เพิ่มการเปิดเผยว่าฉากห้องสมุดโดมเป็นภาพสร้างด้วย AI ส่วนหนังสือ โหนด และเส้นเชื่อมเป็นวัตถุและปฏิสัมพันธ์ใน Three.js
 - ตัวเลข coverage บน Slide 7 เป็นผลของสถานะผู้เรียนและอักษรที่เลือกในครั้งนั้น ให้รายงานตัวเลขบนเว็บจริงขณะเดโม ห้ามสัญญาว่าเพิ่มอักษรใดก็จะได้ 5.6%
 
+## บทพูดหลักฉบับกระชับ 7–8 นาที แล้ว Q&A 2–3 นาที
+
+ใช้ส่วนนี้เป็นสคริปต์หลักในการนำเสนอ ส่วนบทพูดรายละเอียดด้านล่างเก็บไว้ตอบคำถาม
+
+### คำอ่านที่ใช้ระหว่างพูด
+
+- 青 `qīng` ประมาณ “ชิง” เสียงสูงคงที่
+- 清 `qīng` ประมาณ “ชิง” เสียงสูงคงที่
+- 晴 `qíng` ประมาณ “ชิง” เสียงไต่ขึ้น
+- 請 `qǐng` ประมาณ “ฉิ่ง” เสียงต่ำแล้วกลับขึ้น
+- 情 `qíng` ประมาณ “ชิง” เสียงไต่ขึ้น
+- 睛 `jīng` ประมาณ “จิง” เสียงสูงคงที่
+- 問 `wèn` ประมาณ “เวิ่น” เสียงตก
+- 請問 `qǐngwèn` ประมาณ “ฉิ่งเวิ่น” หมายถึง “excuse me” หรือ “may I ask”
+
+### Slide 1 — 40 วินาที
+
+“Hello, I’m Lin. ZIKEY is an interactive learning tool for Traditional Chinese. It helps answer one practical question. Which character should I learn next, and why?
+
+For example, I start with the sound family `qing`. 青 is `qīng`, 清 is also `qīng`, 晴 is `qíng`, 請 is `qǐng`, and 情 is `qíng`. They look related, but their readings and tones are not identical. ZIKEY makes those connections and differences visible, then recommends a next step from the learner’s current knowledge.”
+
+### Slide 2 — 45 วินาที
+
+“The pipeline is Data to AI to Visualization to Human feedback. I combine TOCFL vocabulary levels, Make Me a Hanzi character structures, and CC-CEDICT English senses. Python and NetworkX turn them into a character and word graph.
+
+For the word 請問, pronounced `qǐngwèn`, the system stores the two distinct characters 請 `qǐng` and 問 `wèn`. It can then test whether a learner knows both characters, rather than assuming the whole word is readable.”
+
+### Slide 3 — 35 วินาที
+
+“This proof of concept uses 290 characters, 450 vocabulary entries, and 556 component edges. It is deliberately a pilot dataset, not a claim of full Chinese coverage.
+
+The data quality report is visible. The current processing report has zero missing word glosses, eleven senses needing review, and thirty characters without origin records. Missing evidence stays missing. The system does not invent it.”
+
+### Slide 4 — 45 วินาที
+
+“The learner can explore a 2D graph or an immersive 3D library. In the 2D graph, colour is a vocabulary band and size is vocabulary prevalence in this pilot set.
+
+In the 3D library, a book is a sound family or a radical group. For example, 青 `qīng` connects to 請 `qǐng` through a documented component relationship. The library is for exploration. The edges and source data remain the evidence.”
+
+### Slide 5 — 45 วินาที
+
+“The recommendation is not a black box. It combines vocabulary prevalence, component reuse, unlock gain, and heat. For the default goal, the weights are 35, 25, 40, and 0 percent.
+
+The important rule is unlock gain. Learning 請 `qǐng` does not unlock 請問 `qǐngwèn` unless 問 `wèn` is already known. Changing the goal changes the weights, and marking a character known recalculates the ranking and coverage.”
+
+### Slide 6 — 2 นาทีเดโม
+
+“Now I will show one complete task. I search `qing`. The result separates same-looking sound families from the exact current reading. I select 青 `qīng`, then inspect 清 `qīng`, 晴 `qíng`, 請 `qǐng`, and 情 `qíng`.
+
+I open 請 `qǐng` and show its component and related words. The system shows that 請問 `qǐngwèn` still needs 問 `wèn`. Next, I change the learning goal and select Mark as known. The recommendation list and coverage update from the same learner state.
+
+In the 3D view, I can open the related book, inspect a character on the paper spread, then close it or step back through the navigation history. This is interactive exploration, not a static chart.”
+
+### Slide 7 — 35 วินาที
+
+“The current codebase has 32 automated tests passing. They cover scoring, unlock logic, coverage monotonicity, and navigation history. I also tested the core browser path.
+
+The coverage value is the share of pilot vocabulary whose distinct characters are all known. It is not a percentage of all Chinese text a learner can read.”
+
+### Slide 8 — 35 วินาที
+
+“The main limitation is that this is a 290-character pilot and not evidence that users learn faster. The public deployment uses a clearly labelled template explanation, not a paid cloud LLM. Ollama remains an optional local experiment.
+
+Next, I will expand and review the data, measure interaction latency on devices, and run task-based tests with learners. ALS, accounts, and a 10,000-node graph are intentionally deferred.”
+
+### Slide 9 — 25 วินาที
+
+“The data sources are TOCFL, Make Me a Hanzi, and CC-CEDICT. The library background is AI-generated visual material. The book objects, graph links, scoring, and learner interactions are implemented in the prototype.
+
+ZIKEY’s contribution is not claiming that AI knows the best answer. It shows the learner the data-backed reasons for a recommendation. Thank you. I welcome questions.”
+
+### Q&A — กันเวลา 2–3 นาที
+
+ถ้าเวลาสั้น ให้ข้ามคำอธิบาย 3D เพิ่มเติมใน Slide 4 และลดเดโมเหลือค้น `qing` → เปิด 請 `qǐng` → mark as known → ดูคำแนะนำเปลี่ยน
+
 ## Slide 1 — Which character should I learn next and why?
 
 “Hello, I’m Lin. My project is ZIKEY, a visual learning tool for Traditional Chinese.
