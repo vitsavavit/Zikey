@@ -13,7 +13,20 @@ async function createLibraryOverview(panel, characters, actions) {
   const hud=document.createElement('details');
   hud.className='zk-library-hud';
   const hudSummary=document.createElement('summary');
-  hudSummary.textContent='Character details';
+  const hudHeading=document.createElement('span');
+  hudHeading.textContent='Character details';
+  const hudClose=document.createElement('button');
+  hudClose.type='button';
+  hudClose.dataset.library='close-details';
+  hudClose.textContent='Close';
+  hudClose.setAttribute('aria-label','Close character details');
+  const collapseHud=()=>{hud.open=false;};
+  hudClose.onclick=event=>{
+    event.preventDefault();
+    collapseHud();
+    hudSummary.focus();
+  };
+  hudSummary.append(hudHeading,hudClose);
   const hudTitle=document.createElement('h2');
   hudTitle.lang='zh-Hant';
   const hudReading=document.createElement('p');
@@ -26,7 +39,26 @@ async function createLibraryOverview(panel, characters, actions) {
   hudWords.type='button';
   hudWords.textContent='Related words';
   hudWords.onclick=()=>actions.allWords();
-  hud.append(hudSummary,hudTitle,hudReading,hudDefinition,hudEvidence,hudMark,hudWords);
+  const hudBody=document.createElement('div');
+  hudBody.className='zk-library-hud-body';
+  hudBody.tabIndex=0;
+  hudBody.setAttribute('role','region');
+  hudBody.setAttribute('aria-label','Scrollable character details');
+  hudBody.append(hudTitle,hudReading,hudDefinition,hudEvidence,hudMark,hudWords);
+  hud.append(hudSummary,hudBody);
+  hud.addEventListener('pointerdown',event=>event.stopPropagation());
+  hud.addEventListener('wheel',event=>event.stopPropagation(),{passive:true});
+  panel.addEventListener('pointerdown',event=>{
+    if(hud.open&&!hud.contains(event.target))collapseHud();
+  },true);
+  panel.addEventListener('keydown',event=>{
+    if(event.key==='Escape'&&hud.open){
+      event.preventDefault();
+      event.stopPropagation();
+      collapseHud();
+      hudSummary.focus();
+    }
+  },true);
   stage.append(hud);
   hud.hidden=true;
   actions.details(()=>{if(!hud.hidden)hud.open=true;});
@@ -397,7 +429,7 @@ async function createLibraryOverview(panel, characters, actions) {
     const entry=data.selected&&characters[data.selected];
     hud.hidden=!entry;
     if(entry){
-      hudSummary.textContent=`${data.selected} · Details`;
+      hudHeading.textContent=`${data.selected} · Details`;
       hudTitle.textContent=data.selected;
       hudReading.textContent=entry.pinyin.join(' / ');
       hudDefinition.textContent=entry.definition||'Definition unavailable';

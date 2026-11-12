@@ -255,3 +255,14 @@
 
 .zk .zk-library-hud:not([open]){width:auto;max-width:44%}
 @media(max-width:600px){.zk .zk-library-hud[open]{width:calc(100% - 20px);max-width:300px;max-height:65%}}
+
+
+.zk .zk-library-hud{overflow:visible;max-height:none;padding:0}
+.zk .zk-library-hud summary{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 10px;margin:0}
+.zk .zk-library-hud summary::-webkit-details-marker{display:none}
+.zk .zk-library-hud summary button{flex-shrink:0;min-height:36px;margin:0;font-size:12px}
+.zk .zk-library-hud:not([open]) summary button{display:none}
+.zk-library-hud-body{max-height:min(48dvh,340px);overflow-y:auto;overscroll-behavior:contain;
+  touch-action:pan-y;scrollbar-gutter:stable;padding:0 10px 10px}
+.zk-rotunda:has(.zk-library-hud[open]){touch-action:pan-y}
+@media(max-width:600px){.zk .zk-library-hud[open]{max-height:none}}
