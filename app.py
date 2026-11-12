@@ -146,5 +146,5 @@ payload = {**{k: v for k, v in state.items() if k not in ('events', 'explanation
            'radical_count': len({e['radical'] for e in data.characters.values()}),
            'heat_active': bool(state['simulated'] or state['logging']),
            'max_heat': max(heat.values(), default=1), 'event_count': len(state['events'])}
-asset_version = tuple((ROOT/'static'/name).stat().st_mtime_ns for name in ('workspace.html', 'workspace.css', 'book_shelf.js', 'workspace.js'))
+asset_version = tuple((ROOT/'static'/name).stat().st_mtime_ns for name in ('workspace.html', 'workspace.css', 'book_shelf.js', 'library_overview.js', 'workspace.js', 'rotunda-library.jpg'))
 workspace_component((data_version, asset_version), data)(key='galaxy_workspace', data=payload, on_action_change=on_action)

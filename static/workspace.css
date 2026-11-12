@@ -161,3 +161,79 @@
   background:transparent!important;border:0;box-shadow:none
 }
 .zk .zk-shelf-3d .zk-book-volume{display:none}
+
+#galaxy.zk-show-library{height:auto;min-height:0}
+#library-overview{position:relative;background:#f3e5ca;padding:10px}
+.zk-map-wrap:has(.zk-show-library)+.zk-map-legend{display:none}
+#galaxy.zk-show-library>svg,#galaxy.zk-show-library>.zk-zoom{display:none}
+.zk-rotunda{--rotunda-background:url('/app/static/rotunda-library.jpg');position:relative;height:clamp(310px,49vw,500px);overflow:hidden;touch-action:none;cursor:grab;
+  background:#2b1c12 var(--rotunda-background,var(--walnut-shelves)) var(--rotunda-shift,50%) center/cover;
+  border:1px solid #745130}
+.zk-rotunda:active{cursor:grabbing}
+.zk-rotunda canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.zk .zk-rotunda-node,.zk-rotunda-edge{position:absolute;transform:translate(-50%,-50%);white-space:nowrap}
+.zk .zk-rotunda-node{display:grid;justify-items:center;min-width:44px;min-height:44px;padding:3px 7px;
+  background:#30251ded;color:#f9dca0;border:1px solid #ab7a3e;font:600 20px/1.05 "Songti TC",serif}
+.zk .zk-rotunda-node[hidden],.zk-rotunda-edge[hidden]{display:none}
+.zk .zk-rotunda-node:hover{background:#5a3a25;color:#fff2d0}
+.zk-rotunda-node small{font:11px/1.2 system-ui,sans-serif}
+.zk-rotunda-edge{pointer-events:none;padding:2px 4px;color:#f7ddb6;background:#30251de8;font:10px system-ui,sans-serif}
+.zk-library-controls{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.zk-library-controls button{min-height:36px}
+.zk-library-status{margin-top:6px!important;font-size:12px}
+@media(max-width:480px){
+  .zk-rotunda-edge:not(.zk-rotunda-key-edge){display:none}
+  .zk .zk-rotunda-node{padding-inline:4px;font-size:17px}
+  .zk-rotunda-node small{font-size:9px}
+}
+
+.zk .zk-rotunda-book,.zk .zk-rotunda-book:hover{display:flex;align-items:flex-end;justify-content:center;
+  background:transparent;border-color:transparent;padding:0;color:#ffebc4}
+.zk .zk-rotunda-book:hover{border-color:#e4b677}
+.zk-rotunda-book small{position:absolute;top:100%;padding:2px 4px;background:#24170edb;text-shadow:0 1px 2px #170d06}
+
+.zk-rotunda-edge:not(.zk-rotunda-key-edge){display:none}
+
+
+
+.zk .zk-rotunda-book small{padding:1px 5px}
+.zk #library-immersive{width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;
+  border:0;border-radius:0;background:#21150e;color:#f5dfbb;overflow:hidden}
+.zk #library-immersive::backdrop{background:#21150e}
+#library-immersive #library-overview{display:flex;flex-direction:column;height:100%;background:#21150e;padding:0}
+#library-immersive .zk-rotunda{flex:1;min-height:0;height:auto;border:0}
+#library-immersive .zk-library-controls,#library-immersive .zk-library-status{margin:8px 12px}
+
+.zk .zk-library-controls button[aria-pressed="true"]{background:#70502d;color:#fff5e2;border-color:#c29a5d}
+
+.zk .zk-rotunda-component{border-color:#c6c0b4}
+.zk .zk-rotunda-highlight{outline:2px solid #eab960;outline-offset:2px}
+.zk .zk-rotunda-word{background:#f4e2b9;color:#352215}
+.zk .zk-rotunda-word-missing{border:2px dashed #996c39}
+.zk .zk-rotunda-word-ready{border:2px solid #497452}
+
+
+.zk-rotunda.zk-rotunda-paper{
+  background-color:#e9d6af;
+  background-image:linear-gradient(90deg,#6a452b30,transparent 7%,transparent 47%,
+    #65442744 49.7%,#7e593755 50%,#fff6db7a 50.5%,transparent 54%,transparent 93%,#6a452b30),
+    url('/app/static/rag-paper.jpg');
+  background-position:center;
+  background-size:100% 100%,cover;
+  border:5px solid #755034;
+  box-shadow:inset 0 0 18px #53351f55;
+}
+.zk .zk-rotunda-paper .zk-rotunda-node{
+  color:#392719;background:#f6e7c7;border-color:#9e784d;
+}
+.zk .zk-rotunda-paper .zk-rotunda-node:hover{background:#fff4d9}
+.zk .zk-rotunda-paper .zk-rotunda-word-ready{border-color:#497452}
+.zk .zk-rotunda-paper .zk-rotunda-word-missing{border-color:#996c39}
+.zk .zk-rotunda-paper .zk-rotunda-component{border-color:#766b60}
+.zk .zk-rotunda-paper .zk-rotunda-highlight{outline-color:#93612d}
+
+
+.zk .zk-rotunda-paper>[data-library="back"]{
+  position:absolute;z-index:5;top:10px;left:10px;min-height:40px;
+  color:#382619;background:#fff0cf;border-color:#a27a48;
+}

@@ -14,7 +14,7 @@ export default async function(component) {
     if(S.pending)return;
     S.pending=true;root.setAttribute('aria-busy','true');
     S.lockedControls=[...root.querySelectorAll('button,input,select,textarea')].filter(el=>
-      !el.disabled&&!el.matches('[data-expand],.zk-zoom button,.zk-close,#methods-button,#all-words,.zk-book'));
+      !el.disabled&&!el.matches('[data-expand],.zk-zoom button,.zk-close,#methods-button,#all-words,.zk-book,[data-library],#library-view'));
     S.lockedControls.forEach(el=>el.disabled=true);
     $('error').hidden=true;component.setTriggerValue('action',action);
   };
@@ -41,7 +41,7 @@ export default async function(component) {
   function wordDetails(word) {
     const w=S.data.words.find(w=>w.word===word); if(!w)return;
     const missing=[...new Set(w.word)].filter(c=>!S.data.known.includes(c));
-    $('word-detail').innerHTML=`<h2 class="word-title" lang="zh-Hant">${esc(w.word)}</h2><p>${esc(w.pinyin)}</p>${gloss(w)}<p class="word-status">${missing.length ? missing.length+' distinct character(s) missing' : 'Readable now'}</p><div class="word-list"></div><p class="zk-muted">${[w.level,w.part_of_speech,w.sense_status].filter(Boolean).map(esc).join(' · ')}</p><details><summary>Dictionary senses & source</summary>${w.dictionary_readings.map(s=>`<p>${esc(s.pinyin)}: ${esc(s.meaning)}</p>`).join('')}<p class="zk-muted">TOCFL ${esc(w.sheet)}, row ${w.row}. English senses: CC-CEDICT.</p></details>`;
+    $('word-detail').innerHTML=`<h2 class="word-title" lang="zh-Hant">${esc(w.word)}</h2><p>${esc(w.pinyin)}</p>${gloss(w)}<p class="word-status">${missing.length ? 'Still needed: '+esc(missing.join(' · ')) : 'Readable now'}</p><div class="word-list"></div><p class="zk-muted">${[w.level,w.part_of_speech,w.sense_status].filter(Boolean).map(esc).join(' · ')}</p><details><summary>Dictionary senses & source</summary>${w.dictionary_readings.map(s=>`<p>${esc(s.pinyin)}: ${esc(s.meaning)}</p>`).join('')}<p class="zk-muted">TOCFL ${esc(w.sheet)}, row ${w.row}. English senses: CC-CEDICT.</p></details>`;
     for(const c of missing){const b=document.createElement('button');b.textContent=`Learn about ${c}`;b.onclick=()=>{$('word-dialog').close();select(c);};$('word-detail').querySelector('.word-list').append(b);}
     $('word-dialog').showModal();
   }
@@ -89,7 +89,6 @@ export default async function(component) {
   $('heat-status').textContent=D.simulated?'SIMULATED counts · not community data':D.logging?`Local session totals · ${D.event_count} lookups`:'Heat unavailable until opt-in lookups; currently zero.';
   $('map-title').textContent=D.mode==='overview'?'Your Learning Library':D.mode==='radical'?`${D.radical} · radical group`:D.mode==='search'?'Search results':D.family?`${D.family.root} · sound family`:`${D.selected} · character structure`;
   $('map-description').textContent=D.mode==='overview'?'290 characters, grouped by dictionary radical. Choose a cluster or start with qing.':D.mode==='radical'?'Dictionary group, not a guaranteed meaning category. Select a character to explore.':D.mode==='search'?`${D.matches.length} exact pronunciation matches; different sound families may be represented.`:D.family?'Documented sound relationships. Modern readings and tones may differ.':'No documented sound family. Explore available structure and vocabulary.';
-  $('map-hint').textContent=D.mode==='overview'?'Click a group to zoom · click a character to learn':'Ochre ring: recommended in '+D.scope.toLowerCase()+' · dashed words: one missing character';
   $('results').replaceChildren();
   if(D.query){
     if(!D.matches.length){const p=document.createElement('span');p.textContent='No pilot match. Try qing, shi or 請.';$('results').append(p);}
@@ -208,6 +207,79 @@ export default async function(component) {
     S.svg.call(S.zoom).on('dblclick.zoom',null);
     $('zoom-in').onclick=()=>S.svg.call(S.zoom.scaleBy,1.35);$('zoom-out').onclick=()=>S.svg.call(S.zoom.scaleBy,1/1.35);$('fit').onclick=()=>S.svg.call(S.zoom.transform,d3.zoomIdentity);
   }
+  const library=$('library-overview'), libraryView=$('library-view');
+  if(!S.updateLibrary){
+    const full=library.querySelector('[data-library="full"]');
+    const modal=document.createElement('dialog');
+    modal.id='library-immersive';
+    modal.setAttribute('aria-label','Full library');
+    root.append(modal);
+    const marker=document.createComment('library overview position');
+    library.before(marker);
+    const exitLibrary=()=>{
+      marker.after(library);
+      full.textContent='Full library';
+      if(!library.hidden)full.focus();
+    };
+    modal.addEventListener('close',exitLibrary);
+    full.onclick=()=>{
+      if(modal.open){modal.close();return;}
+      modal.append(library);
+      full.textContent='Exit full library';
+      modal.showModal();
+      full.focus();
+    };
+    const showLibrary=()=>{
+      const available=Boolean(S.drawLibrary);
+      const active=available&&S.libraryMode!=='2d';
+      const hasFocus=library.contains(root.getRootNode().activeElement);
+      library.hidden=!active;
+      if(!active&&modal.open)modal.close();
+      libraryView.hidden=!available;
+      libraryView.textContent=active?'2D map':'3D library';
+      container.classList.toggle('zk-show-library',active);
+      $('map-hint').textContent=active?(S.data.mode==='focus'
+        ?'Gold: sound or missing character · green: meaning or readable word · gray: component'
+        :'Drag to rotate · Pan to move · scroll or use + / − to zoom'):
+        S.data.mode==='overview'?'Click a group to zoom · click a character to learn':
+        'Ochre ring: recommended in '+S.data.scope.toLowerCase()+' · solid: readable · dashed: one character needed';
+      if(active){
+        if(S.data.mode==='overview')$('map-description').textContent='Explore sound families and radical groups through their shared characters.';
+        S.drawLibrary(S.data);
+      }else if(S.data.mode==='overview'){
+        $('map-description').textContent='290 characters, grouped by dictionary radical. Choose a cluster or start with qing.';
+      }
+      if(!active&&hasFocus)(available?libraryView:$('overview')).focus();
+    };
+    library.querySelector('[data-library="map"]').onclick=()=>{
+      S.libraryMode='2d';
+      showLibrary();
+      libraryView.focus();
+    };
+    libraryView.onclick=()=>{
+      S.libraryMode=library.hidden?'3d':'2d';
+      showLibrary();
+    };
+    library.addEventListener('library-context-lost',()=>{
+      S.drawLibrary=null;
+      showLibrary();
+    });
+    S.updateLibrary=showLibrary;
+  }
+  if(!S.libraryLoading){
+    S.libraryLoading=true;
+    createLibraryOverview(library,D.characters,{
+      select,word:wordDetails,overview:()=>send({type:'overview'}),
+      component:character=>{
+        $('word-detail').innerHTML=`<h2 class="word-title" lang="zh-Hant">${esc(character)}</h2><p>Documented structural component outside the learning vocabulary.</p>`;
+        $('word-dialog').showModal();
+      }
+    }).then(draw=>{
+      S.drawLibrary=draw;
+      S.updateLibrary();
+    }).catch(error=>console.info('Using the 2D library overview.',error));
+  }
+  S.updateLibrary();
   S.viewKey=viewKey;S.layer.selectAll('*').remove();
   S.svg.attr('viewBox','0 0 1000 650');S.zoom.extent([[0,0],[1000,650]]);
   const camera=S.camera[viewKey]||{x:0,y:0,k:1};S.svg.call(S.zoom.transform,d3.zoomIdentity.translate(camera.x,camera.y).scale(camera.k));
@@ -244,11 +316,11 @@ export default async function(component) {
       }if(spot)displayedWords.push(spot);
     }
     const layer=S.layer.append('g');
-    layer.selectAll('line').data(displayedWords).join('line').attr('x1',selectedNode.x).attr('y1',selectedNode.y).attr('x2',w=>w.x).attr('y2',w=>w.y).attr('stroke','#9aa7a0').attr('stroke-dasharray','2 5');
-    const pills=layer.selectAll('g').data(displayedWords).join('g').attr('class','word-node').attr('data-word',w=>w.word).attr('transform',w=>`translate(${w.x},${w.y})`).attr('role','button').attr('tabindex',0).attr('aria-label',w=>`Word ${w.word}, ${w.missing.length?'one character missing':'readable now'}`);
-    pills.append('rect').attr('x',-56).attr('y',-19).attr('width',112).attr('height',38).attr('rx',2).attr('fill','#fffaf0').attr('stroke',w=>w.missing.length?'#778b8b':'#4d7254').attr('stroke-dasharray',w=>w.missing.length?'5 3':null);
+    layer.selectAll('line').data(displayedWords).join('line').attr('x1',selectedNode.x).attr('y1',selectedNode.y).attr('x2',w=>w.x).attr('y2',w=>w.y).attr('stroke',w=>w.missing.length?'#916228':'#4d7254').attr('stroke-width',1.7).attr('stroke-dasharray',w=>w.missing.length?'4 4':null);
+    const pills=layer.selectAll('g').data(displayedWords).join('g').attr('class','word-node').attr('data-word',w=>w.word).attr('transform',w=>`translate(${w.x},${w.y})`).attr('role','button').attr('tabindex',0).attr('aria-label',w=>`Word ${w.word}, ${w.missing.length?'still needed: '+w.missing.join(' '):'readable now'}`);
+    pills.append('rect').attr('x',-56).attr('y',-19).attr('width',112).attr('height',38).attr('rx',2).attr('fill','#fffaf0').attr('stroke',w=>w.missing.length?'#916228':'#4d7254').attr('stroke-dasharray',w=>w.missing.length?'5 3':null);
     pills.append('text').attr('class','word-label').attr('text-anchor','middle').attr('dy',-1).attr('fill','#332e27').attr('font-size',15).text(w=>w.word);
-    pills.append('text').attr('class','word-status-label').attr('font-family','Patrick Hand, Avenir Next, sans-serif').attr('text-anchor','middle').attr('dy',13).attr('fill','#675f52').attr('font-size',8).text(w=>w.missing.length?'Need '+w.missing.join(' '):'Readable now');
+    pills.append('text').attr('class','word-status-label').attr('font-family','Patrick Hand, Avenir Next, sans-serif').attr('text-anchor','middle').attr('dy',13).attr('fill',w=>w.missing.length?'#704518':'#36583b').attr('font-size',8).text(w=>w.missing.length?'Need '+w.missing.join(' '):'Readable now');
     pills.on('click',(e,w)=>wordDetails(w.word)).on('keydown',(e,w)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();wordDetails(w.word);}});
   }
   S.frame=()=>{
