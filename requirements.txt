@@ -1,4 +1,4 @@
-# Deployment refresh 2026-11-06: load the scope-preserving book selection action.
+# Deployment refresh 2026-11-12: reload the immersive library component bundle.
 streamlit==1.66.1
 pandas==3.1.0
 networkx==3.7
